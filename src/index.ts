@@ -21,6 +21,20 @@ ipcMain.on('device-info', async (_) => {
   }
 });
 
+ipcMain.on('device-running-apps', async (_) => {
+  console.log('device-running-apps');
+  const device = new Device();
+  try {
+    await device.connect();
+    const apps = await device.getRunningApps();
+    device.disconnect();
+    _.sender.send('device-running-apps-reply', null, apps);
+  } catch (err) {
+    device.disconnect();
+    _.sender.send('device-running-apps-reply', err, null);
+  }
+});
+
 ipcMain.on('device-installed-apps', async (_) => {
   console.log('device-installed-apps');
   const device = new Device();

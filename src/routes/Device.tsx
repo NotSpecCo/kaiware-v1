@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { AppRow } from '../components/AppRow';
 import { DeviceApp, DeviceInfo } from '../models';
-import { getDeviceInfo, getInstalledApps } from '../services/device';
+import { getDeviceInfo, getInstalledApps, getRunningApps } from '../services/device';
 import { Typography } from '../ui-components/Typography';
 import { View, ViewContent, ViewHeader } from '../ui-components/view';
-import { delay } from '../utils/delay';
 import styles from './Device.module.css';
 
 export function Device(): JSX.Element {
   const [info, setInfo] = useState<DeviceInfo>();
-  const [apps, setApps] = useState<DeviceApp[]>([]);
+  const [installedApps, setInstalledApps] = useState<DeviceApp[]>([]);
+  const [runningApps, setRunningApps] = useState<DeviceApp[]>([]);
 
   async function getData() {
-    const res1 = await getDeviceInfo();
-    setInfo(res1);
+    const inf = await getDeviceInfo();
+    setInfo(inf);
 
-    await delay(500);
+    const running = await getRunningApps();
+    setRunningApps(running);
 
-    const res2 = await getInstalledApps();
-    setApps(res2);
+    const installed = await getInstalledApps();
+    setInstalledApps(installed);
   }
 
   useEffect(() => {
@@ -29,7 +30,7 @@ export function Device(): JSX.Element {
     <View>
       <ViewHeader>
         <Typography type="titleLarge" padding="none">
-          Device
+          Device Info
         </Typography>
       </ViewHeader>
       <ViewContent>
@@ -39,13 +40,16 @@ export function Device(): JSX.Element {
             <Typography type="subtitle" padding="horizontal">
               {info?.name}
             </Typography>
-            <Typography padding="horizontal">KaiOS v{info?.version}</Typography>
-            <Typography padding="horizontal">Gecko v{info?.geckoversion}</Typography>
+            <Typography padding="horizontal" type="bodyLarge">
+              KaiOS v{info?.version}
+            </Typography>
+            <Typography padding="horizontal" type="bodyLarge">
+              Gecko v{info?.geckoversion}
+            </Typography>
           </div>
         </div>
-        <Typography type="title">Installed Apps</Typography>
-
-        {apps.map((app) => (
+        <Typography type="title">Running Apps</Typography>
+        {runningApps.map((app) => (
           <AppRow
             key={app.id}
             appId={app.id}
@@ -53,7 +57,19 @@ export function Device(): JSX.Element {
             author={app.manifest.developer.name}
             description={app.manifest.description}
             installed={true}
-            onUninstall={() => setApps(apps.filter((a) => a.id !== app.id))}
+            onUninstall={() => setInstalledApps(installedApps.filter((a) => a.id !== app.id))}
+          />
+        ))}
+        <Typography type="title">Installed Apps</Typography>
+        {installedApps.map((app) => (
+          <AppRow
+            key={app.id}
+            appId={app.id}
+            name={app.manifest.name}
+            author={app.manifest.developer.name}
+            description={app.manifest.description}
+            installed={true}
+            onUninstall={() => setInstalledApps(installedApps.filter((a) => a.id !== app.id))}
           />
         ))}
       </ViewContent>
