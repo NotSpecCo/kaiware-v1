@@ -1,0 +1,7 @@
+.device {
+  height: 100px;
+}
+
+.container {
+  display: flex;
+}

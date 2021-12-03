@@ -13,11 +13,26 @@ ipcMain.on('device-info', async (_) => {
   try {
     await device.connect();
     const info = await device.getDeviceInfo();
+    device.disconnect();
     _.sender.send('device-info-reply', null, info);
   } catch (err) {
+    device.disconnect();
     _.sender.send('device-info-reply', err, null);
   }
-  device.disconnect();
+});
+
+ipcMain.on('device-installed-apps', async (_) => {
+  console.log('device-installed-apps');
+  const device = new Device();
+  try {
+    await device.connect();
+    const apps = await device.getInstalledApps();
+    device.disconnect();
+    _.sender.send('device-installed-apps-reply', null, apps);
+  } catch (err) {
+    device.disconnect();
+    _.sender.send('device-installed-apps-reply', err, null);
+  }
 });
 
 ipcMain.on('device-install', async (_, url: string) => {
@@ -26,11 +41,26 @@ ipcMain.on('device-install', async (_, url: string) => {
   try {
     await device.connect();
     await device.installPackagedAppFromUrl(url, 'test');
+    device.disconnect();
     _.sender.send('device-install-reply', null, app);
   } catch (err) {
+    device.disconnect();
     _.sender.send('device-install-reply', err, null);
   }
-  device.disconnect();
+});
+
+ipcMain.on('device-uninstall', async (_, appId: string) => {
+  console.log('device-uninstall', appId);
+  const device = new Device();
+  try {
+    await device.connect();
+    await device.uninstallApp(appId);
+    device.disconnect();
+    _.sender.send('device-uninstall-reply', null);
+  } catch (err) {
+    device.disconnect();
+    _.sender.send('device-uninstall-reply', err, null);
+  }
 });
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.

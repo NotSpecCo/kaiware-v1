@@ -18,7 +18,8 @@ export function Sidebar(): JSX.Element {
     <div className={styles.root}>
       <div className={styles.titlebar} />
       <SidebarItem primaryText="Home" onClick={() => history.push(`/`)} />
-      <Typography type="titleSmall">Categories</Typography>
+      <SidebarItem primaryText="Device" onClick={() => history.push(`/device`)} />
+      <Typography type="titleSmall">Apps</Typography>
       {categories.map((a) => (
         <SidebarItem
           key={a.id}
@@ -26,13 +27,9 @@ export function Sidebar(): JSX.Element {
           onClick={() => history.push(`/category/${a.id}`)}
         />
       ))}
-      <div className={styles.spacer}></div>
       <Typography type="titleSmall">System</Typography>
       <SidebarItem primaryText="Settings" />
       <SidebarItem primaryText="About" />
-      <Typography type="titleSmall">Device</Typography>
-      {/* <div className={styles.device}>Nokia 6300</div> */}
-      <SidebarItem primaryText="Nokia 6300" />
     </div>
   );
 }

@@ -1,39 +1,56 @@
 import React, { useState } from 'react';
 import { ClickableProps } from '../models/ClickableProps';
-import { StoreApp } from '../models/StoreApp';
-import { installApp } from '../services/device';
+import { installApp, uninstallApp } from '../services/device';
 import { Button } from '../ui-components/Button';
 import styles from './AppRow.module.css';
 
 type Props = ClickableProps & {
-  app: StoreApp;
+  appId: string;
+  iconUrl?: string;
+  name: string;
+  author: string;
+  description: string;
+  downloadUrl?: string;
+  installed?: boolean;
+  onInstall?: () => void;
+  onUninstall?: () => void;
 };
 
 export function AppRow(props: Props): JSX.Element {
-  const [installing, setInstalling] = useState(false);
+  const [working, setWorking] = useState(false);
 
   async function install() {
-    if (installing) return;
+    if (working) return;
 
-    setInstalling(true);
-    await installApp(props.app.download.url);
-    setInstalling(false);
+    setWorking(true);
+    await installApp(props.downloadUrl);
+    setWorking(false);
+    props.onInstall?.();
+  }
+
+  async function uninstall() {
+    if (working) return;
+
+    setWorking(true);
+    await uninstallApp(props.appId);
+    setWorking(false);
+    props.onUninstall?.();
   }
 
   return (
     <div className={styles.root} onClick={props.onClick}>
-      <img className={styles.icon} src={props.app.icon} alt="" />
+      <img className={styles.icon} src={props.iconUrl || ''} alt="" />
       <div className={styles.text}>
-        <div className={styles.name}>{props.app.name}</div>
-        <div className={styles.author}>{props.app.author}</div>
-        <div className={styles.description}>{props.app.description}</div>
+        <div className={styles.name}>{props.name}</div>
+        <div className={styles.author}>{props.author}</div>
+        <div className={styles.description}>{props.description}</div>
       </div>
       <div className={styles.actions}>
         <Button
           className={styles.install}
-          text={installing ? 'Installing' : 'Install'}
-          disabled={installing}
-          onClick={install}
+          text={`${props.installed ? 'Uninstall' : 'Install'}${working ? 'ing' : ''}`}
+          disabled={working}
+          onClick={() => (props.installed ? uninstall() : install())}
         />
       </div>
     </div>

@@ -7,6 +7,7 @@ import { Sidebar } from './components/Sidebar';
 import { DeviceProvider } from './contexts/DeviceProvider';
 import { SettingsProvider } from './contexts/SettingsProvider';
 import { Category } from './routes/Category';
+import { Device } from './routes/Device';
 import { Home } from './routes/Home';
 import { getDeviceInfo } from './services/device';
 
@@ -46,6 +47,9 @@ export function App(): JSX.Element {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route exact path="/device">
+          <Device />
         </Route>
         <Route exact path="/category/:categoryId">
           <Category />

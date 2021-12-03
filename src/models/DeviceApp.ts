@@ -1,7 +1,15 @@
 export interface DeviceApp {
   origin: string;
   installOrigin: string;
-  manifest: any;
+  manifest: {
+    name: string;
+    description: string;
+    subtitle: string;
+    developer: {
+      name: string;
+      url: string;
+    };
+  };
   manifestURL: string;
   appStatus: number;
   receipts: any[];

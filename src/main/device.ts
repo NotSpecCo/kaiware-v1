@@ -138,6 +138,7 @@ export class Device {
     );
 
     const device = await getDeviceInfo();
+    device.name = device.useragent?.match(/Mobile; (.*);/)?.[1] || 'Generic Device';
 
     return device;
   }

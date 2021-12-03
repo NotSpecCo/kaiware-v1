@@ -27,12 +27,21 @@ export function Category(): JSX.Element {
     <View>
       <ViewHeader>
         <Typography type="titleLarge" padding="none">
-          {data?.category.name}
+          Apps {'>'} {data?.category.name}
         </Typography>
       </ViewHeader>
       <ViewContent>
         {data?.apps.map((app) => (
-          <AppRow key={app.slug} app={app} onClick={() => console.log('clicked', app)} />
+          <AppRow
+            key={app.slug}
+            appId={app.slug}
+            iconUrl={app.icon}
+            name={app.name}
+            author={app.author?.[0]}
+            description={app.description}
+            downloadUrl={app.download.url}
+            onClick={() => console.log('clicked', app)}
+          />
         ))}
       </ViewContent>
       <ViewFooter className={styles.footer}>
