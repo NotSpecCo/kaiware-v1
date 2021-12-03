@@ -1,22 +1,6 @@
-.root {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  padding: 0 15px;
-}
-
-.root > header {
-  padding: 15px 10px;
-}
-
-.root > footer {
+.footer {
   padding: 5px 10px;
   text-align: right;
   color: var(--secondary-text-color);
   font-style: italic;
-}
-
-.content {
-  flex: 1;
-  overflow-y: auto;
 }

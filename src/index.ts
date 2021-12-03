@@ -50,7 +50,7 @@ const createWindow = (): void => {
       responseHeaders: {
         ...details.responseHeaders,
         'Content-Security-Policy': [
-          "default-src 'self' 'unsafe-inline' data:; script-src 'self' 'unsafe-eval' 'unsafe-inline' data:; img-src data: https://banana-hackers.gitlab.io",
+          "default-src 'self' 'unsafe-inline' data: https://banana-hackers.gitlab.io; script-src 'self' 'unsafe-eval' 'unsafe-inline' data:",
         ],
       },
     });
@@ -60,7 +60,7 @@ const createWindow = (): void => {
   const mainWindow = new BrowserWindow({
     height: 900,
     width: 1200,
-    // titleBarStyle: 'hidden',
+    titleBarStyle: 'hidden',
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,

@@ -1,0 +1,101 @@
+.block {
+  display: block;
+}
+.inline {
+  display: inline;
+  padding: 0;
+}
+
+.caption {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.body {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.bodyStrong {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.bodyLarge {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.titleSmall {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+.subtitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+.titleLarge {
+  font-size: 2.8rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.primary {
+  color: var(--primary-text-color);
+}
+.secondary {
+  color: var(--secondary-text-color);
+}
+.accent {
+  color: var(--accent-text-color);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+
+.padding-vertical {
+  padding: 10px 0;
+}
+.padding-horizontal {
+  padding: 0 15px;
+}
+.padding-both {
+  padding: 10px 15px;
+}
+.padding-none {
+  padding: 0;
+}
+
+.wrap {
+  white-space: initial;
+}
+
+.nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

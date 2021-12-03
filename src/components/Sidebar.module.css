@@ -4,7 +4,6 @@
   min-width: 200px;
   display: flex;
   flex-direction: column;
-  padding: 10px 0;
   box-shadow: 5px 0px 20px rgb(0 0 0 / 10%);
 }
 .subtitle {
@@ -19,4 +18,9 @@
 
 .device {
   padding: 5px 10px;
+}
+
+.titlebar {
+  height: 35px;
+  -webkit-app-region: drag;
 }

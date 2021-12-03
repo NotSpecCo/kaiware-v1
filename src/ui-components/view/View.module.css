@@ -4,3 +4,8 @@
   overflow: hidden;
   padding: 0 15px;
 }
+
+.titlebar {
+  height: 25px;
+  -webkit-app-region: drag;
+}

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import { StoreCategory } from '../models/StoreCategory';
-import { getCategories } from '../services/storedb';
+import { getCategories } from '../services/apps';
+import { Typography } from '../ui-components/Typography';
 import styles from './Sidebar.module.css';
 import { SidebarItem } from './SitebarItem';
 
@@ -15,8 +16,9 @@ export function Sidebar(): JSX.Element {
 
   return (
     <div className={styles.root}>
+      <div className={styles.titlebar} />
       <SidebarItem primaryText="Home" onClick={() => history.push(`/`)} />
-      <div className={styles.subtitle}>Categories</div>
+      <Typography type="titleSmall">Categories</Typography>
       {categories.map((a) => (
         <SidebarItem
           key={a.id}
@@ -25,10 +27,10 @@ export function Sidebar(): JSX.Element {
         />
       ))}
       <div className={styles.spacer}></div>
-      <div className={styles.subtitle}>System</div>
+      <Typography type="titleSmall">System</Typography>
       <SidebarItem primaryText="Settings" />
       <SidebarItem primaryText="About" />
-      <div className={styles.subtitle}>Device</div>
+      <Typography type="titleSmall">Device</Typography>
       {/* <div className={styles.device}>Nokia 6300</div> */}
       <SidebarItem primaryText="Nokia 6300" />
     </div>
