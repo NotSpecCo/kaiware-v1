@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ClickableProps } from '../models/ClickableProps';
 import { StoreApp } from '../models/StoreApp';
 import { installApp } from '../services/device';
@@ -10,8 +10,14 @@ type Props = ClickableProps & {
 };
 
 export function AppRow(props: Props): JSX.Element {
+  const [installing, setInstalling] = useState(false);
+
   async function install() {
+    if (installing) return;
+
+    setInstalling(true);
     await installApp(props.app.download.url);
+    setInstalling(false);
   }
 
   return (
@@ -23,7 +29,12 @@ export function AppRow(props: Props): JSX.Element {
         <div className={styles.description}>{props.app.description}</div>
       </div>
       <div className={styles.actions}>
-        <Button text="Install" onClick={install} />
+        <Button
+          className={styles.install}
+          text={installing ? 'Installing' : 'Install'}
+          disabled={installing}
+          onClick={install}
+        />
       </div>
     </div>
   );

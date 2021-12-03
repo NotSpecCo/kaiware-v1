@@ -1,8 +1,9 @@
 import FirefoxClient from '@cliqz-oss/firefox-client';
 // console.log(FirefoxClient);
 import promisify from 'util.promisify';
-import { AppsActor, DeviceActor, DeviceApp, DeviceInfo } from './models';
-import { getManifestUrl, logger } from './utils';
+import { AppsActor, DeviceActor, DeviceApp, DeviceInfo } from '../models';
+import { getManifestUrl, logger } from '../utils';
+import { getZipFromUrl } from './files';
 
 export class Device {
   private _client: FirefoxClient;
@@ -109,6 +110,13 @@ export class Device {
 
     const installedAppId = await installPackagedApp(path, appId);
     const installedApp = (await this.getApp(installedAppId)) as DeviceApp;
+
+    return installedApp;
+  }
+
+  public async installPackagedAppFromUrl(url: string, appId: string): Promise<DeviceApp> {
+    const zipFilePath = await getZipFromUrl(url);
+    const installedApp = await this.installPackagedApp(zipFilePath, appId);
 
     return installedApp;
   }

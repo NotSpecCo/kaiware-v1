@@ -43,3 +43,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.install {
+  width: 100px;
+}

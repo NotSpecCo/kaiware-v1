@@ -1,7 +1,8 @@
 .root {
   display: flex;
   align-items: center;
-  padding: 10px 30px;
+  justify-content: center;
+  padding: 10px 10px;
   cursor: pointer;
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
@@ -13,7 +14,12 @@
   border-radius: 5px;
   border: none;
   outline: none;
+  text-align: center;
 }
 .root:hover {
   opacity: 1;
+}
+
+.root[disabled] {
+  opacity: 0.3;
 }
