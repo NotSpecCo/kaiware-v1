@@ -56,7 +56,7 @@ ipcMain.on('device-install', async (_, url: string) => {
     await device.connect();
     await device.installPackagedAppFromUrl(url, 'test');
     device.disconnect();
-    _.sender.send('device-install-reply', null, app);
+    _.sender.send('device-install-reply', null, null);
   } catch (err) {
     device.disconnect();
     _.sender.send('device-install-reply', err, null);

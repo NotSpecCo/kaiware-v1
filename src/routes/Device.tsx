@@ -57,7 +57,10 @@ export function Device(): JSX.Element {
             author={app.manifest.developer.name}
             description={app.manifest.description}
             installed={true}
-            onUninstall={() => setInstalledApps(installedApps.filter((a) => a.id !== app.id))}
+            onUninstall={() => {
+              setRunningApps(runningApps.filter((a) => a.id !== app.id));
+              setInstalledApps(installedApps.filter((a) => a.id !== app.id));
+            }}
           />
         ))}
         <Typography type="title">Installed Apps</Typography>
