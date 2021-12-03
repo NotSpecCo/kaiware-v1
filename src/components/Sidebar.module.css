@@ -1,0 +1,23 @@
+.root {
+  height: 100vh;
+  width: 200px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  box-shadow: 5px 0px 20px rgb(0 0 0 / 10%);
+  margin-right: 20px;
+}
+.subtitle {
+  padding: 15px 15px 5px 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.device {
+  padding: 5px 10px;
+}

@@ -1,0 +1,3 @@
+export type ClickableProps = {
+  onClick?: (ev: React.MouseEvent<any, MouseEvent>) => void;
+};

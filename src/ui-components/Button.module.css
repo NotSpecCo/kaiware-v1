@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  opacity: 0.75;
+  transition: opacity 500ms;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+.root:hover {
+  opacity: 1;
+}

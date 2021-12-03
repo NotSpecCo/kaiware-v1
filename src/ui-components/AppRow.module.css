@@ -1,0 +1,45 @@
+.root {
+  display: grid;
+  grid-template-columns: 48px auto max-content;
+  align-items: center;
+  padding: 10px 10px;
+  grid-gap: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--divider-color);
+}
+.root:hover {
+  background-color: var(--highlight-bg-color);
+}
+
+.text {
+  margin-left: 10px;
+  overflow: hidden;
+}
+.text:first-child {
+  margin-left: 0px;
+}
+
+.icon {
+  height: 48px;
+  width: 48px;
+  aspect-ratio: 1/1;
+  margin-right: 10px;
+}
+
+.name {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--primary-text-color);
+}
+
+.author {
+  color: var(--secondary-text-color);
+  font-style: italic;
+}
+
+.description {
+  color: var(--secondary-text-color);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

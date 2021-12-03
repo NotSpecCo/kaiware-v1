@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.root:hover {
+  background-color: var(--highlight-bg-color);
+}
+
+.text {
+  margin-left: 10px;
+}
+.text:first-child {
+  margin-left: 0px;
+}
+
+.primaryText {
+  font-size: 1.6rem;
+  color: var(--primary-text-color);
+}
+
+.secondaryText {
+  color: var(--secondary-text-color);
+}

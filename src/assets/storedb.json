@@ -1,0 +1,2976 @@
+{
+    "$schema": "./schema.json",
+    "version": 3,
+    "generated_at": 1635587067648,
+    "categories": {
+        "communication": {
+            "name": "Communication",
+            "description": "Apps that allow you to communicate with other people.",
+            "icon": "fas fa-comments"
+        },
+        "education": {
+            "name": "Education",
+            "description": "Apps that provide access to Education sources.",
+            "icon": "fas fa-book-reader"
+        },
+        "games": {
+            "name": "Games",
+            "description": "Test your finger speed.",
+            "icon": "fas fa-gamepad"
+        },
+        "health": {
+            "name": "Health",
+            "description": "Health related utilities",
+            "icon": "fas fa-file-medical"
+        },
+        "multimedia": {
+            "name": "Multimedia",
+            "description": "Apps to help with entertainment",
+            "icon": "fas fa-film"
+        },
+        "news": {
+            "name": "News",
+            "description": "Apps that provide access to news sources.",
+            "icon": "fas fa-newspaper"
+        },
+        "search": {
+            "name": "Search",
+            "icon": "fas fa-search"
+        },
+        "social": {
+            "name": "Social",
+            "icon": "fas fa-users"
+        },
+        "travel": {
+            "name": "Travel",
+            "description": "Useful tools for traveling",
+            "icon": "fas fa-plane"
+        },
+        "utility": {
+            "name": "Utility",
+            "description": "Utilities to help with daily functions.",
+            "icon": "fas fa-wrench"
+        }
+    },
+    "apps": [
+        {
+            "name": "10000h",
+            "description": "Strengthen your skills with 10000 hours rule.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/10000h.png",
+            "git_repo": "https://github.com/canicjusz/10000h",
+            "download": {
+                "url": "https://github.com/canicjusz/10000h/raw/master/10000h.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/10000h.json"
+            },
+            "type": "privileged",
+            "license": "WTFPL",
+            "author": [
+                "Jan Michalak <janmichalak@int.pl>"
+            ],
+            "maintainer": [
+                "Jan Michalak <janmichalak@int.pl>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "self-development; self-impovement",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "10000h",
+            "screenshots": []
+        },
+        {
+            "name": "FoxCast Lite",
+            "description": "Foxcasts is an app for subscribing to and listening to podcasts. It started off on FirefoxOS and has been twice rebuilt from the ground up using different frameworks for KaiOS and as a general web app.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/FoxCastLite.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/FoxCastLite/screenshot0.png"
+            ],
+            "website": "https://garrettdowns.com",
+            "download": {
+                "url": "https://github.com/JuanCarlosM1/Apps-Download/blob/main/foxcasts-lite-v0.1.0%20beta.zip?raw=true",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/FoxCastLite.json"
+            },
+            "type": "privileged",
+            "license": "MIT",
+            "author": [
+                "Garrett Downs"
+            ],
+            "maintainer": [
+                "JuanCarlosM1"
+            ],
+            "has_ads": false,
+            "has_tracking": true,
+            "meta": {
+                "tags": "podcasts; audio; news; Fox; Cast; Lite;",
+                "categories": [
+                    "news",
+                    "multimedia"
+                ]
+            },
+            "slug": "FoxCastLite"
+        },
+        {
+            "name": "ADBroot",
+            "description": "An easier way to root Nokia 8110 4G.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/adbroot.png",
+            "download": {
+                "url": "https://groups.google.com/group/bananahackers/attach/cff5882d389fb/adbroot.zip?part=0.1&authuser=0",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/adbroot.json"
+            },
+            "type": "root",
+            "license": "Unknown",
+            "author": [
+                "speeduploop"
+            ],
+            "maintainer": [
+                "jkelol111"
+            ],
+            "donation": "https://paypal.me/speeduploop",
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "root, 8110, bananahackers, adb, adbroot",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "adbroot",
+            "screenshots": []
+        },
+        {
+            "name": "AirshipCombat3D",
+            "description": "Looking for a fun 3D action game with great graphics? Get inside the airship and enjoy challanging battles in the skies. You can navigate the ship freely in a real 3D environment. Works best with 512MB of RAM.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/airshipcombat3d.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/airshipcombat3d/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/airshipcombat3d/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/airshipcombat3d/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/airshipcombat3d/screenshot3.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/airshipcombat3d/screenshot4.png"
+            ],
+            "website": "https://ays-arts.de",
+            "download": {
+                "url": "https://ays-arts.de/public/ac3d/ac3d_1.4.22.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/airshipcombat3d.json"
+            },
+            "type": "privileged",
+            "license": "Unknown",
+            "author": [
+                "Christian Waadt <contact@ays-arts.de>"
+            ],
+            "maintainer": [
+                "Christian Waadt <contact@ays-arts.de>"
+            ],
+            "donation": "https://www.paypal.me/cwaadt",
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "action; 3d; open-world; multiplayer; online",
+                "categories": [
+                    "games"
+                ]
+            },
+            "slug": "airshipcombat3d"
+        },
+        {
+            "name": "K-Chess",
+            "description": "K-Chess is unofficial lichess.org client for KaiOS",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/ajedrez.png",
+            "website": "https://github.com/arma7x/kai-chess",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/ajedrez/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/ajedrez/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/ajedrez/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/ajedrez/screenshot3.png"
+            ],
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/chess/ajedrez.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/chess/manifest.webapp"
+            },
+            "type": "privileged",
+            "license": "MIT",
+            "author": [
+                "arma7x <ahmadmuhamad101@gmail.com>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "chess; lichess; game; arma7x; online; ajedrez;",
+                "categories": [
+                    "games"
+                ]
+            },
+            "slug": "ajedrez"
+        },
+        {
+            "name": "AppBuster",
+            "description": "Utility to safely disable/enable KaiOS pre-installed applications",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/appbuster.png",
+            "website": "https://gitlab.com/suborg/appbuster/",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/suborg/appbuster/appbuster.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/suborg/appbuster/manifest.webapp"
+            },
+            "type": "certified",
+            "locales": [
+                "English"
+            ],
+            "license": "Unlicense <https://unlicense.org/>",
+            "author": [
+                "Luxferre"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "cool; luxferre; app;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "appbuster",
+            "screenshots": []
+        },
+        {
+            "name": "Pocket ATM",
+            "description": "Manage money in your pocket & track your spending. Pocket ATM also provide transaction statistic by daily, monthly or yearly.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/atm.png",
+            "website": "https://github.com/arma7x/pocket-atm",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/atm/atm.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/atm/manifest.webapp"
+            },
+            "type": "privileged",
+            "locales": [
+                "English"
+            ],
+            "license": "MIT",
+            "author": [
+                "arma7x <ahmadmuhamad101@gmail.com>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "Money;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "atm",
+            "screenshots": []
+        },
+        {
+            "name": "Audio Visualizer",
+            "description": "Visualize your music or voice recordings! There are 5 styles of visualization you can choose, and you can customize how the visualization looks and reacts.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/audviz.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/audviz/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/audviz/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/audviz/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/audviz/screenshot3.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/audviz/screenshot4.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/audviz/screenshot5.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/audviz/screenshot6.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/audviz/screenshot7.png"
+            ],
+            "website": "https://alego.web.fc2.com/kaiosapps/audiovis/",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/ale4710/audviz/audviz.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/ale4710/audviz/manifest.webapp"
+            },
+            "type": "privileged",
+            "locales": [
+                "English"
+            ],
+            "license": "MIT",
+            "author": [
+                "ale4710 <alego4710@vivaldi.net>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "Visualizer; Music; \"Music Player\";",
+                "categories": [
+                    "multimedia"
+                ]
+            },
+            "slug": "audviz"
+        },
+        {
+            "name": "Kloud File Manager",
+            "description": "File Manager & Kloudless app(unofficial) for KaiOS",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/b2gfm.png",
+            "website": "https://github.com/arma7x/b2gfm",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/b2gfm/b2gfm.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/b2gfm/manifest.webapp"
+            },
+            "type": "privileged",
+            "license": "MIT",
+            "author": [
+                "arma7x <ahmadmuhamad101@gmail.com>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus1@outlook.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "filemanager; files; backup; sync; wireless; kloudless;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "b2gfm",
+            "screenshots": []
+        },
+        {
+            "name": "baka⑨player",
+            "description": "A fanmade application for listening to music from Gensokyo Radio.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/b9p.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/b9p/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/b9p/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/b9p/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/b9p/screenshot3.png"
+            ],
+            "website": "https://alego.web.fc2.com/kaiosapps/bakabakaplayer/",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/ale4710/b9p/b9p.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/ale4710/b9p/manifest.webapp"
+            },
+            "type": "privileged",
+            "license": "unknown",
+            "author": [
+                "ale4710 <alego4710@vivaldi.net>"
+            ],
+            "locales": [
+                "English"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "Touhou; Music;",
+                "categories": [
+                    "multimedia"
+                ]
+            },
+            "slug": "b9p"
+        },
+        {
+            "name": "BankiTube",
+            "description": "Easily watch and listen to YouTube on your KaiOS device. It basically uses Invidious. The best part is that it does not use the cursor, because the cursor is a pain in the behind to use. It's called BankiTube for no special reason beside the fact I like Sekibanki.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/bankitube.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/bankitube/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/bankitube/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/bankitube/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/bankitube/screenshot3.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/bankitube/screenshot4.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/bankitube/screenshot5.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/bankitube/screenshot6.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/bankitube/screenshot7.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/bankitube/screenshot8.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/bankitube/screenshot9.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/bankitube/screenshot10.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/bankitube/screenshot11.png"
+            ],
+            "website": "https://alego.web.fc2.com/kaiosapps/bankitube/",
+            "git_repo": "https://gitlab.com/ale4710/bankitube",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/ale4710/bankitube/bankitube.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/ale4710/bankitube/manifest.webapp"
+            },
+            "type": "privileged",
+            "locales": [
+                "English"
+            ],
+            "license": "unknown",
+            "author": [
+                "ale4710 <alego4710@vivaldi.net>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "YouTube; Best YouTube Player for KaiOS; Invidious; Sekibanki;",
+                "categories": [
+                    "multimedia"
+                ]
+            },
+            "slug": "bankitube"
+        },
+        {
+            "name": "Battery Info",
+            "description": "Shows Battery of your KaiOS devices.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/batterya.png",
+            "license": "Unknown",
+            "git_repo": "https://gitlab.com/musky603/bh-apps/-/tree/master/batteryinfo",
+            "download": {
+                "url": "https://gitlab.com/musky603/bh-apps/-/raw/master/batteryinfo/batteryv1.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/batterya.json"
+            },
+            "author": [
+                "Sylvain D<https://bananahackers.net>"
+            ],
+            "maintainer": [
+                "Fanofgk<https://bananahackers.net>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "meta": {
+                "tags": "Battery; Battery Info",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "type": "privileged",
+            "slug": "batterya",
+            "screenshots": []
+        },
+        {
+            "name": "Medical Dictionary",
+            "description": "Simple Lightweight Online Medical Dictionary",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/bhdict.png",
+            "license": "Unknown",
+            "git_repo": "https://github.com/musky603/E-M-Dictionary/",
+            "download": {
+                "url": "https://gitlab.com/musky603/bh-apps/-/raw/master/medidictV1.10.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/bhdict.json"
+            },
+            "author": [
+                "Fanofgk<http://easyonlineshop.rf.gd>"
+            ],
+            "maintainer": [
+                "Fanofgk<http://easyonlineshop.rf.gd>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "donation": "https://www.paypal.me/IDevik",
+            "meta": {
+                "tags": "Dictionary; Medical Dictionary",
+                "categories": [
+                    "education"
+                ]
+            },
+            "type": "privileged",
+            "slug": "bhdict",
+            "screenshots": []
+        },
+        {
+            "name": "ChemicalAid",
+            "description": "Chemical reaction, a process in which one or more substances, the reactants, are converted to one or more different substances, the products. Substances are either chemical elements or compounds.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/chemicala.png",
+            "license": "Unknown",
+            "git_repo": "https://gitlab.com/musky603/bh-apps/-/tree/master/chemicalaid",
+            "download": {
+                "url": "https://gitlab.com/musky603/bh-apps/-/raw/master/chemicalaid/ChemicalAid.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/chemicala.json"
+            },
+            "author": [
+                "S Aronno<https://bananahackers.net>"
+            ],
+            "maintainer": [
+                "S Aronno<https://bananahackers.net>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "meta": {
+                "tags": "chemical; equations",
+                "categories": [
+                    "education"
+                ]
+            },
+            "type": "privileged",
+            "slug": "chemicala",
+            "screenshots": []
+        },
+        {
+            "name": "Chingari",
+            "description": "Short Videos Made in India application",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/chingari.png",
+            "license": "Proprietary",
+            "download": {
+                "url": "https://gitlab.com/musky603/bh-apps/-/raw/master/chingari.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/chingari.json"
+            },
+            "author": [
+                "Rk Tech Youtube<http://easyonlineshop.rf.gd>"
+            ],
+            "maintainer": [
+                "Rk Tech Youtube<http://easyonlineshop.rf.gd>"
+            ],
+            "has_tracking": true,
+            "has_ads": true,
+            "meta": {
+                "tags": "Chingari; Short Videos",
+                "categories": [
+                    "social"
+                ]
+            },
+            "type": "privileged",
+            "slug": "chingari",
+            "screenshots": []
+        },
+        {
+            "name": "Contact search",
+            "description": "With this app you can search your contacts, start calls and sms. I wrote it because the KaiOs standart app is extremely slow.\n",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/contact-search.png",
+            "screenshots": [],
+            "license": "Unlicense",
+            "git_repo": "https://github.com/strukturart/search",
+            "download": {
+                "url": "https://github.com/strukturart/search/releases/latest/download/search.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/contact-search.json"
+            },
+            "author": [
+                "perry<https://github.com/strukturart>"
+            ],
+            "maintainer": [
+                "perry<https://github.com/strukturart>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "donation": "https://paypal.me/strukturart",
+            "meta": {
+                "tags": "travel; utility;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "type": "packaged",
+            "slug": "contact-search"
+        },
+        {
+            "name": "CoroNumbers",
+            "description": "Track COVID-19 numbers and get info to protect yourself and others. Information is from WHO and COVID-19 API, we are not responsible for the accuracy of the information provided. Please follow the instructions of your local authorities. We have made fair use of the following data and in no way monetize this content.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/coronumbers.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/coronumbers/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/coronumbers/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/coronumbers/screenshot2.png"
+            ],
+            "git_repo": "https://github.com/jkelol111/CoroNumbers",
+            "download": {
+                "url": "https://github.com/jkelol111/CoroNumbers/releases/download/v1.0.4/coronumbers-1.0.4-stable-omnisd.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/coronumbers.json"
+            },
+            "type": "privileged",
+            "license": "MIT",
+            "author": [
+                "jkelol111"
+            ],
+            "maintainer": [
+                "jkelol111"
+            ],
+            "donation": "https://paypal.me/jkelol111",
+            "has_ads": true,
+            "has_tracking": false,
+            "meta": {
+                "tags": "covid19",
+                "categories": [
+                    "utility",
+                    "health"
+                ]
+            },
+            "slug": "coronumbers"
+        },
+        {
+            "name": "Free Hit Cricket",
+            "description": "Have some fun with this Online Cum Offline Cricket Free Hit Game by Rk Tech Youtube and Ashish Suthaar.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/crickett.png",
+            "license": "Free",
+            "website": "https://www.youtube.com/watch?v=tjAd4_LFKDI",
+            "git_repo": "https://gitlab.com/musky603/bh-apps/-/tree/master/cricket",
+            "download": {
+                "url": "https://gitlab.com/musky603/bh-apps/-/raw/master/freehitcricketbyRktechYoutube.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/crickett.json"
+            },
+            "author": [
+                "Rk Tech Youtube<https://doodlecricket.github.io>"
+            ],
+            "maintainer": [
+                "Rk Tech Youtube<https://doodlecricket.github.io>"
+            ],
+            "has_tracking": true,
+            "has_ads": false,
+            "donation": null,
+            "meta": {
+                "tags": "cricket; free hit",
+                "categories": [
+                    "games"
+                ]
+            },
+            "type": "privileged",
+            "slug": "crickett",
+            "screenshots": []
+        },
+        {
+            "name": "DALE-8",
+            "description": "This is a CHIP-8 platform emulator. It was completely created from scratch and initially was intended as a GerdaOS easter egg. Now, it's released as a stand-alone application into public domain. The unpacked engine source (dale.js) can be found in the src/ directory.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/dale8.png",
+            "website": "https://gitlab.com/suborg/dale-8",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/suborg/dale8/dale8.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/suborg/dale8/manifest.webapp"
+            },
+            "type": "privileged",
+            "locales": [
+                "English"
+            ],
+            "license": "Unlicense <https://unlicense.org/>",
+            "author": [
+                "Luxferre"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "chip-8; emulator;",
+                "categories": [
+                    "utility",
+                    "games"
+                ]
+            },
+            "slug": "dale8",
+            "screenshots": []
+        },
+        {
+            "name": "delta.map",
+            "description": "delta.map is a local offline and online caching client for viewing maps, weather, utilities, and more coming soon.\n",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/delta-map.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/delta-map/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/delta-map/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/delta-map/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/delta-map/screenshot3.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/delta-map/screenshot4.png"
+            ],
+            "license": "MIT",
+            "git_repo": "https://github.com/Delta-Applications/delta.map",
+            "download": {
+                "url": "https://raw.githubusercontent.com/Delta-Applications/delta.map/main/build.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/delta-map.json"
+            },
+            "author": [
+                "LolloDev5123;"
+            ],
+            "maintainer": [
+                "LolloDev5123;"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "meta": {
+                "tags": "map; openstreatmap; osm; maps; travel;",
+                "categories": [
+                    "travel",
+                    "utility"
+                ]
+            },
+            "type": "packaged",
+            "slug": "delta-map"
+        },
+        {
+            "name": ".KVP",
+            "description": "The first KaiOS video poker game under 3K bytes (unpacked), featuring cryptographically secure random draws. Control: Center to deal/draw, 1 to 5 to hold, 6 to 0 to select bet value.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/dotkvp.png",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/suborg/kvp/kvp.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/suborg/kvp/manifest.webapp"
+            },
+            "type": "packaged",
+            "license": "Unlicense <https://unlicense.org/>",
+            "author": [
+                "Luxferre"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "videopoker; poker; 3k",
+                "categories": [
+                    "games"
+                ]
+            },
+            "slug": "dotkvp",
+            "screenshots": []
+        },
+        {
+            "name": ".TRIS",
+            "description": "The first KaiOS tetris game under 4096 bytes (unpacked)",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/dottris.png",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/suborg/tris/tris.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/suborg/tris/manifest.webapp"
+            },
+            "type": "packaged",
+            "license": "Unlicense <https://unlicense.org/>",
+            "author": [
+                "Luxferre"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "tetris; 4k",
+                "categories": [
+                    "games"
+                ]
+            },
+            "slug": "dottris",
+            "screenshots": []
+        },
+        {
+            "name": "The Economy",
+            "description": "Get information about commodities price, energy price, metal price, foreign exchange(also known as FX or forex) & cryptocurrencies market value.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/ekonomia.png",
+            "website": "https://github.com/arma7x/The-Economy",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/ekonomia/ekonomia.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/ekonomia/manifest.webapp"
+            },
+            "type": "hosted",
+            "license": "MIT",
+            "author": [
+                "arma7x <ahmadmuhamad101@gmail.com>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus1@outlook.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "economy;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "ekonomia",
+            "screenshots": []
+        },
+        {
+            "name": "Explorer",
+            "description": "A file explorer to share files with other apps. A fork of Explorer by Sebastián Rajo with a fresh code of paint for KaiOS.",
+            "license": "GPLv3",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/explorer.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/explorer/screenshot0.png"
+            ],
+            "git_repo": "https://github.com/FabianOvrWrt/kaios-freshapps",
+            "download": {
+                "url": "https://github.com/FabianOvrWrt/kaios-freshapps/raw/master/Explorer.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/explorer.json"
+            },
+            "type": "privileged",
+            "author": [
+                "FabianOvrWrt"
+            ],
+            "maintainer": [
+                "FabianOvrWrt"
+            ],
+            "donation": "https://paypal.me/OvrWrt",
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "music; mp3; playlist; audio",
+                "categories": [
+                    "multimedia"
+                ]
+            },
+            "slug": "explorer"
+        },
+        {
+            "name": "Flashcards",
+            "description": "Create decks, flaschards and review them using spaced repetition system.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/flashcards.png",
+            "git_repo": "https://github.com/canicjusz/flashcards",
+            "download": {
+                "url": "https://github.com/canicjusz/flashcards/blob/master/flashcards.zip?raw=true",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/flashcards.json"
+            },
+            "type": "privileged",
+            "license": "WTFPL",
+            "author": [
+                "Jan Michalak <janmichalak@int.pl>"
+            ],
+            "maintainer": [
+                "Jan Michalak <janmichalak@int.pl>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "flashcards; memorization",
+                "categories": [
+                    "education"
+                ]
+            },
+            "slug": "flashcards",
+            "screenshots": []
+        },
+        {
+            "name": "Fooplot",
+            "description": "Draws mathematical functions. Use variable x and sin(x),cos(x),etc for pre-defined functions. Use Call key to clear all what has been drawn",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/fooplot.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/fooplot/screenshot0.png"
+            ],
+            "license": "GPLv3",
+            "website": "https://notabug.org/bananaphone/fooplot",
+            "git_repo": "https://notabug.org/bananaphone/fooplot",
+            "download": {
+                "url": "https://notabug.org/attachments/6c10a6e7-76d4-4fab-8f1f-6ca1b30ce61f",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/fooplot.json"
+            },
+            "author": [
+                "Farooq Karimi Zadeh <hapu@riseup.net>"
+            ],
+            "maintainer": [
+                "Farooq Karimi Zadeh <hapu@riseup.net>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "donation": "http://far.chickenkiller.com/pages/donate.html",
+            "meta": {
+                "tags": "math; mathematics; graphing; plotting; plot; function plot;",
+                "categories": [
+                    "education"
+                ]
+            },
+            "type": "packaged",
+            "slug": "fooplot"
+        },
+        {
+            "name": "Freedoom",
+            "description": "Freedoom is not affiliated with DOOM by id Software, and does not contain any content from that game.\n",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/freedoom.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/freedoom/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/freedoom/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/freedoom/screenshot2.png"
+            ],
+            "license": "GPL",
+            "website": "https://github.com/pelya/doom-kaios",
+            "git_repo": "https://github.com/pelya/doom-kaios",
+            "download": {
+                "url": "https://github.com/pelya/doom-kaios/releases/download/1.6.1/Freedoom-omnisd.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/freedoom.json"
+            },
+            "author": [
+                "pelya <x.pelya.x@gmail.com>"
+            ],
+            "maintainer": [
+                "pelya <x.pelya.x@gmail.com>"
+            ],
+            "has_tracking": false,
+            "has_ads": true,
+            "donation": null,
+            "meta": {
+                "tags": "action;",
+                "categories": [
+                    "games"
+                ]
+            },
+            "type": "packaged",
+            "slug": "freedoom"
+        },
+        {
+            "name": "Google Duo",
+            "description": "Google Duo made specifically for \"unsupported\" devices(aka you can't find Google Duo on the KaiStore).",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/gduo.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/gduo/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/gduo/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/gduo/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/gduo/screenshot3.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/gduo/screenshot4.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/gduo/screenshot5.png"
+            ],
+            "website": "https://duo.google.com",
+            "download": {
+                "url": "https://cdn.discordapp.com/attachments/687788038298140732/834415955080773632/duo.google.com.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/gduo.json"
+            },
+            "type": "certified",
+            "license": "unknown",
+            "author": [
+                "Google"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus1@outlook.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": true,
+            "meta": {
+                "tags": "videocall; video; GerdaOS; gerdaos; google;",
+                "categories": [
+                    "communication"
+                ]
+            },
+            "slug": "gduo"
+        },
+        {
+            "name": "Google Maps",
+            "description": "Google Maps made specifically for GerdaOS users. Note, GPS probably won't work.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/gmaps.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/gmaps/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/gmaps/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/gmaps/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/gmaps/screenshot3.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/gmaps/screenshot4.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/gmaps/screenshot5.png"
+            ],
+            "website": "https://groups.google.com/g/bananahackers/c/8oVmcMmjysY/m/CgLYfTvhCgAJ",
+            "download": {
+                "url": "https://cdn.discordapp.com/attachments/687788038298140732/834391369756966992/gmaps_for_kaios_with_micro.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/gmaps.json"
+            },
+            "type": "certified",
+            "license": "unknown",
+            "author": [
+                "Google"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus1@outlook.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": true,
+            "meta": {
+                "tags": "map; maps; GerdaOS; gerdaos; google;",
+                "categories": [
+                    "travel"
+                ]
+            },
+            "slug": "gmaps"
+        },
+        {
+            "name": "Guita",
+            "description": "Manage your pocket money, simple.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/guita.png",
+            "license": "ISC",
+            "type": "packaged",
+            "git_repo": "https://gitlab.com/guide42/guita",
+            "download": {
+                "url": "https://gitlab.com/guide42/guita/uploads/c159ec33acb59dc9dcd5537a82b674f7/guita-v0.3.0.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/guita.json"
+            },
+            "author": [
+                "Juan M <http://jm.guide42.com>"
+            ],
+            "maintainer": [
+                "Juan M <http://jm.guide42.com>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "meta": {
+                "tags": "cash; money; finance; transactions;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "guita",
+            "screenshots": []
+        },
+        {
+            "name": "Guitar Tuner",
+            "description": "A simple Guitar Tuner",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/guitar-tuner.png",
+            "git_repo": "https://github.com/derhagen/kaios-guitar-tuner",
+            "download": {
+                "url": "https://github.com/derhagen/kaios-guitar-tuner/releases/download/v0.1.1/kaios-guitar-tuner-0.1.1-omnisd.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/guitar-tuner.json"
+            },
+            "type": "privileged",
+            "license": "GPLv3",
+            "author": [
+                "derhagen"
+            ],
+            "maintainer": [
+                "derhagen"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "guitar; tuner; instrument; ukulele; tune; music",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "guitar-tuner",
+            "screenshots": []
+        },
+        {
+            "name": "Habit Tracker",
+            "description": "Habit Tracker is an app to track your daily habits or if you want to stop yourself from bad habits.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/habit.png",
+            "website": "https://github.com/arma7x/kai-habit-tracker/",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/habit/habit.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/habit/manifest.webapp"
+            },
+            "type": "privileged",
+            "locales": [
+                "English"
+            ],
+            "license": "MIT",
+            "author": [
+                "arma7x <ahmadmuhamad101@gmail.com>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "Habit;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "habit",
+            "screenshots": []
+        },
+        {
+            "name": "Here INFO",
+            "description": "About where you are here and now, rise and set hours, astronomical positions, moon age, and much more.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/hereinfo.png",
+            "license": "ISC",
+            "type": "packaged",
+            "git_repo": "https://gitlab.com/guide42/hereinfo",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/hereinfo/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/hereinfo/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/hereinfo/screenshot2.png"
+            ],
+            "download": {
+                "url": "https://gitlab.com/guide42/hereinfo/uploads/a068c53705bd53f09eaf558d69e9d05b/hereinfo-v0.5.0.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/hereinfo.json"
+            },
+            "author": [
+                "Juan M <http://jm.guide42.com>"
+            ],
+            "maintainer": [
+                "Juan M <http://jm.guide42.com>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "meta": {
+                "tags": "sunrise; sunset; goldenhour; moon; moonphase; sun; day; night; clock; position; calendar; almanac; sundial;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "hereinfo"
+        },
+        {
+            "name": "ISO Player",
+            "description": "Mount ISO files as virtual USB CD drive and boot your PC! (now for spreadtrum devices only, tested on Nobby 240 LTE)",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/isoplayer.png",
+            "git_repo": "https://github.com/CAHbKA-IV/Kai-ISO-player",
+            "download": {
+                "url": "https://github.com/CAHbKA-IV/Kai-ISO-player/releases/download/v1.0/iso-player.c-iv.ru.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/isoplayer.json"
+            },
+            "type": "certified",
+            "license": "GPL",
+            "author": [
+                "CAHbKA-IV <cahbka-iv@mail.ru>"
+            ],
+            "maintainer": [
+                "CAHbKA-IV <cahbka-iv@mail.ru>"
+            ],
+            "donation": "https://sobe.ru/na/CIV_donate",
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "iso; mount",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "isoplayer",
+            "screenshots": []
+        },
+        {
+            "name": "KaiAuth",
+            "description": "Simple Google Authenticator alternative",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/kaiauth.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/kaiauth/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/kaiauth/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/kaiauth/screenshot2.png"
+            ],
+            "website": "https://kaiauth.zjyl1994.com",
+            "git_repo": "https://github.com/zjyl1994/KaiAuth",
+            "download": {
+                "url": "https://kaiauth.zjyl1994.com/download/kaiauth-omnisd-latest.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/kaiauth.json"
+            },
+            "type": "privileged",
+            "license": "MIT",
+            "author": [
+                "zjyl1994 <me@zjyl1994.com>"
+            ],
+            "maintainer": [
+                "zjyl1994 <me@zjyl1994.com>"
+            ],
+            "donation": "https://www.buymeacoffee.com/zjyl1994",
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "2fa; totp; authenticator",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "kaiauth"
+        },
+        {
+            "name": "KaiBoy",
+            "description": "The first Nintendo Game Boy and Game Boy Color emulator port for KaiOS.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/kaiboy.png",
+            "website": "https://groups.google.com/g/bananahackers/c/H1bsIJOnOTM/m/_vFwJ9ejAgAJ",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/suborg/kaiboy/kaiboy.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/suborg/kaiboy/manifest.webapp"
+            },
+            "type": "privileged",
+            "license": "Unknown",
+            "author": [
+                "Luxferre"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "kaiboy, gameboy, gbc",
+                "categories": [
+                    "games"
+                ]
+            },
+            "slug": "kaiboy",
+            "screenshots": []
+        },
+        {
+            "name": "Kaidi Remote",
+            "description": "The Kodi Remote app for KaiOS.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/kaidiremote.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/kaidiremote/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/kaidiremote/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/kaidiremote/screenshot2.png"
+            ],
+            "website": "https://jkelol111.github.io/kaidi",
+            "git_repo": "https://github.com/jkelol111/kaidi",
+            "download": {
+                "url": "https://github.com/jkelol111/kaidi/releases/download/v1.0.8/kaidi-1.0.8-stable-omnisd.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/kaidiremote.json"
+            },
+            "type": "privileged",
+            "license": "GPLv3",
+            "author": [
+                "jkelol111"
+            ],
+            "maintainer": [
+                "jkelol111"
+            ],
+            "donation": "https://paypal.me/jkelol111",
+            "has_ads": true,
+            "has_tracking": false,
+            "meta": {
+                "tags": "kodi; remote; kaidi; beta",
+                "categories": [
+                    "utility",
+                    "multimedia"
+                ]
+            },
+            "slug": "kaidiremote"
+        },
+        {
+            "name": "Khan Academy",
+            "description": "This Academy allows you to learn almost anything for free.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/khanacad.png",
+            "license": "Proprietary",
+            "git_repo": "https://gitlab.com/musky603/bh-apps/-/tree/master/khanacademy",
+            "download": {
+                "url": "https://gitlab.com/musky603/bh-apps/-/raw/master/khanacademy/khanV1.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/khanacad.json"
+            },
+            "author": [
+                "Sylvain D<https://bananahackers.net>"
+            ],
+            "maintainer": [
+                "Fanofgk<https://bananahackers.net>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "meta": {
+                "tags": "Khan Academy; Learning",
+                "categories": [
+                    "education"
+                ]
+            },
+            "type": "privileged",
+            "slug": "khanacad",
+            "screenshots": []
+        },
+        {
+            "name": "K-Loan",
+            "description": "K-Loan is an amortization calculator, that allows you to keep track of your loans.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/kloan.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/kloan/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/kloan/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/kloan/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/kloan/screenshot3.png"
+            ],
+            "website": "https://ays-arts.de",
+            "download": {
+                "url": "https://ays-arts.de/public/kloan/kloan_1.3.3.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/kloan.json"
+            },
+            "type": "privileged",
+            "license": "Unknown",
+            "author": [
+                "Christian Waadt <contact@ays-arts.de>"
+            ],
+            "maintainer": [
+                "Christian Waadt <contact@ays-arts.de>"
+            ],
+            "donation": "https://www.paypal.me/cwaadt",
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "loan; finance;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "kloan"
+        },
+        {
+            "name": "K-Music",
+            "description": "An audio player for KaiOS with playlist manager + Equalizer + MP3 Cutter/Trimmer.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/kmusic.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/kmusic/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/kmusic/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/kmusic/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/kmusic/screenshot3.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/kmusic/screenshot4.png"
+            ],
+            "website": "https://github.com/arma7x/kaimusic",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/kaimusic/kaimusic.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/kaimusic/manifest.webapp"
+            },
+            "type": "privileged",
+            "license": "MIT",
+            "author": [
+                "arma7x <ahmadmuhamad101@gmail.com>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "mp3; playlist; flac; equalizer; alac;",
+                "categories": [
+                    "multimedia"
+                ]
+            },
+            "slug": "kmusic"
+        },
+        {
+            "name": "K-Pocket Browser",
+            "description": "Web Browser & Unoffical GetPocket client for KaiOS. K-Pocket Browser provide Reader View mode, parses html text(usually news and articles) and returns title & main text content without nav bars, ads, footers, or anything that isn't the main body of the text. You also can save Reader View for offline usage and read it later without internet access.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/kpocketbrowser.png",
+            "website": "https://github.com/arma7x/K-Pocket-Browser",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/k-pocket/k-pocket.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/k-pocket/manifest.webapp"
+            },
+            "type": "privileged",
+            "license": "MIT",
+            "author": [
+                "arma7x <ahmadmuhamad101@gmail.com>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus1@outlook.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": true,
+            "meta": {
+                "tags": "browser; GetPocket; Browser;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "kpocketbrowser",
+            "screenshots": []
+        },
+        {
+            "name": "K-Todoist",
+            "description": "K-Todoist is a unoffical Todoist client for KaiOS",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/ktodoist.png",
+            "website": "https://github.com/arma7x/k-todoist",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/ktodoist/ktodoist.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/ktodoist/manifest.webapp"
+            },
+            "type": "privileged",
+            "license": "MIT",
+            "author": [
+                "arma7x <ahmadmuhamad101@gmail.com>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus1@outlook.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "arma7x; todoist;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "ktodoist",
+            "screenshots": []
+        },
+        {
+            "name": "Ladies in a Box",
+            "description": "A very simple and opensource platform game.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/ladiesinabox.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/ladiesinabox/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/ladiesinabox/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/ladiesinabox/screenshot2.png"
+            ],
+            "website": "http://michelangelo.altervista.org/kaios/#ladies",
+            "git_repo": "https://github.com/micheg/ladies_in_trouble/tree/open_store",
+            "download": {
+                "url": "https://github.com/micheg/ladies_in_trouble/releases/download/open/open_ladies.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/ladiesinabox.json"
+            },
+            "type": "packaged",
+            "license": "MIT",
+            "author": [
+                "micheg"
+            ],
+            "maintainer": [
+                "micheg"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "platform; game; jump;",
+                "categories": [
+                    "games"
+                ]
+            },
+            "slug": "ladiesinabox"
+        },
+        {
+            "name": "launcher",
+            "description": "Start your favorit apps, enable/disaple bluetooth,wifi,mobile-data,tethering, airplain, sleep mode and a weather forecast.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/launcher.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/launcher/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/launcher/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/launcher/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/launcher/screenshot3.png"
+            ],
+            "license": "MIT",
+            "website": "https://github.com/strukturart/qlauncher",
+            "git_repo": "https://github.com/strukturart/qlauncher",
+            "download": {
+                "url": "https://github.com/strukturart/qlauncher/blob/master/build/qlauncher.zip?raw=true",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/launcher.json"
+            },
+            "author": [
+                "perry<https://github.com/strukturart>"
+            ],
+            "maintainer": [
+                "perry<https://github.com/strukturart>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "donation": "https://paypal.me/strukturart",
+            "meta": {
+                "tags": "utility",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "type": "certified",
+            "slug": "launcher"
+        },
+        {
+            "name": "bhackers src",
+            "description": "The BananaHackers sources, powered by Linktree",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/linktree.png",
+            "license": "Free",
+            "download": {
+                "url": "https://github.com/musky603/E-M-Dictionary/blob/build/bhackerslink.zip?raw=true",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/linktree.json"
+            },
+            "author": [
+                "Ivan<https://bananahackers.net>"
+            ],
+            "maintainer": [
+                "Ivan<https://bananahackers.net>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "donation": "https://www.paypal.me/ivanalexhc",
+            "meta": {
+                "tags": "Bhackers; KaiOS",
+                "categories": [
+                    "social"
+                ]
+            },
+            "type": "weblink",
+            "slug": "linktree",
+            "screenshots": []
+        },
+        {
+            "name": "MDX Dictionary",
+            "description": "MDX Dictionary allows you to open MDict dictionary(mdx only) files, and you can easily search the dictionary in the app",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/mdx.png",
+            "website": "https://github.com/arma7x",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/mdx/mdx.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/mdx/manifest.webapp"
+            },
+            "type": "privileged",
+            "locales": [
+                "English"
+            ],
+            "license": "MIT",
+            "author": [
+                "arma7x <ahmadmuhamad101@gmail.com>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "MDX;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "mdx",
+            "screenshots": []
+        },
+        {
+            "name": "Meditation",
+            "description": "Simple timer suitable for meditation.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/medidate.png",
+            "license": "Unknown",
+            "git_repo": "https://gitlab.com/musky603/bh-apps/-/tree/master/Medidation",
+            "download": {
+                "url": "https://gitlab.com/musky603/bh-apps/-/raw/master/Medidation/meditationvp2.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/medidate.json"
+            },
+            "author": [
+                "Sylvain D<https://bananahackers.net>"
+            ],
+            "maintainer": [
+                "Fanofgk<https://bananahackers.net>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "meta": {
+                "tags": "Meditation; Timer",
+                "categories": [
+                    "utility",
+                    "health"
+                ]
+            },
+            "type": "privileged",
+            "slug": "medidate",
+            "screenshots": []
+        },
+        {
+            "name": "musmus highway",
+            "description": "musmus highway is a game that generates levels based on the music you give it.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/mmh.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/mmh/screenshot0.png"
+            ],
+            "website": "https://alego.web.fc2.com/kaiosapps/musmushighway/",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/ale4710/mmh/mmh.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/ale4710/mmh/manifest.webapp"
+            },
+            "type": "privileged",
+            "locales": [
+                "English"
+            ],
+            "license": "unknown",
+            "author": [
+                "ale4710 <alego4710@vivaldi.net>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "musmus;",
+                "categories": [
+                    "games"
+                ]
+            },
+            "slug": "mmh"
+        },
+        {
+            "name": "Mocha radio",
+            "description": "Listen to music from more than 20.000 internet radio stations streaming live right now. View album cover and song titles. Record music and listen when offline.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/mocharadio.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/mocharadio/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/mocharadio/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/mocharadio/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/mocharadio/screenshot3.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/mocharadio/screenshot4.png"
+            ],
+            "website": "https://mochasoft.dk",
+            "download": {
+                "url": "https://mochasoft.dk/kaios/mocharadio/mocharadio.zip",
+                "manifest": "https://mochasoft.dk/kaios/mocharadio/manifest.webapp"
+            },
+            "type": "privileged",
+            "license": "Unknown",
+            "author": [
+                "Jan Frydendal <jan@mochasoft.dk>"
+            ],
+            "maintainer": [
+                "Jan Frydendal <jan@mochasoft.dk>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "radio; music; streaming ; mocha;",
+                "categories": [
+                    "multimedia",
+                    "news"
+                ]
+            },
+            "slug": "mocharadio"
+        },
+        {
+            "name": "Mp3 Juices",
+            "description": "Discover and Download Mp3 audio files on the go.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/mp3juices.png",
+            "license": "Unknown",
+            "website": "https://www.mp3juices.cc",
+            "download": {
+                "url": "https://gitlab.com/musky603/bh-apps/-/raw/master/mp3juices/mp3juices_cc.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/mp3juices.json"
+            },
+            "author": [
+                "S Aronno <https://www.youtube.com/channel/UCroSTt_KrlgJGwA-ODT2frA>"
+            ],
+            "maintainer": [
+                "S Aronno <https://www.youtube.com/channel/UCroSTt_KrlgJGwA-ODT2frA>"
+            ],
+            "has_tracking": true,
+            "has_ads": false,
+            "donation": "https://www.paypal.me/idevik",
+            "meta": {
+                "tags": "mp3; audio",
+                "categories": [
+                    "multimedia"
+                ]
+            },
+            "type": "weblink",
+            "slug": "mp3juices",
+            "screenshots": []
+        },
+        {
+            "name": "RSS Reader by N4NO",
+            "description": "RSS Reader is the best RSS reading application on KaiOS. This application is designed to work with small screens.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/n4no.com.rss-reader.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/n4no.com.rss-reader/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/n4no.com.rss-reader/screenshot1.png"
+            ],
+            "license": "freeware",
+            "website": "http://n4no.com/",
+            "download": {
+                "url": "http://kaios.n4no.com/releases/rss-reader/1.0.1.bh.0bf8afb7de9e4e8.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/n4no.com.rss-reader.json"
+            },
+            "author": [
+                "b4rtaz<https://twitter.com/b4rtaz>"
+            ],
+            "maintainer": [
+                "b4rtaz<https://twitter.com/b4rtaz>"
+            ],
+            "has_tracking": true,
+            "has_ads": true,
+            "donation": "https://paypal.me/b4rtaz",
+            "meta": {
+                "tags": "news",
+                "categories": [
+                    "news"
+                ]
+            },
+            "type": "packaged",
+            "slug": "n4no.com.rss-reader"
+        },
+        {
+            "name": "Nihonoari",
+            "description": "A simple Japanese Kana training app for KaiOS.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/nihonoari.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/nihonoari/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/nihonoari/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/nihonoari/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/nihonoari/screenshot3.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/nihonoari/screenshot4.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/nihonoari/screenshot5.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/nihonoari/screenshot6.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/nihonoari/screenshot7.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/nihonoari/screenshot8.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/nihonoari/screenshot9.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/nihonoari/screenshot10.png"
+            ],
+            "website": "https://github.com/cyan-2048/Nihonoari-KaiOS",
+            "download": {
+                "url": "https://github.com/cyan-2048/Nihonoari-KaiOS/releases/download/v1.0.9/nihonoari-omni.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/nihonoari.json"
+            },
+            "type": "packaged",
+            "locales": [
+                "English"
+            ],
+            "license": "MIT",
+            "author": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "Japanese; Kana;",
+                "categories": [
+                    "education",
+                    "utility"
+                ]
+            },
+            "slug": "nihonoari"
+        },
+        {
+            "name": "Open Street Map",
+            "description": "Open Street Map app   This app is a good companion for your outdoor adventures.  You can load different types of maps, set your own markers, import gpx / geojson files  or send your position to friends and a few other helpful features.\n",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/omap.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/omap/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/omap/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/omap/screenshot2.png"
+            ],
+            "license": "MIT",
+            "git_repo": "https://github.com/strukturart/o.map",
+            "download": {
+                "url": "https://github.com/strukturart/osm-map/releases/latest/download/o.map-omnisd.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/omap.json"
+            },
+            "author": [
+                "perry<https://github.com/strukturart>"
+            ],
+            "maintainer": [
+                "perry<https://github.com/strukturart>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "donation": "https://paypal.me/strukturart",
+            "meta": {
+                "tags": "map; openstreatmap; osm; maps; travel;",
+                "categories": [
+                    "travel"
+                ]
+            },
+            "type": "packaged",
+            "slug": "omap"
+        },
+        {
+            "name": "OmniBB",
+            "description": "Attempt to develop the universal temporary Busybox installer for KaiOS devices that don't have it.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/omnibb.png",
+            "git_repo": "https://gitlab.com/suborg/omnibb",
+            "download": {
+                "url": "https://cloud.disroot.org/s/xG6eg3XEtE5naZk/download",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/omnibb.json"
+            },
+            "type": "root",
+            "license": "Unknown",
+            "author": [
+                "Luxferre/Suborg/Nihilist"
+            ],
+            "maintainer": [
+                "jkelol111"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "root, 8110, bananahackers, busybox, wallace, omni",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "omnibb",
+            "screenshots": []
+        },
+        {
+            "name": "OmniSD",
+            "description": "Install KaiOS apps from SD card.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/omnisd.png",
+            "website": "https://wiki.bananahackers.net/install-omnisd",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/suborg/omnisd/omnisd.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/suborg/omnisd/manifest.webapp"
+            },
+            "type": "certified",
+            "locales": [
+                "English"
+            ],
+            "license": "unknown",
+            "author": [
+                "Luxferre"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "omnisd; sideload;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "omnisd",
+            "screenshots": []
+        },
+        {
+            "name": "openGiraffes Store Client bHackers",
+            "description": "Download and install apps.This version uses the database of bHackers Store.\n",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/openGiraffes-bhackers.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/openGiraffes-bhackers/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/openGiraffes-bhackers/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/openGiraffes-bhackers/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/openGiraffes-bhackers/screenshot3.png"
+            ],
+            "license": "MIT",
+            "website": "https://opengiraffes.top",
+            "git_repo": "https://github.com/openGiraffes/openGiraffes-store-client",
+            "download": {
+                "url": "https://git.yumenaka.net/https://github.com/openGiraffes/openGiraffes-store-client/releases/latest/download/openGiraffes-store-bHackers.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/openGiraffes-bhackers.json"
+            },
+            "author": [
+                "openGiraffes"
+            ],
+            "maintainer": [
+                "openGiraffes"
+            ],
+            "has_tracking": true,
+            "has_ads": false,
+            "donation": null,
+            "meta": {
+                "tags": "apps;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "type": "certified",
+            "slug": "openGiraffes-bhackers"
+        },
+        {
+            "name": "openGiraffes Store Client",
+            "description": "Download and install apps.This version uses the database of openGiraffes Store. If you need to use the database of bHackers Store, please download the bHackers version.\n",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/openGiraffes-store.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/openGiraffes-store/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/openGiraffes-store/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/openGiraffes-store/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/openGiraffes-store/screenshot3.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/openGiraffes-store/screenshot4.png"
+            ],
+            "license": "MIT",
+            "website": "https://opengiraffes.top",
+            "git_repo": "https://github.com/openGiraffes/openGiraffes-store-client",
+            "download": {
+                "url": "https://git.yumenaka.net/https://github.com/openGiraffes/openGiraffes-store-client/releases/latest/download/openGiraffes-store-openGiraffes.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/openGiraffes-store.json"
+            },
+            "author": [
+                "openGiraffes"
+            ],
+            "maintainer": [
+                "openGiraffes"
+            ],
+            "has_tracking": true,
+            "has_ads": false,
+            "donation": null,
+            "meta": {
+                "tags": "apps;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "type": "certified",
+            "slug": "openGiraffes-store"
+        },
+        {
+            "name": "OpenTyrian",
+            "description": "Arcade-style vertical scrolling shooter, with story mode and weapon upgrades.\n",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/opentyrian.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/opentyrian/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/opentyrian/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/opentyrian/screenshot2.png"
+            ],
+            "license": "GPL",
+            "website": "https://github.com/pelya/opentyrian-kaios",
+            "git_repo": "https://github.com/pelya/opentyrian-kaios",
+            "download": {
+                "url": "https://github.com/pelya/opentyrian-kaios/releases/download/2.1.4/OpenTyrian-omnisd.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/opentyrian.json"
+            },
+            "author": [
+                "pelya <x.pelya.x@gmail.com>"
+            ],
+            "maintainer": [
+                "pelya <x.pelya.x@gmail.com>"
+            ],
+            "has_tracking": false,
+            "has_ads": true,
+            "donation": null,
+            "meta": {
+                "tags": "action;",
+                "categories": [
+                    "games"
+                ]
+            },
+            "type": "packaged",
+            "slug": "opentyrian"
+        },
+        {
+            "name": "Passport",
+            "description": "A helper app that omits images from the folder / passport and can display them. I use it to store QR code images there and then display them quickly.\n",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/passport.png",
+            "screenshots": [],
+            "license": "Unlicense",
+            "git_repo": "https://github.com/strukturart/passport",
+            "download": {
+                "url": "https://github.com/strukturart/passport/releases/latest/download/passport.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/passport.json"
+            },
+            "author": [
+                "perry<https://github.com/strukturart>"
+            ],
+            "maintainer": [
+                "perry<https://github.com/strukturart>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "donation": "https://paypal.me/strukturart",
+            "meta": {
+                "tags": "travel; utility;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "type": "packaged",
+            "slug": "passport"
+        },
+        {
+            "name": "Plastic Map",
+            "description": "Download and view plastic maps (mbtiles) offline. Keep your markers organized.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/plastic-map.png",
+            "license": "ISC",
+            "type": "privileged",
+            "git_repo": "https://gitlab.com/guide42/plastic-map",
+            "download": {
+                "url": "https://gitlab.com/guide42/plastic-map/uploads/ab15f178d0e1e341ec4fd0c3a722af96/plastic-map-v0.4.0.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/plastic-map.json"
+            },
+            "author": [
+                "Juan M <http://jm.guide42.com>"
+            ],
+            "maintainer": [
+                "Juan M <http://jm.guide42.com>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "meta": {
+                "tags": "map; maps; travel; opentopomap; openstreetmap; mbtiles; compass; olc; plus code; geojson; gpx;",
+                "categories": [
+                    "travel"
+                ]
+            },
+            "slug": "plastic-map",
+            "screenshots": []
+        },
+        {
+            "name": "PlayDrum",
+            "description": "Play Drum app simulates a real drum on your mobile, PC or tablet screen.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/playdrum.png",
+            "license": "Unknown",
+            "git_repo": "https://gitlab.com/musky603/bh-apps/-/tree/master/PlayDrum",
+            "download": {
+                "url": "https://gitlab.com/musky603/bh-apps/-/raw/master/PlayDrum/playdrum-for-kaios.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/playdrum.json"
+            },
+            "author": [
+                "Sylvain D<https://bananahackers.net>"
+            ],
+            "maintainer": [
+                "Fanofgk<https://bananahackers.net>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "meta": {
+                "tags": "music; drumbeats",
+                "categories": [
+                    "multimedia"
+                ]
+            },
+            "type": "packaged",
+            "slug": "playdrum",
+            "screenshots": []
+        },
+        {
+            "name": "PodLP",
+            "description": "Discover, listen, download, and subscribe to podcasts both online and offline.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/podlp.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/podlp/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/podlp/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/podlp/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/podlp/screenshot3.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/podlp/screenshot4.png"
+            ],
+            "website": "https://podlp.com",
+            "download": {
+                "url": "https://app.podlp.com/d/PodLP_2.0.0.1.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/podlp.json"
+            },
+            "type": "privileged",
+            "license": "Unknown",
+            "author": [
+                "Tom Barrasso <support@podlp.com>"
+            ],
+            "maintainer": [
+                "Tom Barrasso <support@podlp.com>"
+            ],
+            "donation": "https://www.paypal.me/tbarrasso",
+            "has_ads": false,
+            "has_tracking": true,
+            "meta": {
+                "tags": "podcasts; audio; news; PodLP;",
+                "categories": [
+                    "news",
+                    "multimedia"
+                ]
+            },
+            "slug": "podlp"
+        },
+        {
+            "name": "Roposo",
+            "description": "Made in India Short Videos app.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/roposo.png",
+            "license": "Proprietary",
+            "download": {
+                "url": "https://gitlab.com/musky603/bh-apps/-/raw/master/roposo.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/roposo.json"
+            },
+            "author": [
+                "Rk Tech Youtube<http://easyonlineshop.rf.gd>"
+            ],
+            "maintainer": [
+                "Rk Tech Youtube<http://easyonlineshop.rf.gd>"
+            ],
+            "has_tracking": true,
+            "has_ads": true,
+            "meta": {
+                "tags": "Roposo; Short Videos",
+                "categories": [
+                    "social"
+                ]
+            },
+            "type": "privileged",
+            "slug": "roposo",
+            "screenshots": []
+        },
+        {
+            "name": "feedolin",
+            "description": "read your favorit rss/atom feeds and stream your podcasts.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/rss-reader.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/rss-reader/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/rss-reader/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/rss-reader/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/rss-reader/screenshot3.png"
+            ],
+            "license": "MIT",
+            "website": "https://github.com/strukturart/rss-reader",
+            "git_repo": "https://github.com/strukturart/rss-reader",
+            "download": {
+                "url": "https://github.com/strukturart/rss-reader/releases/latest/download/feedolin.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/rss-reader.json"
+            },
+            "author": [
+                "perry<https://github.com/strukturart>"
+            ],
+            "maintainer": [
+                "perry<https://github.com/strukturart>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "donation": "https://paypal.me/strukturart",
+            "meta": {
+                "tags": "news",
+                "categories": [
+                    "news"
+                ]
+            },
+            "type": "packaged",
+            "slug": "rss-reader"
+        },
+        {
+            "name": "sequiviewer",
+            "description": "A sequential image viewer. You can read manga and comics you have on your device. It is designed for KaiOS and small screens. Do not read using your KaiOS device for a long time, as prolonged reading on a small screen can damage your eyes.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/sequiviewer.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/sequiviewer/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/sequiviewer/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/sequiviewer/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/sequiviewer/screenshot3.png"
+            ],
+            "website": "https://alego.web.fc2.com/kaiosapps/sequiviewer/",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/ale4710/sequiviewer/sequiviewer.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/ale4710/sequiviewer/manifest.webapp"
+            },
+            "type": "privileged",
+            "license": "unknown",
+            "author": [
+                "ale4710 <alego4710@vivaldi.net>"
+            ],
+            "locales": [
+                "English"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "Sequential; Manga; Comics; Reader;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "sequiviewer"
+        },
+        {
+            "name": "SHAREit",
+            "description": "SHAREit is popular globally for transfering and sharing files without data. Now feel FREE to enjoy your sharing time with android phone friends as well as KaiOS phone friends. The Application, the Services and all trademarks, service marks and trade names and other intellectual property rights associated therewith are, and shall remain, the property of SHAREit and its licensors, as applicable. All content related to Services, including any text, graphics, logos, button icons, images, audio clips and software, is the exclusive property of SHAREit or its licensors and is protected by applicable legislation concerning protection and preservation of intellectual property rights. All software used on the Application is the property of SHAREit or its software suppliers. Any use except as specifically permitted, including the reproduction, modification, distribution, transmission, republication, display or performance, of the content on the Application is strictly prohibited except as otherwise permitted by law.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/shareit.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/shareit/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/shareit/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/shareit/screenshot2.png"
+            ],
+            "website": "https://shareit.ushareit.com/",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/SHAREit.zip?inline=false",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/shareit.json"
+            },
+            "type": "certified",
+            "license": "Apache License 2.0",
+            "author": [
+                "Smart Media4U Technology Pte.Ltd <feedback_pc@ushareit.com>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus1@outlook.com>"
+            ],
+            "has_ads": true,
+            "has_tracking": true,
+            "meta": {
+                "tags": "files; transfer; send; receive; filetransfer;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "shareit"
+        },
+        {
+            "name": "shell-commands",
+            "description": "With this app you can execute saved shell commands. e.g . cUrl  regular downloads / uploads",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/shell-commands.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/shell-commands/screenshot0.png"
+            ],
+            "license": "MIT",
+            "website": "https://github.com/strukturart/shell-command",
+            "git_repo": "https://github.com/strukturart/shell-command",
+            "download": {
+                "url": "https://github.com/strukturart/shell-command/releases/latest/download/shell_command.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/shell-commands.json"
+            },
+            "author": [
+                "perry<https://github.com/strukturart>"
+            ],
+            "maintainer": [
+                "perry<https://github.com/strukturart>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "donation": "https://paypal.me/strukturart",
+            "meta": {
+                "tags": "tool",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "type": "packaged",
+            "slug": "shell-commands"
+        },
+        {
+            "name": "Simple Quran",
+            "description": "Read the Holy Quran in Arabic. Up/Down for going backward/forward and Left/Right for going backward/forward 10 ayahs.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/simplequran.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/simplequran/screenshot0.png"
+            ],
+            "license": "GPLv3",
+            "website": "https://notabug.org/bananaphone/simplequran",
+            "git_repo": "https://notabug.org/bananaphone/simplequran",
+            "download": {
+                "url": "https://notabug.org/attachments/b7e45c06-a12c-4c73-aef3-ad68305b1ca1",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/simplequran.json"
+            },
+            "author": [
+                "Farooq Karimi Zadeh <hapu@riseup.net>"
+            ],
+            "maintainer": [
+                "Farooq Karimi Zadeh <hapu@riseup.net>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "donation": "http://far.chickenkiller.com/pages/donate.html",
+            "meta": {
+                "tags": "quran; koran; islam; islamic-software; quran study tool; study tool;",
+                "categories": [
+                    "education"
+                ]
+            },
+            "type": "packaged",
+            "slug": "simplequran"
+        },
+        {
+            "name": "Snake",
+            "description": "The Nokia game found on Nokia KaiOS devices.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/snek.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/snek/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/snek/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/snek/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/snek/screenshot3.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/snek/screenshot4.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/snek/screenshot5.png"
+            ],
+            "website": "http://gameloft.com",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/snek.zip?inline=false",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/snek.json"
+            },
+            "type": "certified",
+            "license": "Unknown",
+            "author": [
+                "Gameloft <support@gameloft.com>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus1@outlook.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": true,
+            "meta": {
+                "tags": "nokia; classic; snake;",
+                "categories": [
+                    "games"
+                ]
+            },
+            "slug": "snek"
+        },
+        {
+            "name": "Soundlist",
+            "description": "Create temporary playlist of your favourite music. A fork of Folder Player by Andrea Magro with a fresh code of paint for KaiOS.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/soundlist.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/soundlist/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/soundlist/screenshot1.png"
+            ],
+            "git_repo": "https://github.com/FabianOvrWrt/kaios-freshapps",
+            "download": {
+                "url": "https://github.com/FabianOvrWrt/kaios-freshapps/raw/master/Soundlist.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/soundlist.json"
+            },
+            "type": "privileged",
+            "license": "GPLv3",
+            "author": [
+                "FabianOvrWrt"
+            ],
+            "maintainer": [
+                "FabianOvrWrt"
+            ],
+            "donation": "https://paypal.me/OvrWrt",
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "music; mp3; playlist; audio",
+                "categories": [
+                    "multimedia"
+                ]
+            },
+            "slug": "soundlist"
+        },
+        {
+            "name": "SpaceWalk3D",
+            "description": "Explore our amazing solar system and interact with all planets in full 3D.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/spacewalk3d.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/spacewalk3d/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/spacewalk3d/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/spacewalk3d/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/spacewalk3d/screenshot3.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/spacewalk3d/screenshot4.png"
+            ],
+            "website": "https://ays-arts.de",
+            "download": {
+                "url": "https://ays-arts.de/public/sw3d/sw3d_1.2.3.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/spacewalk3d.json"
+            },
+            "type": "privileged",
+            "license": "Unknown",
+            "author": [
+                "Christian Waadt <contact@ays-arts.de>"
+            ],
+            "maintainer": [
+                "Christian Waadt <contact@ays-arts.de>"
+            ],
+            "donation": "https://www.paypal.me/cwaadt",
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "astronomy; 3d; earth; timezones; planets;",
+                "categories": [
+                    "education",
+                    "utility"
+                ]
+            },
+            "slug": "spacewalk3d"
+        },
+        {
+            "name": "Store Client",
+            "description": "An almost universal client for KaiOS app stores. Supports both KaiStore and B-Hackers Store. Can update apps via Self-Debugging and falls back to OmniSD method if Self-Debugging is unavailable. Spoofs your IMEI and other personal data when accessing KaiStore.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/storeclient.png",
+            "git_repo": "https://gitlab.com/affenull2345/store-client",
+            "download": {
+                "url": "https://affenull2345.gitlab.io/store-client/store.zip",
+                "manifest": "https://affenull2345.gitlab.io/store-client/manifest.webapp"
+            },
+            "type": "certified",
+            "license": "Apache-2.0",
+            "author": [
+                "Affe Null <affenull2345@gmail.com>"
+            ],
+            "maintainer": [
+                "Affe Null <affenull2345@gmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "appstore; bhackers;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "storeclient",
+            "screenshots": []
+        },
+        {
+            "name": "Talking bot",
+            "description": "This is a stupid talking bot. Hold call key and talk(up to 10 seconds). Then wait up to ~30 seconds for a response from your phone(it will talk!). Donations are welcome, especially a server to host the API which is currently hosted on Heroku using a free account.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/talkingbot.svg",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/talkingbot/screenshot0.png"
+            ],
+            "license": "ISC",
+            "website": "https://notabug.org/bananaphone/talkingbot",
+            "git_repo": "https://notabug.org/bananaphone/talkingbot",
+            "download": {
+                "url": "https://notabug.org/attachments/166b4485-3614-43b2-8766-4f1f6639d8da",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/talkingbot.json"
+            },
+            "author": [
+                "Farooq Karimi Zadeh <hapu@riseup.net>"
+            ],
+            "maintainer": [
+                "Farooq Karimi Zadeh <hapu@riseup.net>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "donation": "http://far.chickenkiller.com/pages/donate.html",
+            "meta": {
+                "tags": "fun; AI; chatbot; talkbot; entertainment; talking bot;",
+                "categories": [
+                    "games",
+                    "multimedia"
+                ]
+            },
+            "type": "packaged",
+            "slug": "talkingbot"
+        },
+        {
+            "name": "TeleKram",
+            "description": "a fork of Telegram Web for KaiOS. Supports dpad navigation and push notifications. Note, the app is in Beta expect bugs and slow performance. some parts of the app doesn't support dpad navigation, to enable cursor press 5.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/telekram.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/telekram/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/telekram/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/telekram/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/telekram/screenshot3.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/telekram/screenshot4.png"
+            ],
+            "website": "https://github.com/arma7x/telekram",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/telekram/telekram.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/telekram/manifest.webapp"
+            },
+            "type": "privileged",
+            "license": "GPLv3",
+            "author": [
+                "arma7x <ahmadmuhamad101@gmail.com>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus1@outlook.com>"
+            ],
+            "locales": [
+                "English",
+                "Russian",
+                "Persian",
+                "Turkish",
+                "Italian",
+                "Arabic",
+                "Ukrainian",
+                "Uzbek",
+                "Portuguese",
+                "Spanish",
+                "German",
+                "Dutch",
+                "Frence",
+                "Korean",
+                "Indonesian",
+                "Malay",
+                "Belarusian",
+                "Catalan",
+                "Polish"
+            ],
+            "has_ads": false,
+            "has_tracking": true,
+            "meta": {
+                "tags": "telegram;",
+                "categories": [
+                    "communication"
+                ]
+            },
+            "slug": "telekram"
+        },
+        {
+            "name": "Telnetd",
+            "description": "The first root app for Nokia 8110 4G.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/telnetd.png",
+            "download": {
+                "url": "https://groups.google.com/group/bananahackers/attach/cff5882d389fb/telnetd.zip?part=0.5&authuser=0",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/telnetd.json"
+            },
+            "type": "root",
+            "license": "Unknown",
+            "author": [
+                "speeduploop"
+            ],
+            "maintainer": [
+                "jkelol111"
+            ],
+            "donation": "https://paypal.me/speeduploop",
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "root, 8110, bananahackers, telnet, telnetd",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "telnetd",
+            "screenshots": []
+        },
+        {
+            "name": "Terminal",
+            "description": "Terminal emulator for KaiOS with busybox",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/terminal.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/terminal/screenshot0.png"
+            ],
+            "git_repo": "https://gitlab.com/affenull2345/terminal-emulator-kaios",
+            "download": {
+                "url": "https://gitlab.com/affenull2345/terminal-emulator-kaios/-/raw/master/terminal-omnisd.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/terminal.json"
+            },
+            "license": "GPLv3",
+            "author": [
+                "Affe Null <affenull2345@gmail.com>"
+            ],
+            "maintainer": [
+                "Affe Null <affenull2345@gmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "tool",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "type": "certified",
+            "slug": "terminal"
+        },
+        {
+            "name": "Topo Map",
+            "description": "Topo Map is an OpenStreetMap app for KaiOS devices.  It uses OpenTopoMap with hill shading and contour lines.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/topomap.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/topomap/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/topomap/screenshot1.png"
+            ],
+            "git_repo": "https://github.com/GP4Flo/Topo-Map",
+            "download": {
+                "url": "https://github.com/user18130814200115-2/Topo-Map/releases/download/latest/topomap.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/topomap.json"
+            },
+            "type": "packaged",
+            "license": "MIT",
+            "author": [
+                "GP4Flo"
+            ],
+            "maintainer": [
+                "User18130814200115"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "map; osm;",
+                "categories": [
+                    "utility",
+                    "travel"
+                ]
+            },
+            "slug": "topomap"
+        },
+        {
+            "name": "TweetFit",
+            "description": "A fast and responsive Twitter App dedicated for KaiOS. It is not an official app from Twitter, it uses the Twitter public API to retrieve user timeline.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/tweetfit.png",
+            "license": "MIT",
+            "download": {
+                "url": "https://qichuan.github.io/kaios-twitter-gh/release/tweetfit_0.1.2_bHStore.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/tweetfit.json"
+            },
+            "author": [
+                "ZHANG Qichuan<https://github.com/qichuan>"
+            ],
+            "maintainer": [
+                "ZHANG Qichuan<https://github.com/qichuan>"
+            ],
+            "has_tracking": true,
+            "has_ads": true,
+            "donation": "https://www.buymeacoffee.com/vj6Q8lR",
+            "meta": {
+                "tags": "social, twitter",
+                "categories": [
+                    "social"
+                ]
+            },
+            "type": "packaged",
+            "slug": "tweetfit",
+            "screenshots": []
+        },
+        {
+            "name": "Users Bible",
+            "description": "Ready any book, chaper and verse from the bible righ on your kaios device",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/usersbible.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/usersbible/screenshot0.png"
+            ],
+            "git_repo": "https://github.com/user18130814200115-2/User-s-bible",
+            "download": {
+                "url": "https://github.com/user18130814200115-2/User-s-bible/releases/download/latest/bible.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/usersbible.json"
+            },
+            "type": "packaged",
+            "license": "MIT",
+            "author": [
+                "User18130814200115"
+            ],
+            "maintainer": [
+                "User18130814200115"
+            ],
+            "donation": "https://github.com/user18130814200115-2/User-s-Weather/blob/master/Donations.md",
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "bible; information;",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "usersbible"
+        },
+        {
+            "name": "Users Sudoku",
+            "description": "A simple one-screen sudoku player with intergrated checking and 400 sudoku's from gnome-sudokus",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/userssudoku.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/userssudoku/screenshot0.png"
+            ],
+            "git_repo": "https://github.com/user18130814200115-2/User-s-sudoku",
+            "download": {
+                "url": "https://github.com/user18130814200115-2/User-s-sudoku/releases/download/Latest/userssudoku.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/userssudoku.json"
+            },
+            "type": "packaged",
+            "license": "MIT",
+            "author": [
+                "User18130814200115"
+            ],
+            "maintainer": [
+                "User18130814200115"
+            ],
+            "donation": "https://github.com/user18130814200115-2/User-s-Weather/blob/master/Donations.md",
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "sudoku; games;",
+                "categories": [
+                    "games"
+                ]
+            },
+            "slug": "userssudoku"
+        },
+        {
+            "name": "Users Tetris",
+            "description": "A simple one-screen tetris player",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/userstetris.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/userstetris/screenshot0.png"
+            ],
+            "git_repo": "https://github.com/user18130814200115-2/User-s-Tetris",
+            "download": {
+                "url": "https://github.com/user18130814200115-2/User-s-Tetris/releases/download/latest/tetris.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/userstetris.json"
+            },
+            "type": "packaged",
+            "license": "MIT",
+            "author": [
+                "User18130814200115"
+            ],
+            "maintainer": [
+                "User18130814200115"
+            ],
+            "donation": "https://github.com/user18130814200115-2/User-s-Weather/blob/master/Donations.md",
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "tetris; games;",
+                "categories": [
+                    "games"
+                ]
+            },
+            "slug": "userstetris"
+        },
+        {
+            "name": "Users Weather",
+            "description": "A simple app that interfactes with wttr.in for local weather information and forecasts",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/usersweather.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/usersweather/screenshot0.png"
+            ],
+            "git_repo": "https://github.com/user18130814200115-2/User-s-Weather",
+            "download": {
+                "url": "https://github.com/user18130814200115-2/User-s-Weather/releases/download/latest/weather.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/usersweather.json"
+            },
+            "type": "packaged",
+            "license": "MIT",
+            "author": [
+                "User18130814200115"
+            ],
+            "maintainer": [
+                "User18130814200115"
+            ],
+            "donation": "https://github.com/user18130814200115-2/User-s-Weather/blob/master/Donations.md",
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "weather",
+                "categories": [
+                    "news",
+                    "utility"
+                ]
+            },
+            "slug": "usersweather"
+        },
+        {
+            "name": "K-Video Player",
+            "description": "K-Video Player is a full-featured video player. Supports VTT/SRT, auto-resume last playback duration, control playback rate, screenshot & fullscreen.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/vidplay.png",
+            "website": "https://github.com/arma7x/k-video-player",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/vidplay/vidplay.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/vidplay/manifest.webapp"
+            },
+            "type": "privileged",
+            "locales": [
+                "English"
+            ],
+            "license": "MIT",
+            "author": [
+                "arma7x <ahmadmuhamad101@gmail.com>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "video;",
+                "categories": [
+                    "multimedia"
+                ]
+            },
+            "slug": "vidplay",
+            "screenshots": []
+        },
+        {
+            "name": "VM-IRC",
+            "description": "Connect to freenode IRC network via this app. For PM use Call key. see app website for more info. The bug in which you could not send message to channels has been fixed. Thank you Ivan Pasev :)",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/vm-irc.png",
+            "license": "LGPL 3.0 or later",
+            "website": "https://notabug.org/bananaphone/vm-irc",
+            "git_repo": "https://notabug.org/bananaphone/vm-irc",
+            "download": {
+                "url": "https://notabug.org/attachments/f70215a5-71cf-417d-8d12-ea96fd1c3bdb",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/vm-irc.json"
+            },
+            "author": [
+                "Farooq Karimi Zadeh <hapu@riseup.net>"
+            ],
+            "maintainer": [
+                "Farooq Karimi Zadeh <hapu@riseup.net>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "donation": "http://far.chickenkiller.com/pages/donate.html",
+            "meta": {
+                "tags": "irc; freenode; irc-client; simple-irc-client; minimal-irc-client;",
+                "categories": [
+                    "communication"
+                ]
+            },
+            "type": "packaged",
+            "slug": "vm-irc",
+            "screenshots": []
+        },
+        {
+            "name": "Wallace Toolbox",
+            "description": "Universal toolbox for KaiOS internal tweaking.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/wallacetoolbox.png",
+            "git_repo": "https://gitlab.com/suborg/wallace-toolbox",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/suborg/wallace-toolbox/wallace-toolbox.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/suborg/wallace-toolbox/manifest.webapp"
+            },
+            "type": "root",
+            "license": "Unknown",
+            "author": [
+                "Luxferre"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "root, 8110, bananahackers, adb, reset, imei, mods, wallace",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "wallacetoolbox",
+            "screenshots": []
+        },
+        {
+            "name": "WhatsApp",
+            "description": "WhatsApp patched specifically for devices running GerdaOS.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/whatsapp.png",
+            "website": "https://groups.google.com/g/bananahackers/c/AStA-oas3Jg",
+            "download": {
+                "url": "https://cdn.discordapp.com/attachments/687788038298140732/834149222105743373/whatsapp-debug-20210312.gpkg.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/whatsapp.json"
+            },
+            "type": "certified",
+            "license": "Proprietary",
+            "author": [
+                "Affe Null"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus1@outlook.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": true,
+            "meta": {
+                "tags": "whatsapp; gerdaos; GerdaOS; patched;",
+                "categories": [
+                    "communication"
+                ]
+            },
+            "slug": "whatsapp",
+            "screenshots": []
+        },
+        {
+            "name": "wheelCal",
+            "description": "Car wheel size calculation and comparison.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/wheelcal.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/wheelcal/screenshot0.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/wheelcal/screenshot1.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/wheelcal/screenshot2.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/wheelcal/screenshot3.png",
+                "https://banana-hackers.gitlab.io/store-db/icons/wheelcal/screenshot4.png"
+            ],
+            "website": "https://ays-arts.de",
+            "download": {
+                "url": "https://ays-arts.de/public/wheelcal/wheelcal_1.3.0.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/wheelcal.json"
+            },
+            "type": "privileged",
+            "license": "Unknown",
+            "author": [
+                "Christian Waadt <contact@ays-arts.de>"
+            ],
+            "maintainer": [
+                "Christian Waadt <contact@ays-arts.de>"
+            ],
+            "donation": "https://www.paypal.me/cwaadt",
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "car; wheels; tyres; tires",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "wheelcal"
+        },
+        {
+            "name": "wikipedia-search",
+            "description": "With this app you can search within Wikipedia. If you have activated geolocation you can display all the articles found at your current position. This can be useful when travelling.\n",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/wikipedia-search.png",
+            "license": "MIT",
+            "website": "https://github.com/strukturart/wikipedia-search",
+            "git_repo": "https://github.com/strukturart/wikipedia-search/blob/master/build/wikipedia.zip",
+            "download": {
+                "url": "https://github.com/strukturart/wikipedia-search/blob/master/build/wikipedia.zip?raw=true",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/wikipedia-search.json"
+            },
+            "author": [
+                "strukturart<https://github.com/strukturart>"
+            ],
+            "maintainer": [
+                "strukturart<https://github.com/strukturart>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "donation": "https://paypal.me/strukturart",
+            "meta": {
+                "tags": "search; wikipedia",
+                "categories": [
+                    "search"
+                ]
+            },
+            "type": "packaged",
+            "slug": "wikipedia-search",
+            "screenshots": []
+        },
+        {
+            "name": "Xkcd Viewer",
+            "description": "A simple comic viewer for xkcd.",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/xkcd.png",
+            "license": "Unknown",
+            "website": "https://xkcd.com/",
+            "git_repo": "https://github.com/aaronrolls/kaios/tree/master/xkcd%20viewer",
+            "download": {
+                "url": "https://github.com/aaronrolls/kaios/blob/master/xkcd%20viewer/versions/0.0.2/xkcd%20viewer.zip?raw=true",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/xkcd.json"
+            },
+            "author": [
+                "Aaron Rolls<https://bananahackers.net>"
+            ],
+            "maintainer": [
+                "Aaron Rolls<https://bananahackers.net>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "meta": {
+                "tags": "xkcd; comics",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "type": "weblink",
+            "slug": "xkcd",
+            "screenshots": []
+        },
+        {
+            "name": "XRick",
+            "description": "Retro platforming action. Avoid traps, collect treasure. 45 levels, no ads, unlimited continues.\n",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/xrick.png",
+            "screenshots": [
+                "https://banana-hackers.gitlab.io/store-db/icons/xrick/screenshot0.gif",
+                "https://banana-hackers.gitlab.io/store-db/icons/xrick/screenshot1.gif",
+                "https://banana-hackers.gitlab.io/store-db/icons/xrick/screenshot2.gif"
+            ],
+            "license": "GPL",
+            "website": "http://www.bigorno.net/xrick/",
+            "git_repo": "https://github.com/pelya/xrick-kaios",
+            "download": {
+                "url": "https://github.com/pelya/xrick-kaios/releases/download/05.05.04/XRick-omnisd.zip",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/xrick.json"
+            },
+            "author": [
+                "pelya <x.pelya.x@gmail.com>"
+            ],
+            "maintainer": [
+                "pelya <x.pelya.x@gmail.com>"
+            ],
+            "has_tracking": false,
+            "has_ads": false,
+            "donation": null,
+            "meta": {
+                "tags": "platformer;",
+                "categories": [
+                    "games"
+                ]
+            },
+            "type": "packaged",
+            "slug": "xrick"
+        },
+        {
+            "name": "YT Music",
+            "description": "YT Music Player",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/ytmus.png",
+            "website": "https://github.com/arma7x/kai-yt-music",
+            "download": {
+                "url": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/ytmus/ytmus.zip",
+                "manifest": "https://gitlab.com/cyan2048/snek/-/raw/master/arma7x/ytmus/manifest.webapp"
+            },
+            "type": "privileged",
+            "locales": [
+                "English"
+            ],
+            "license": "MIT",
+            "author": [
+                "arma7x <ahmadmuhamad101@gmail.com>"
+            ],
+            "maintainer": [
+                "Cyan <cyankindasus@protonmail.com>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "yt music;",
+                "categories": [
+                    "multimedia"
+                ]
+            },
+            "slug": "ytmus",
+            "screenshots": []
+        },
+        {
+            "name": "Zipper",
+            "description": "Zip and unzip files on your device. There is no internet connection needed!",
+            "icon": "https://banana-hackers.gitlab.io/store-db/icons/zipper.png",
+            "git_repo": "https://github.com/canicjusz/Zipper",
+            "download": {
+                "url": "https://github.com/canicjusz/Zipper/blob/master/Zipper.zip?raw=true",
+                "manifest": "https://gitlab.com/banana-hackers/store-db/-/raw/master/apps/zipper.json"
+            },
+            "type": "privileged",
+            "license": "WTFPL",
+            "author": [
+                "Jan Michalak <janmichalak@int.pl>"
+            ],
+            "maintainer": [
+                "Jan Michalak <janmichalak@int.pl>"
+            ],
+            "has_ads": false,
+            "has_tracking": false,
+            "meta": {
+                "tags": "zip; compression; decompression",
+                "categories": [
+                    "utility"
+                ]
+            },
+            "slug": "zipper",
+            "screenshots": []
+        }
+    ]
+}
