@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
+import { ComponentBaseProps } from '../models';
 import { ClickableProps } from '../models/ClickableProps';
 import { installApp, uninstallApp } from '../services/device';
 import { Button } from '../ui-components/Button';
+import { joinClasses } from '../utils/classes';
 import styles from './AppRow.module.css';
 
-type Props = ClickableProps & {
-  appId: string;
-  iconUrl?: string;
-  name: string;
-  author: string;
-  description: string;
-  downloadUrl?: string;
-  installed?: boolean;
-  onInstall?: () => void;
-  onUninstall?: () => void;
-};
+type Props = ComponentBaseProps &
+  ClickableProps & {
+    appId: string;
+    iconUrl?: string;
+    name: string;
+    author: string;
+    description: string;
+    downloadUrl?: string;
+    installed?: boolean;
+    onInstall?: () => void;
+    onUninstall?: () => void;
+  };
 
 export function AppRow(props: Props): JSX.Element {
   const [working, setWorking] = useState(false);
@@ -38,7 +41,7 @@ export function AppRow(props: Props): JSX.Element {
   }
 
   return (
-    <div className={styles.root} onClick={props.onClick}>
+    <div className={joinClasses(styles.root, props.className)} onClick={props.onClick}>
       <img className={styles.icon} src={props.iconUrl || ''} alt="" />
       <div className={styles.text}>
         <div className={styles.name}>{props.name}</div>

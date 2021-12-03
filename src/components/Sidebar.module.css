@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   box-shadow: 5px 0px 20px rgb(0 0 0 / 10%);
+  padding-bottom: 15px;
 }
 .subtitle {
   padding: 15px 15px 5px 15px;
