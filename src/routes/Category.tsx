@@ -2,37 +2,42 @@ import { format } from 'date-fns';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { AppRow } from '../components/AppRow';
-import { StoreApp } from '../models/StoreApp';
-import { StoreCategory } from '../models/StoreCategory';
-import { getAppsByCategory, getCategories } from '../services/storedb';
+import { StoreApp, StoreCategory } from '../models';
+import { getAppsByCategory } from '../services/store';
+import { Typography } from '../ui-components/Typography';
 import { View, ViewContent, ViewFooter, ViewHeader } from '../ui-components/view';
+import styles from './Category.module.css';
 
 type Params = {
   categoryId: string;
 };
 export function Category(): JSX.Element {
-  const [apps, setApps] = useState<StoreApp[]>([]);
-  const [category, setCategory] = useState<StoreCategory>();
-
+  const [data, setData] = useState<{
+    category: StoreCategory;
+    apps: StoreApp[];
+    fetchedAt: number;
+  }>();
   const { categoryId } = useParams<Params>();
 
   useEffect(() => {
-    console.log('category', categoryId);
-    getCategories().then((res) => setCategory(res.find((a) => a.id === categoryId)));
-    getAppsByCategory(categoryId).then(setApps);
+    getAppsByCategory(categoryId).then(setData);
   }, [categoryId]);
 
   return (
     <View>
       <ViewHeader>
-        <h1>{category?.name}</h1>
+        <Typography type="titleLarge" padding="none">
+          {data?.category.name}
+        </Typography>
       </ViewHeader>
       <ViewContent>
-        {apps.map((app) => (
+        {data?.apps.map((app) => (
           <AppRow key={app.slug} app={app} onClick={() => console.log('clicked', app)} />
         ))}
       </ViewContent>
-      <ViewFooter>Updated {format(new Date(), 'MMMM do p')}</ViewFooter>
+      <ViewFooter className={styles.footer}>
+        {data === undefined ? 'Loading...' : `Updated ${format(data.fetchedAt, 'MMMM do p')}`}
+      </ViewFooter>
     </View>
   );
 }

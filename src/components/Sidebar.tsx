@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import { StoreCategory } from '../models/StoreCategory';
-import { getCategories } from '../services/apps';
+import { getCategories } from '../services/store';
 import { Typography } from '../ui-components/Typography';
 import styles from './Sidebar.module.css';
 import { SidebarItem } from './SitebarItem';
