@@ -5,6 +5,7 @@ import { StoreCategory } from '../models/StoreCategory';
 import { getDeviceInfo } from '../services/device';
 import { getCategories } from '../services/store';
 import { Typography } from '../ui-components/Typography';
+import { delay } from '../utils/delay';
 import styles from './Sidebar.module.css';
 import { SidebarItem } from './SitebarItem';
 
@@ -23,8 +24,11 @@ export function Sidebar(): JSX.Element {
     if (searching) return;
 
     setSearching(true);
-    const res = await getDeviceInfo();
-    setDevice(res);
+    await delay(500);
+    const res = await getDeviceInfo().catch((err) => console.log('init err', err));
+    if (res) {
+      setDevice(res);
+    }
     setSearching(false);
   }
 
@@ -46,7 +50,11 @@ export function Sidebar(): JSX.Element {
       <SidebarItem primaryText="About" />
       <Typography type="titleSmall">Device</Typography>
       {device ? (
-        <SidebarItem primaryText={device.name} onClick={() => history.push(`/device`)} />
+        <SidebarItem
+          primaryText={device.name}
+          secondaryText="Connected"
+          onClick={() => history.push(`/device`)}
+        />
       ) : (
         <SidebarItem
           primaryText="No Device"
