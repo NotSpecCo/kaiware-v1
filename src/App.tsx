@@ -1,15 +1,18 @@
-import React from 'react';
+import { kebabCase } from 'lodash';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import styles from './App.module.css';
 import { Sidebar } from './components/Sidebar';
 import { DeviceProvider } from './contexts/DeviceProvider';
-import { SettingsProvider } from './contexts/SettingsProvider';
+import { SettingsProvider, useSettings } from './contexts/SettingsProvider';
 import { AppInfo } from './routes/AppInfo';
+import { AppSettings } from './routes/AppSettings';
 import { Category } from './routes/Category';
 import { Device } from './routes/Device';
 import { Home } from './routes/Home';
+import { themes } from './themes';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -35,6 +38,28 @@ export function AppWrapper(): JSX.Element {
 }
 
 export function App(): JSX.Element {
+  const { settings } = useSettings();
+
+  useEffect(() => {
+    // Theme
+    const theme = themes.find((a) => a.id === settings.theme) || themes[0];
+    for (const id in theme.values) {
+      document.documentElement.style.setProperty(`--${kebabCase(id)}`, theme.values[id]);
+    }
+
+    // const fontSize = {
+    //   [TextSize.Smallest]: 9,
+    //   [TextSize.Small]: 10,
+    //   [TextSize.Medium]: 11,
+    //   [TextSize.Large]: 12,
+    //   [TextSize.Largest]: 13,
+    // };
+    // document.documentElement.style.setProperty(
+    //   '--base-font-size',
+    //   `${fontSize[settings.textSize]}px`
+    // );
+  }, [settings]);
+
   return (
     <div className={styles.root}>
       <Sidebar />
@@ -50,6 +75,9 @@ export function App(): JSX.Element {
         </Route>
         <Route exact path="/app/:slug">
           <AppInfo />
+        </Route>
+        <Route exact path="/settings">
+          <AppSettings />
         </Route>
       </Switch>
     </div>

@@ -2,6 +2,7 @@
   height: 100vh;
   width: var(--sidebar-width);
   min-width: var(--sidebar-width);
+  background-color: var(--sidebar-bg-color);
   display: flex;
   flex-direction: column;
   box-shadow: 5px 0px 20px rgb(0 0 0 / 10%);

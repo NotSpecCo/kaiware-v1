@@ -9,12 +9,16 @@ const defaultSettings: Settings = {
 type SettingsContextValue = {
   settings: Settings;
   setSettings: (settings: Settings) => void;
+  setSetting: <T extends keyof Settings>(settingsKey: keyof Settings, val: Settings[T]) => void;
 };
 
 const defaultValue: SettingsContextValue = {
   settings: defaultSettings,
   setSettings: (settings) => {
     console.log('default', settings);
+  },
+  setSetting: (settingsKey) => {
+    console.log('default', settingsKey);
   },
 };
 
@@ -33,11 +37,19 @@ export function SettingsProvider(props: SettingsProviderProps) {
     setSettingsInternal(val);
   }
 
+  function setSetting<T extends keyof Settings>(key: T, val: Settings[T]): void {
+    setSettings({
+      ...settings,
+      [key]: val,
+    });
+  }
+
   return (
     <SettingsContext.Provider
       value={{
         settings,
         setSettings,
+        setSetting,
       }}
     >
       {props.children}

@@ -46,7 +46,7 @@ export function Sidebar(): JSX.Element {
       ))}
       <div className={styles.spacer} />
       <Typography type="titleSmall">System</Typography>
-      <SidebarItem primaryText="Settings" />
+      <SidebarItem primaryText="Settings" onClick={() => history.push(`/settings`)} />
       <SidebarItem primaryText="About" />
       <Typography type="titleSmall">Device</Typography>
       {device ? (
