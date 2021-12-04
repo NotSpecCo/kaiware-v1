@@ -1,11 +1,12 @@
 .root {
   height: 100vh;
-  width: 200px;
-  min-width: 200px;
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
   display: flex;
   flex-direction: column;
   box-shadow: 5px 0px 20px rgb(0 0 0 / 10%);
   padding-bottom: 15px;
+  z-index: 10;
 }
 .subtitle {
   padding: 15px 15px 5px 15px;

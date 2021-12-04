@@ -3,6 +3,7 @@
   flex-direction: column;
   overflow: hidden;
   padding: 0 15px;
+  flex: 1;
 }
 
 .titlebar {

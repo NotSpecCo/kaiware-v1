@@ -1,6 +1,7 @@
 import { format } from 'date-fns';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { useHistory } from 'react-router-dom';
 import { AppRow } from '../components/AppRow';
 import { StoreApp, StoreCategory } from '../models';
 import { getAppsByCategory } from '../services/store';
@@ -18,6 +19,7 @@ export function Category(): JSX.Element {
     fetchedAt: number;
   }>();
   const { categoryId } = useParams<Params>();
+  const history = useHistory();
 
   useEffect(() => {
     getAppsByCategory(categoryId).then(setData);
@@ -40,7 +42,7 @@ export function Category(): JSX.Element {
             author={app.author?.[0]}
             description={app.description}
             downloadUrl={app.download.url}
-            onClick={() => console.log('clicked', app)}
+            onClick={() => history.push(`/app/${app.slug}`)}
           />
         ))}
       </ViewContent>

@@ -124,6 +124,7 @@
 
   --scrim-color: rgba(0, 0, 0, 0.7);
 
+  --sidebar-width: 200px;
   --base-font-size: 10px;
   font-size: var(--base-font-size);
 }

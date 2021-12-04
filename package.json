@@ -94,6 +94,7 @@
   "dependencies": {
     "@cliqz-oss/firefox-client": "0.3.1",
     "date-fns": "^2.27.0",
+    "electron-dl": "^3.3.0",
     "electron-is-dev": "^2.0.0",
     "electron-squirrel-startup": "^1.0.0",
     "extract-zip": "^2.0.1",

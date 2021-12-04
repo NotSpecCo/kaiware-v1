@@ -50,3 +50,9 @@ export async function getAppsByCategory(categoryId: string): Promise<{
   ) as StoreApp[];
   return Promise.resolve({ category, apps, fetchedAt: store.fetchedAt });
 }
+
+export async function getAppBySlug(slug: string): Promise<StoreApp> {
+  const store = await getStoreDb();
+  const app: StoreApp = store.apps.find((a) => a.slug === slug);
+  return app;
+}

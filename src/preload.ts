@@ -23,4 +23,14 @@ contextBridge.exposeInMainWorld('electron', {
       ipcRenderer.on('device-uninstall-reply', (event, err, result) => cb(err, result));
     },
   },
+  browser: {
+    openUrl(url: string, cb: (err: any, res: any) => void) {
+      ipcRenderer.send('open-url', url);
+      ipcRenderer.on('open-url-reply', (event, err, result) => cb(err, result));
+    },
+    downloadUrl(url: string, cb: (err: any, res: any) => void) {
+      ipcRenderer.send('download-url', url);
+      ipcRenderer.on('download-url-reply', (event, err, result) => cb(err, result));
+    },
+  },
 });

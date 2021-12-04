@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { HashRouter, Route, Switch } from 'react-router-dom';
@@ -6,10 +6,10 @@ import styles from './App.module.css';
 import { Sidebar } from './components/Sidebar';
 import { DeviceProvider } from './contexts/DeviceProvider';
 import { SettingsProvider } from './contexts/SettingsProvider';
+import { AppInfo } from './routes/AppInfo';
 import { Category } from './routes/Category';
 import { Device } from './routes/Device';
 import { Home } from './routes/Home';
-import { getDeviceInfo } from './services/device';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -35,15 +35,9 @@ export function AppWrapper(): JSX.Element {
 }
 
 export function App(): JSX.Element {
-  useEffect(() => {
-    getDeviceInfo();
-  }, []);
   return (
     <div className={styles.root}>
-      {/* <nav className={styles.sidebar}> */}
       <Sidebar />
-      {/* </nav>
-      <main className={styles.content}> */}
       <Switch>
         <Route exact path="/">
           <Home />
@@ -54,8 +48,10 @@ export function App(): JSX.Element {
         <Route exact path="/category/:categoryId">
           <Category />
         </Route>
+        <Route exact path="/app/:slug">
+          <AppInfo />
+        </Route>
       </Switch>
-      {/* </main> */}
     </div>
   );
 }
