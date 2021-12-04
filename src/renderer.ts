@@ -30,7 +30,6 @@
 // import ReactDOM from 'react-dom';
 // import { App } from './App';
 import './App';
-import './assets/css/all.min.css';
 import './index.css';
 
 // function render() {
