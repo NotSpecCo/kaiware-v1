@@ -1,9 +1,10 @@
 import React, { createContext, useContext, useState } from 'react';
-import { ComponentBaseProps, Settings, Theme } from '../models';
+import { ComponentBaseProps, Settings, TextSize, Theme } from '../models';
 import { getStorageItem, setStorageItem, StorageKey } from '../utils/storage';
 
 const defaultSettings: Settings = {
-  theme: Theme.Dark,
+  theme: Theme.Light,
+  textSize: TextSize.Medium,
 };
 
 type SettingsContextValue = {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSettings } from '../contexts/SettingsProvider';
-import { Theme } from '../models';
+import { TextSize, Theme } from '../models';
 import { Select } from '../ui-components/Select';
 import { Typography } from '../ui-components/Typography';
 import { View, ViewContent, ViewHeader } from '../ui-components/view';
@@ -32,6 +32,22 @@ export function AppSettings(): JSX.Element {
               { value: Theme.Darkest, label: 'Darkest' },
             ]}
             onChange={(val: Theme) => setSetting('theme', val)}
+          />
+        </div>
+        <div className={styles.row}>
+          <Typography type="bodyLarge" padding="none">
+            Text Size
+          </Typography>
+          <Select
+            value={settings.textSize}
+            options={[
+              { value: TextSize.Smallest, label: 'Smallest' },
+              { value: TextSize.Small, label: 'Small' },
+              { value: TextSize.Medium, label: 'Medium' },
+              { value: TextSize.Large, label: 'Large' },
+              { value: TextSize.Largest, label: 'Largest' },
+            ]}
+            onChange={(val: TextSize) => setSetting('textSize', val)}
           />
         </div>
       </ViewContent>

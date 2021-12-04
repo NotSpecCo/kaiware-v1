@@ -7,6 +7,7 @@ import styles from './App.module.css';
 import { Sidebar } from './components/Sidebar';
 import { DeviceProvider } from './contexts/DeviceProvider';
 import { SettingsProvider, useSettings } from './contexts/SettingsProvider';
+import { TextSize } from './models';
 import { AppInfo } from './routes/AppInfo';
 import { AppSettings } from './routes/AppSettings';
 import { Category } from './routes/Category';
@@ -47,17 +48,17 @@ export function App(): JSX.Element {
       document.documentElement.style.setProperty(`--${kebabCase(id)}`, theme.values[id]);
     }
 
-    // const fontSize = {
-    //   [TextSize.Smallest]: 9,
-    //   [TextSize.Small]: 10,
-    //   [TextSize.Medium]: 11,
-    //   [TextSize.Large]: 12,
-    //   [TextSize.Largest]: 13,
-    // };
-    // document.documentElement.style.setProperty(
-    //   '--base-font-size',
-    //   `${fontSize[settings.textSize]}px`
-    // );
+    const fontSize = {
+      [TextSize.Smallest]: 9,
+      [TextSize.Small]: 10,
+      [TextSize.Medium]: 11,
+      [TextSize.Large]: 12,
+      [TextSize.Largest]: 13,
+    };
+    document.documentElement.style.setProperty(
+      '--base-font-size',
+      `${fontSize[settings.textSize]}px`
+    );
   }, [settings]);
 
   return (
