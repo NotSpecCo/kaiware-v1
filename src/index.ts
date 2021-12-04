@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain, Menu, session, shell } from 'electron';
+import { app, BrowserWindow, ipcMain, session, shell } from 'electron';
 import { download } from 'electron-dl';
 import { Device } from './main/device';
 
@@ -133,29 +133,29 @@ if (require('electron-squirrel-startup')) {
   app.quit();
 }
 
-const menuTemplate: any[] = [
-  {
-    label: 'Device',
-    submenu: [{ label: 'TODO' }],
-  },
-];
-const isMac = process.platform === 'darwin';
-if (isMac) {
-  menuTemplate.unshift({
-    label: app.name,
-    submenu: [
-      { role: 'about' },
-      { type: 'separator' },
-      { role: 'services' },
-      { type: 'separator' },
-      { role: 'hide' },
-      { role: 'hideOthers' },
-      { role: 'unhide' },
-      { type: 'separator' },
-      { role: 'quit' },
-    ],
-  });
-}
+// const menuTemplate: any[] = [
+//   {
+//     label: 'Device',
+//     submenu: [{ label: 'TODO' }],
+//   },
+// ];
+// const isMac = process.platform === 'darwin';
+// if (isMac) {
+//   menuTemplate.unshift({
+//     label: app.name,
+//     submenu: [
+//       { role: 'about' },
+//       { type: 'separator' },
+//       { role: 'services' },
+//       { type: 'separator' },
+//       { role: 'hide' },
+//       { role: 'hideOthers' },
+//       { role: 'unhide' },
+//       { type: 'separator' },
+//       { role: 'quit' },
+//     ],
+//   });
+// }
 
 const createWindow = (): void => {
   session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
@@ -173,8 +173,8 @@ const createWindow = (): void => {
 
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    height: 750,
-    width: 900,
+    height: 800,
+    width: app.isPackaged ? 900 : 1400,
     titleBarStyle: 'hidden',
     webPreferences: {
       nodeIntegration: false,
@@ -187,11 +187,13 @@ const createWindow = (): void => {
   // and load the index.html of the app.
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 
-  // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  if (!app.isPackaged) {
+    // Open the DevTools.
+    mainWindow.webContents.openDevTools();
+  }
 
-  const menu = Menu.buildFromTemplate(menuTemplate);
-  Menu.setApplicationMenu(menu);
+  // const menu = Menu.buildFromTemplate(menuTemplate);
+  // Menu.setApplicationMenu(menu);
 };
 
 // This method will be called when Electron has finished
