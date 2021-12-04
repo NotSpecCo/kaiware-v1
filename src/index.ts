@@ -78,6 +78,34 @@ ipcMain.on('device-uninstall', async (_, appId: string) => {
   }
 });
 
+ipcMain.on('device-launch-app', async (_, appId: string) => {
+  console.log('device-launch-app', appId);
+  const device = new Device();
+  try {
+    await device.connect();
+    await device.launchApp(appId);
+    device.disconnect();
+    _.sender.send('device-launch-app-reply', null);
+  } catch (err) {
+    device.disconnect();
+    _.sender.send('device-launch-app-reply', err, null);
+  }
+});
+
+ipcMain.on('device-close-app', async (_, appId: string) => {
+  console.log('device-close-app', appId);
+  const device = new Device();
+  try {
+    await device.connect();
+    await device.closeApp(appId);
+    device.disconnect();
+    _.sender.send('device-close-app-reply', null);
+  } catch (err) {
+    device.disconnect();
+    _.sender.send('device-close-app-reply', err, null);
+  }
+});
+
 ipcMain.on('open-url', async (_, url: string) => {
   console.log('open-url', url);
   try {
