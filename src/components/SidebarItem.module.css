@@ -1,7 +1,7 @@
 .root {
   display: flex;
   align-items: center;
-  padding: 10px 15px;
+  padding: 1rem 1.5rem;
   cursor: pointer;
 }
 .root:hover {

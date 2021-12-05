@@ -49,11 +49,11 @@ export function App(): JSX.Element {
     }
 
     const fontSize = {
-      [TextSize.Smallest]: 9,
-      [TextSize.Small]: 10,
-      [TextSize.Medium]: 11,
-      [TextSize.Large]: 12,
-      [TextSize.Largest]: 13,
+      [TextSize.Smallest]: 8,
+      [TextSize.Small]: 9,
+      [TextSize.Medium]: 10,
+      [TextSize.Large]: 11,
+      [TextSize.Largest]: 12,
     };
     document.documentElement.style.setProperty(
       '--base-font-size',
