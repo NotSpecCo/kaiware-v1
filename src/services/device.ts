@@ -16,6 +16,10 @@ export function installApp(url: string): Promise<DeviceApp> {
   return (window as any).electron.kaiDevice.installApp(url);
 }
 
+export function installLocalApp(filePath: string): Promise<DeviceApp> {
+  return (window as any).electron.kaiDevice.installLocalApp(filePath);
+}
+
 export function uninstallApp(appId: string): Promise<void> {
   return (window as any).electron.kaiDevice.uninstallApp(appId);
 }

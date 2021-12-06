@@ -50,6 +50,15 @@ ipcMain.handle('device-install', async (_, url: string) => {
   device.disconnect();
 });
 
+ipcMain.handle('device-install-local', async (_, filePath: string) => {
+  console.log('device-install-local', filePath);
+  const device = new Device();
+
+  await device.connect();
+  await device.installPackagedApp(filePath, `${new Date().valueOf()}`);
+  device.disconnect();
+});
+
 ipcMain.handle('device-uninstall', async (_, appId: string) => {
   console.log('device-uninstall', appId);
   const device = new Device();

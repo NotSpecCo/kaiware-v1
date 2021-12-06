@@ -6,6 +6,7 @@ contextBridge.exposeInMainWorld('electron', {
     getRunningApps: () => ipcRenderer.invoke('device-running-apps'),
     getInstalledApps: () => ipcRenderer.invoke('device-installed-apps'),
     installApp: (url: string) => ipcRenderer.invoke('device-install', url),
+    installLocalApp: (url: string) => ipcRenderer.invoke('device-install-local', url),
     uninstallApp: (appId: string) => ipcRenderer.invoke('device-uninstall', appId),
     launchApp: (appId: string) => ipcRenderer.invoke('device-launch-app', appId),
     closeApp: (appId: string) => ipcRenderer.invoke('device-close-app', appId),
