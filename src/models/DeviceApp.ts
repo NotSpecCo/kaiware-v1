@@ -9,6 +9,7 @@ export interface DeviceApp {
       name: string;
       url: string;
     };
+    version: string;
   };
   manifestURL: string;
   appStatus: number;

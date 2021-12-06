@@ -53,7 +53,7 @@ export function Device(): JSX.Element {
           <AppRow
             key={app.id}
             appId={app.id}
-            name={app.manifest.name}
+            name={`${app.manifest.name} v${app.manifest.version}`}
             author={app.manifest.developer.name}
             description={app.manifest.description}
             installed={true}
@@ -68,7 +68,7 @@ export function Device(): JSX.Element {
           <AppRow
             key={app.id}
             appId={app.id}
-            name={app.manifest.name}
+            name={`${app.manifest.name} v${app.manifest.version}`}
             author={app.manifest.developer.name}
             description={app.manifest.description}
             installed={true}
