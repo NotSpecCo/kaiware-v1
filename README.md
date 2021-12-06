@@ -1,5 +1,7 @@
 # Kaiware
 
+![Screenshot](/promo/screenshot1.png?raw=true)
+
 Note: Very much a work in progress
 
 ## Running
