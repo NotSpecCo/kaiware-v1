@@ -8,123 +8,81 @@ import { Device } from './main/device';
 declare const MAIN_WINDOW_WEBPACK_ENTRY: string;
 declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: any;
 
-ipcMain.on('device-info', async (_) => {
+ipcMain.handle('device-info', async (_) => {
   console.log('device-info');
   const device = new Device();
-  try {
-    await device.connect();
-    const info = await device.getDeviceInfo();
-    device.disconnect();
-    _.sender.send('device-info-reply', null, info);
-  } catch (err) {
-    device.disconnect();
-    _.sender.send('device-info-reply', err, null);
-  }
+
+  await device.connect();
+  const info = await device.getDeviceInfo();
+  device.disconnect();
+
+  return info;
 });
 
-ipcMain.on('device-running-apps', async (_) => {
+ipcMain.handle('device-running-apps', async (_) => {
   console.log('device-running-apps');
   const device = new Device();
-  try {
-    await device.connect();
-    const apps = await device.getRunningApps();
-    device.disconnect();
-    _.sender.send('device-running-apps-reply', null, apps);
-  } catch (err) {
-    device.disconnect();
-    _.sender.send('device-running-apps-reply', err, null);
-  }
+
+  await device.connect();
+  const apps = await device.getRunningApps();
+  device.disconnect();
+
+  return apps;
 });
 
-ipcMain.on('device-installed-apps', async (_) => {
+ipcMain.handle('device-installed-apps', async (_) => {
   console.log('device-installed-apps');
   const device = new Device();
-  try {
-    await device.connect();
-    const apps = await device.getInstalledApps();
-    device.disconnect();
-    _.sender.send('device-installed-apps-reply', null, apps);
-  } catch (err) {
-    device.disconnect();
-    _.sender.send('device-installed-apps-reply', err, null);
-  }
+
+  await device.connect();
+  const apps = await device.getInstalledApps();
+  device.disconnect();
+
+  return apps;
 });
 
-ipcMain.on('device-install', async (_, url: string) => {
+ipcMain.handle('device-install', async (_, url: string) => {
   console.log('device-install', url);
   const device = new Device();
-  try {
-    await device.connect();
-    await device.installPackagedAppFromUrl(url, `${new Date().valueOf()}`);
-    device.disconnect();
-    _.sender.send('device-install-reply', null, null);
-  } catch (err) {
-    device.disconnect();
-    _.sender.send('device-install-reply', err, null);
-  }
+
+  await device.connect();
+  await device.installPackagedAppFromUrl(url, `${new Date().valueOf()}`);
+  device.disconnect();
 });
 
-ipcMain.on('device-uninstall', async (_, appId: string) => {
+ipcMain.handle('device-uninstall', async (_, appId: string) => {
   console.log('device-uninstall', appId);
   const device = new Device();
-  try {
-    await device.connect();
-    await device.uninstallApp(appId);
-    device.disconnect();
-    _.sender.send('device-uninstall-reply', null);
-  } catch (err) {
-    device.disconnect();
-    _.sender.send('device-uninstall-reply', err, null);
-  }
+  await device.connect();
+  await device.uninstallApp(appId);
+  device.disconnect();
 });
 
-ipcMain.on('device-launch-app', async (_, appId: string) => {
+ipcMain.handle('device-launch-app', async (_, appId: string) => {
   console.log('device-launch-app', appId);
   const device = new Device();
-  try {
-    await device.connect();
-    await device.launchApp(appId);
-    device.disconnect();
-    _.sender.send('device-launch-app-reply', null);
-  } catch (err) {
-    device.disconnect();
-    _.sender.send('device-launch-app-reply', err, null);
-  }
+  await device.connect();
+  await device.launchApp(appId);
+  device.disconnect();
 });
 
-ipcMain.on('device-close-app', async (_, appId: string) => {
+ipcMain.handle('device-close-app', async (_, appId: string) => {
   console.log('device-close-app', appId);
   const device = new Device();
-  try {
-    await device.connect();
-    await device.closeApp(appId);
-    device.disconnect();
-    _.sender.send('device-close-app-reply', null);
-  } catch (err) {
-    device.disconnect();
-    _.sender.send('device-close-app-reply', err, null);
-  }
+  await device.connect();
+  await device.closeApp(appId);
+  device.disconnect();
 });
 
-ipcMain.on('open-url', async (_, url: string) => {
+ipcMain.handle('open-url', async (_, url: string) => {
   console.log('open-url', url);
-  try {
-    await shell.openExternal(url);
-    _.sender.send('open-url-reply', null);
-  } catch (err) {
-    _.sender.send('open-url-reply', err, null);
-  }
+  await shell.openExternal(url);
 });
 
-ipcMain.on('download-url', async (_, url: string) => {
+ipcMain.handle('download-url', async (_, url: string) => {
   console.log('download-url', url);
-  try {
-    const win = BrowserWindow.getFocusedWindow();
-    await download(win, url, { saveAs: true });
-    _.sender.send('download-url-reply', null);
-  } catch (err) {
-    _.sender.send('download-url-reply', err, null);
-  }
+  const win = BrowserWindow.getFocusedWindow();
+  await download(win, url, { saveAs: true });
 });
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
