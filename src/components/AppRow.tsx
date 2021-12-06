@@ -41,8 +41,12 @@ export function AppRow(props: Props): JSX.Element {
   }
 
   return (
-    <div className={joinClasses(styles.root, props.className)} onClick={props.onClick}>
-      <img className={styles.icon} src={props.iconUrl || ''} alt="" />
+    <div
+      className={joinClasses(styles.root, props.className)}
+      style={{ gridTemplateColumns: props.iconUrl ? '48px auto max-content' : 'auto max-content' }}
+      onClick={props.onClick}
+    >
+      {props.iconUrl ? <img className={styles.icon} src={props.iconUrl || ''} alt="" /> : null}
       <div className={styles.text}>
         <div className={styles.name}>{props.name}</div>
         <div className={styles.author}>{props.author}</div>

@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 48px auto max-content;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   grid-gap: 20px;
   cursor: pointer;
   border-bottom: 1px solid var(--divider-color);
@@ -45,5 +45,5 @@
 }
 
 .install {
-  width: 100px;
+  width: 120px;
 }
