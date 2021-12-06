@@ -123,7 +123,9 @@ const createWindow = (): void => {
       responseHeaders: {
         ...details.responseHeaders,
         'Content-Security-Policy': [
-          "default-src 'self' 'unsafe-inline' data: https://banana-hackers.gitlab.io; script-src 'self' 'unsafe-eval' 'unsafe-inline' data:",
+          app.isPackaged
+            ? "default-src 'self' 'unsafe-inline' data:; script-src 'self' data:; img-src 'self' https://banana-hackers.gitlab.io; connect-src 'self' https://banana-hackers.gitlab.io"
+            : "default-src 'self' 'unsafe-inline' data: https://banana-hackers.gitlab.io; script-src 'self' 'unsafe-eval' 'unsafe-inline' data:",
         ],
       },
     });
