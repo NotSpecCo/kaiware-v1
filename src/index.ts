@@ -55,7 +55,7 @@ ipcMain.on('device-install', async (_, url: string) => {
   const device = new Device();
   try {
     await device.connect();
-    await device.installPackagedAppFromUrl(url, 'test');
+    await device.installPackagedAppFromUrl(url, `${new Date().valueOf()}`);
     device.disconnect();
     _.sender.send('device-install-reply', null, null);
   } catch (err) {

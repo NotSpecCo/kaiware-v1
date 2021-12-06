@@ -1,9 +1,13 @@
 import FirefoxClient from '@cliqz-oss/firefox-client';
-// console.log(FirefoxClient);
+import extract from 'extract-zip';
+import { https } from 'follow-redirects';
+import fs from 'fs';
+import { mkdtemp, readdir, rm } from 'fs/promises';
+import os from 'os';
+import path from 'path';
 import promisify from 'util.promisify';
 import { AppsActor, DeviceActor, DeviceApp, DeviceInfo } from '../models';
 import { getManifestUrl, logger } from '../utils';
-import { getZipFromUrl } from './files';
 
 export class Device {
   private _client: FirefoxClient;
@@ -115,8 +119,30 @@ export class Device {
   }
 
   public async installPackagedAppFromUrl(url: string, appId: string): Promise<DeviceApp> {
-    const zipFilePath = await getZipFromUrl(url);
+    const basePath = await mkdtemp(path.join(os.tmpdir(), 'kaiware-'));
+    console.log('BASE PATH', basePath);
+
+    const fileId = new Date().valueOf();
+    const downloadedZipPath = `${basePath}/${fileId}.zip`;
+
+    await download(url, downloadedZipPath);
+    await extract(downloadedZipPath, { dir: `${basePath}/${fileId}` });
+    const files = await readdir(`${basePath}/${fileId}`);
+    console.log('files:', files);
+    const zipFileName = files.find((file) => file.endsWith('.zip'));
+
+    if (!zipFileName && !files.includes('manifest.webapp')) {
+      throw new Error('Invalid zip file');
+    }
+
+    const zipFilePath = files.includes('manifest.webapp')
+      ? downloadedZipPath
+      : `${basePath}/${fileId}/${zipFileName}`;
+    console.log('Install zip', zipFilePath);
+
     const installedApp = await this.installPackagedApp(zipFilePath, appId);
+
+    await rm(basePath, { force: true, recursive: true });
 
     return installedApp;
   }
@@ -142,6 +168,18 @@ export class Device {
 
     return device;
   }
+}
+
+function download(url: string, filePath: string) {
+  return new Promise((resolve, reject) => {
+    const file = fs.createWriteStream(filePath);
+    https
+      .get(url, (res) => {
+        res.pipe(file);
+        file.on('finish', () => file.close(resolve));
+      })
+      .on('error', (err) => fs.unlink(filePath, () => reject(err)));
+  });
 }
 
 export async function useDevice(fn: (device: Device) => void) {
