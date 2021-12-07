@@ -34,6 +34,7 @@ export function IconButton({ size = IconSize.Medium, ...props }: Props): JSX.Ele
     <button
       className={joinClasses(styles.root, props.className)}
       disabled={props.disabled || working}
+      title={props.title}
       onClick={handleClick}
     >
       <SvgIcon

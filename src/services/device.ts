@@ -23,3 +23,11 @@ export function installLocalApp(filePath: string): Promise<DeviceApp> {
 export function uninstallApp(appId: string): Promise<void> {
   return (window as any).electron.kaiDevice.uninstallApp(appId);
 }
+
+export function launchApp(appId: string): Promise<void> {
+  return (window as any).electron.kaiDevice.launchApp(appId);
+}
+
+export function closeApp(appId: string): Promise<void> {
+  return (window as any).electron.kaiDevice.closeApp(appId);
+}

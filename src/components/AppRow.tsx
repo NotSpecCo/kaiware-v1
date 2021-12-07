@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { ComponentBaseProps } from '../models';
 import { ClickableProps } from '../models/ClickableProps';
-import { installApp, uninstallApp } from '../services/device';
-import { Button } from '../ui-components/Button';
+import { closeApp, installApp, launchApp, uninstallApp } from '../services/device';
+import { IconButton } from '../ui-components/IconButton';
 import { joinClasses } from '../utils/classes';
 import styles from './AppRow.module.css';
 
@@ -15,11 +15,17 @@ type Props = ComponentBaseProps &
     description: string;
     downloadUrl?: string;
     installed?: boolean;
+    showInstallBtn?: boolean;
+    showUninstallBtn?: boolean;
+    showLaunchBtn?: boolean;
+    showCloseBtn?: boolean;
     onInstall?: () => void;
     onUninstall?: () => void;
+    onLaunch?: () => void;
+    onClose?: () => void;
   };
 
-export function AppRow(props: Props): JSX.Element {
+export function AppRow({ ...props }: Props): JSX.Element {
   const [working, setWorking] = useState(false);
 
   async function install() {
@@ -40,6 +46,24 @@ export function AppRow(props: Props): JSX.Element {
     props.onUninstall?.();
   }
 
+  async function launch() {
+    if (working) return;
+
+    setWorking(true);
+    await launchApp(props.appId);
+    setWorking(false);
+    props.onLaunch?.();
+  }
+
+  async function close() {
+    if (working) return;
+
+    setWorking(true);
+    await closeApp(props.appId);
+    setWorking(false);
+    props.onClose?.();
+  }
+
   return (
     <div
       className={joinClasses(styles.root, props.className)}
@@ -53,12 +77,14 @@ export function AppRow(props: Props): JSX.Element {
         <div className={styles.description}>{props.description}</div>
       </div>
       <div className={styles.actions}>
-        <Button
-          className={styles.install}
-          text={`${props.installed ? 'Uninstall' : 'Install'}${working ? 'ing' : ''}`}
-          disabled={working}
-          onClick={() => (props.installed ? uninstall() : install())}
-        />
+        {props.showLaunchBtn && <IconButton icon="play" title="Launch" onClick={() => launch()} />}
+        {props.showCloseBtn && <IconButton icon="cancel" title="Close" onClick={() => close()} />}
+        {props.showInstallBtn && (
+          <IconButton icon="install" title="Install" onClick={() => install()} />
+        )}
+        {props.showUninstallBtn && (
+          <IconButton icon="delete" title="Uninstall" onClick={() => uninstall()} />
+        )}
       </div>
     </div>
   );

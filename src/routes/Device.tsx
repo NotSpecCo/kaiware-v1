@@ -53,10 +53,15 @@ export function Device(): JSX.Element {
           <AppRow
             key={app.id}
             appId={app.id}
-            name={`${app.manifest.name} v${app.manifest.version}`}
+            name={app.manifest.name}
             author={app.manifest.developer.name}
             description={app.manifest.description}
             installed={true}
+            showCloseBtn={true}
+            showUninstallBtn={true}
+            onClose={() => {
+              setRunningApps(runningApps.filter((a) => a.id !== app.id));
+            }}
             onUninstall={() => {
               setRunningApps(runningApps.filter((a) => a.id !== app.id));
               setInstalledApps(installedApps.filter((a) => a.id !== app.id));
@@ -68,10 +73,13 @@ export function Device(): JSX.Element {
           <AppRow
             key={app.id}
             appId={app.id}
-            name={`${app.manifest.name} v${app.manifest.version}`}
+            name={app.manifest.name}
             author={app.manifest.developer.name}
             description={app.manifest.description}
             installed={true}
+            showLaunchBtn={true}
+            showUninstallBtn={true}
+            onLaunch={() => setRunningApps([...runningApps, app])}
             onUninstall={() => setInstalledApps(installedApps.filter((a) => a.id !== app.id))}
           />
         ))}

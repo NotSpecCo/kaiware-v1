@@ -48,6 +48,7 @@ export function Category(): JSX.Element {
             author={app.author?.[0]}
             description={app.description}
             downloadUrl={app.download.url}
+            showInstallBtn={true}
             onClick={() => history.push(`/app/${app.slug}`)}
           />
         ))}

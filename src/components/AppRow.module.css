@@ -1,6 +1,6 @@
 .root {
   display: grid;
-  grid-template-columns: 48px auto max-content;
+  grid-template-columns: 48px auto min-content;
   align-items: center;
   padding: 1rem 1.5rem;
   grid-gap: 20px;
@@ -44,6 +44,6 @@
   text-overflow: ellipsis;
 }
 
-.install {
-  width: 120px;
+.actions {
+  display: flex;
 }
