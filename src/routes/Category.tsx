@@ -5,6 +5,8 @@ import { useHistory } from 'react-router-dom';
 import { AppRow } from '../components/AppRow';
 import { StoreApp, StoreCategory } from '../models';
 import { getAppsByCategory } from '../services/store';
+import { IconButton } from '../ui-components/IconButton';
+import { IconSize } from '../ui-components/SvgIcon';
 import { Typography } from '../ui-components/Typography';
 import { View, ViewContent, ViewFooter, ViewHeader } from '../ui-components/view';
 import styles from './Category.module.css';
@@ -22,8 +24,12 @@ export function Category(): JSX.Element {
   const history = useHistory();
 
   useEffect(() => {
-    getAppsByCategory(categoryId).then(setData);
+    getApps();
   }, [categoryId]);
+
+  async function getApps(forceRefresh = false) {
+    await getAppsByCategory(categoryId, { forceRefresh }).then(setData);
+  }
 
   return (
     <View>
@@ -48,6 +54,13 @@ export function Category(): JSX.Element {
       </ViewContent>
       <ViewFooter className={styles.footer}>
         {data === undefined ? 'Loading...' : `Updated ${format(data.fetchedAt, 'MMMM do p')}`}
+        <IconButton
+          className={styles.btnRefresh}
+          icon="refresh"
+          animation="spin"
+          size={IconSize.Small}
+          onClick={() => getApps(true)}
+        />
       </ViewFooter>
     </View>
   );

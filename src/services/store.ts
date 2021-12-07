@@ -9,9 +9,13 @@ type StoreDb = {
   generatedAt: number;
 };
 
-export async function getStoreDb(forceRefresh = false): Promise<StoreDb> {
+type Options = {
+  forceRefresh?: boolean;
+};
+
+export async function getStoreDb(options?: Options): Promise<StoreDb> {
   let store = getStorageItem<StoreDb>(StorageKey.StoreDb);
-  if (!store || new Date().valueOf() - store.fetchedAt > 600000 || forceRefresh) {
+  if (!store || new Date().valueOf() - store.fetchedAt > 1_800_000 || options?.forceRefresh) {
     store = await fetch('https://banana-hackers.gitlab.io/store-db/data.json')
       .then((res) => res.json())
       .then((res) => {
@@ -33,17 +37,20 @@ export async function getStoreDb(forceRefresh = false): Promise<StoreDb> {
   return store;
 }
 
-export async function getCategories(): Promise<StoreCategory[]> {
-  const store = await getStoreDb();
+export async function getCategories(options?: Options): Promise<StoreCategory[]> {
+  const store = await getStoreDb(options);
   return store.categories;
 }
 
-export async function getAppsByCategory(categoryId: string): Promise<{
+export async function getAppsByCategory(
+  categoryId: string,
+  options?: Options
+): Promise<{
   category: StoreCategory;
   apps: StoreApp[];
   fetchedAt: number;
 }> {
-  const store = await getStoreDb();
+  const store = await getStoreDb(options);
   const category: StoreCategory = store.categories.find((a) => a.id === categoryId);
   const apps: StoreApp[] = store.apps.filter((a) =>
     a.meta.categories.includes(categoryId)
@@ -51,8 +58,8 @@ export async function getAppsByCategory(categoryId: string): Promise<{
   return Promise.resolve({ category, apps, fetchedAt: store.fetchedAt });
 }
 
-export async function getAppBySlug(slug: string): Promise<StoreApp> {
-  const store = await getStoreDb();
+export async function getAppBySlug(slug: string, options?: Options): Promise<StoreApp> {
+  const store = await getStoreDb(options);
   const app: StoreApp = store.apps.find((a) => a.slug === slug);
   return app;
 }
