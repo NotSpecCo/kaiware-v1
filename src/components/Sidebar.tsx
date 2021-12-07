@@ -4,10 +4,11 @@ import { DeviceInfo } from '../models';
 import { StoreCategory } from '../models/StoreCategory';
 import { getDeviceInfo } from '../services/device';
 import { getCategories } from '../services/store';
+import { IconButton } from '../ui-components/IconButton';
 import { Typography } from '../ui-components/Typography';
 import { delay } from '../utils/delay';
 import styles from './Sidebar.module.css';
-import { SidebarItem } from './SitebarItem';
+import { SidebarItem } from './SidebarItem';
 
 export function Sidebar(): JSX.Element {
   const [categories, setCategories] = useState<StoreCategory[]>([]);
@@ -24,10 +25,12 @@ export function Sidebar(): JSX.Element {
     if (searching) return;
 
     setSearching(true);
-    await delay(500);
+    await delay(1000);
     const res = await getDeviceInfo().catch((err) => console.log('init err', err));
     if (res) {
       setDevice(res);
+    } else {
+      setDevice(undefined);
     }
     setSearching(false);
   }
@@ -54,13 +57,23 @@ export function Sidebar(): JSX.Element {
           primaryText={device.name}
           secondaryText="Connected"
           onClick={() => history.push(`/device`)}
-        />
+        >
+          <IconButton
+            className={styles.btnRefresh}
+            icon="refresh"
+            animation="spin"
+            onClick={() => refreshDevice()}
+          />
+        </SidebarItem>
       ) : (
-        <SidebarItem
-          primaryText="No Device"
-          secondaryText={searching ? 'Searching...' : 'Click to refresh'}
-          onClick={() => refreshDevice()}
-        />
+        <SidebarItem primaryText="No Device">
+          <IconButton
+            className={styles.btnRefresh}
+            icon="refresh"
+            animation="spin"
+            onClick={() => refreshDevice()}
+          />
+        </SidebarItem>
       )}
     </div>
   );

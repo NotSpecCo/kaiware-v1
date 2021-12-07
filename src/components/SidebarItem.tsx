@@ -1,12 +1,14 @@
 import React from 'react';
+import { ComponentBaseProps } from '../models';
 import { ClickableProps } from '../models/ClickableProps';
 import styles from './SidebarItem.module.css';
 
-type Props = ClickableProps & {
-  icon?: string;
-  primaryText: string;
-  secondaryText?: string;
-};
+type Props = ComponentBaseProps &
+  ClickableProps & {
+    icon?: string;
+    primaryText: string;
+    secondaryText?: string;
+  };
 
 export function SidebarItem(props: Props): JSX.Element {
   return (
@@ -16,6 +18,7 @@ export function SidebarItem(props: Props): JSX.Element {
         <div className={styles.primaryText}>{props.primaryText}</div>
         <div className={styles.secondaryText}>{props.secondaryText}</div>
       </div>
+      <div>{props.children}</div>
     </div>
   );
 }
