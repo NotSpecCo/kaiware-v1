@@ -6,6 +6,11 @@ Note: Very much a work in progress
 
 ## Running
 
+Make sure you have the following dependencies installed:
+
+- nodejs `version = 16` (if you manage your nodejs versions with [nvm](https://github.com/nvm-sh/nvm) or [fnm](https://github.com/Schniz/fnm), you can just run `nvm use` or `fnm use` in the repo folder respectively)
+- adb
+
 1. Clone repo
 2. `npm install`
 3. Connect your phone to your computer and make sure it shows up with `adb devices`
