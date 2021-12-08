@@ -16,21 +16,17 @@ type Options = {
 export async function getStoreDb(options?: Options): Promise<StoreDb> {
   let store = getStorageItem<StoreDb>(StorageKey.StoreDb);
   if (!store || new Date().valueOf() - store.fetchedAt > 1_800_000 || options?.forceRefresh) {
-    store = await fetch('https://banana-hackers.gitlab.io/store-db/data.json')
-      .then((res) => res.json())
-      .then((res) => {
-        const categories: StoreCategory[] = Object.keys(res.categories).map((key) => ({
-          ...(res.categories as unknown as { [key: string]: Omit<StoreCategory, 'id'> })[key],
-          id: key,
-        }));
-
-        return {
-          categories,
-          apps: res.apps,
-          fetchedAt: new Date().valueOf(),
-          generatedAt: res.generated_at,
-        };
-      });
+    const data = await (await fetch('https://banana-hackers.gitlab.io/store-db/data.json')).json();
+    const categories: StoreCategory[] = Object.keys(data.categories).map((key) => ({
+      ...(data.categories as unknown as { [key: string]: Omit<StoreCategory, 'id'> })[key],
+      id: key,
+    }));
+    store = {
+      categories,
+      apps: data.apps,
+      fetchedAt: new Date().valueOf(),
+      generatedAt: data.generated_at,
+    };
     setStorageItem(StorageKey.StoreDb, store);
   }
 

@@ -28,7 +28,7 @@ export function Category(): JSX.Element {
   }, [categoryId]);
 
   async function getApps(forceRefresh = false) {
-    await getAppsByCategory(categoryId, { forceRefresh }).then(setData);
+    setData(await getAppsByCategory(categoryId, { forceRefresh }));
   }
 
   return (
