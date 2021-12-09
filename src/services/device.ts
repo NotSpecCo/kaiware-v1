@@ -1,33 +1,33 @@
 import { DeviceApp, DeviceInfo } from '../models';
 
 export function getDeviceInfo(): Promise<DeviceInfo> {
-  return (window as any).electron.kaiDevice.getInfo();
+  return window.electron.kaiDevice.getInfo();
 }
 
 export function getRunningApps(): Promise<DeviceApp[]> {
-  return (window as any).electron.kaiDevice.getRunningApps();
+  return window.electron.kaiDevice.getRunningApps();
 }
 
 export function getInstalledApps(): Promise<DeviceApp[]> {
-  return (window as any).electron.kaiDevice.getInstalledApps();
+  return window.electron.kaiDevice.getInstalledApps();
 }
 
 export function installApp(url: string): Promise<DeviceApp> {
-  return (window as any).electron.kaiDevice.installApp(url);
+  return window.electron.kaiDevice.installApp(url);
 }
 
 export function installLocalApp(filePath: string): Promise<DeviceApp> {
-  return (window as any).electron.kaiDevice.installLocalApp(filePath);
+  return window.electron.kaiDevice.installLocalApp(filePath);
 }
 
 export function uninstallApp(appId: string): Promise<void> {
-  return (window as any).electron.kaiDevice.uninstallApp(appId);
+  return window.electron.kaiDevice.uninstallApp(appId);
 }
 
 export function launchApp(appId: string): Promise<void> {
-  return (window as any).electron.kaiDevice.launchApp(appId);
+  return window.electron.kaiDevice.launchApp(appId);
 }
 
 export function closeApp(appId: string): Promise<void> {
-  return (window as any).electron.kaiDevice.closeApp(appId);
+  return window.electron.kaiDevice.closeApp(appId);
 }

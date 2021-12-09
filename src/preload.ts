@@ -1,5 +1,6 @@
 import { contextBridge, ipcRenderer } from 'electron';
 
+// when updating this make also sure to update the type definitions in globals.d.ts as well
 contextBridge.exposeInMainWorld('electron', {
   kaiDevice: {
     getInfo: () => ipcRenderer.invoke('device-info'),
