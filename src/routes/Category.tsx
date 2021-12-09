@@ -28,7 +28,14 @@ export function Category(): JSX.Element {
   }, [categoryId]);
 
   async function getApps(forceRefresh = false) {
-    setData(await getAppsByCategory(categoryId, { forceRefresh }));
+    const apps = await getAppsByCategory(categoryId, { forceRefresh });
+    if (apps === null) {
+      console.error(`app filter by category failed, does the category exist: ${categoryId}?`);
+      setData(undefined);
+      // This shouldn't happen, but should we show a user visible error for this if it does?
+    } else {
+      setData(apps);
+    }
   }
 
   return (

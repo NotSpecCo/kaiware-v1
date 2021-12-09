@@ -31,7 +31,7 @@ export function AppSettings(): JSX.Element {
               { value: Theme.Darker, label: 'Darker' },
               { value: Theme.Darkest, label: 'Darkest' },
             ]}
-            onChange={(val: Theme) => setSetting('theme', val)}
+            onChange={(val) => setSetting('theme', val)}
           />
         </div>
         <div className={styles.row}>
@@ -47,7 +47,7 @@ export function AppSettings(): JSX.Element {
               { value: TextSize.Large, label: 'Large' },
               { value: TextSize.Largest, label: 'Largest' },
             ]}
-            onChange={(val: TextSize) => setSetting('textSize', val)}
+            onChange={(val) => setSetting('textSize', val)}
           />
         </div>
       </ViewContent>
