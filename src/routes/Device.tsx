@@ -53,9 +53,9 @@ export function Device(): JSX.Element {
           <AppRow
             key={app.id}
             appId={app.id}
-            name={app.manifest.name}
-            author={app.manifest.developer.name}
-            description={app.manifest.description}
+            name={app.manifest?.name || '?'}
+            author={app.manifest?.developer?.name || '?'}
+            description={app.manifest?.description || '?'}
             installed={true}
             showCloseBtn={true}
             showUninstallBtn={true}
@@ -73,9 +73,9 @@ export function Device(): JSX.Element {
           <AppRow
             key={app.id}
             appId={app.id}
-            name={app.manifest.name}
-            author={app.manifest.developer.name}
-            description={app.manifest.description}
+            name={app.manifest?.name || '?'}
+            author={app.manifest?.developer?.name || '?'}
+            description={app.manifest?.description || '?'}
             installed={true}
             showLaunchBtn={true}
             showUninstallBtn={true}
