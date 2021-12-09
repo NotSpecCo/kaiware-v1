@@ -1,9 +1,6 @@
 .root {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  padding: 0 15px;
-  flex: 1;
+  display: grid;
+  width: calc(100vw - var(--sidebar-width));
 }
 
 .titlebar {

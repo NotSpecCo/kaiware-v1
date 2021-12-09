@@ -1,0 +1,20 @@
+.root {
+  padding: 0 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title > img {
+  height: 42px;
+  width: 42px;
+  margin-right: 10px;
+}
+
+.spacer {
+  flex: 1;
+}
