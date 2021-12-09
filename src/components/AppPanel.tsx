@@ -16,7 +16,7 @@ type Props = {
 };
 
 export function AppPanel({ panelId, appSlug }: Props): JSX.Element {
-  const [app, setApp] = useState<StoreApp>();
+  const [app, setApp] = useState<StoreApp | null>();
   const [working, setWorking] = useState(false);
   const { closePanel } = usePanels();
 

@@ -6,7 +6,7 @@ import { Typography } from '../Typography';
 import styles from './PanelHeader.module.css';
 
 type Props = ComponentBaseProps & {
-  title: string;
+  title?: string;
   imageUrl?: string;
   showCloseButton?: boolean;
   onClose?: () => void;

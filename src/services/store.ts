@@ -49,16 +49,16 @@ export async function getAppsByCategory(
   category: StoreCategory;
   apps: StoreApp[];
   fetchedAt: number;
-} | null> {
+}> {
   const store = await getStoreDb(options);
-  const category = store.categories.find((a) => a.id === categoryId);
-  if (!category) {
-    return null;
-  }
+  const category = store.categories.find((a) => a.id === categoryId) || {
+    id: 'unknown',
+    name: 'Unknown',
+  };
   const apps: StoreApp[] = store.apps.filter((a) =>
     a.meta.categories.includes(categoryId)
   ) as StoreApp[];
-  return Promise.resolve({ category, apps, fetchedAt: store.fetchedAt });
+  return { category, apps, fetchedAt: store.fetchedAt };
 }
 
 /**

@@ -1,11 +1,11 @@
 export interface DeviceApp {
   origin: string;
   installOrigin: string;
-  manifest?: {
+  manifest: {
     name: string;
     description: string;
     subtitle: string;
-    developer?: {
+    developer: {
       name: string;
       url: string;
     };

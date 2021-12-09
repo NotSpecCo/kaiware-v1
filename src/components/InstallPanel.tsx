@@ -12,10 +12,10 @@ type Props = {
 export function InstallPanel({ panelId }: Props): JSX.Element {
   const [file, setFile] = useState<File>();
   const [working, setWorking] = useState(false);
-  const ref = useRef<HTMLInputElement>();
+  const ref = useRef<any>();
 
   function reset() {
-    ref.current.value = null;
+    if (ref.current) ref.current.value = '';
     setFile(undefined);
   }
 
@@ -42,10 +42,10 @@ export function InstallPanel({ panelId }: Props): JSX.Element {
           type="file"
           accept="application/zip"
           onChange={(ev) => {
-            if (ev.target.files[0].name.endsWith('.zip')) {
+            if (ev.target.files?.[0]?.name.endsWith('.zip')) {
               setFile(ev.target.files[0]);
             } else {
-              ev.target.value = null;
+              ev.target.value = '';
             }
           }}
         />

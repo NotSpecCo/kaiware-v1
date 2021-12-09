@@ -54,7 +54,7 @@ export function DevicePanel({ panelId }: Props): JSX.Element {
             key={app.id}
             appId={app.id}
             name={app.manifest.name}
-            author={app.manifest.developer.name}
+            author={app.manifest.developer?.name}
             description={app.manifest.description}
             installed={true}
             showCloseBtn={true}
