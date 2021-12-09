@@ -1,0 +1,8 @@
+.device {
+  height: 100px;
+}
+
+.container {
+  display: flex;
+  padding: 0 15px;
+}

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
+import { usePanels } from '../contexts/PanelsProvider';
 import { DeviceInfo } from '../models';
-import { StoreCategory } from '../models/StoreCategory';
 import { getDeviceInfo } from '../services/device';
-import { getCategories } from '../services/store';
 import { IconButton } from '../ui-components/IconButton';
 import { Typography } from '../ui-components/Typography';
 import { delay } from '../utils/delay';
@@ -11,14 +10,13 @@ import styles from './Sidebar.module.css';
 import { SidebarItem } from './SidebarItem';
 
 export function Sidebar(): JSX.Element {
-  const [categories, setCategories] = useState<StoreCategory[]>([]);
   const [device, setDevice] = useState<DeviceInfo>();
   const [searching, setSearching] = useState(false);
   const history = useHistory();
+  const { setPanels } = usePanels();
 
   useEffect(() => {
     refreshDevice();
-    getCategories().then(setCategories);
   }, []);
 
   async function refreshDevice() {
@@ -35,29 +33,29 @@ export function Sidebar(): JSX.Element {
     setSearching(false);
   }
 
+  function navigate(path: string) {
+    setPanels([]);
+    history.push(path);
+  }
+
   return (
     <div className={styles.root}>
       <div className={styles.titlebar} />
       <div className={styles.items}>
-        <SidebarItem primaryText="Home" onClick={() => history.push(`/`)} />
+        <SidebarItem primaryText="Home" onClick={() => navigate(`/`)} />
         <Typography type="titleSmall">Apps</Typography>
-        {categories.map((a) => (
-          <SidebarItem
-            key={a.id}
-            primaryText={a.name}
-            onClick={() => history.push(`/category/${a.id}`)}
-          />
-        ))}
-        <div className={styles.spacer} />
+        {/* <SidebarItem primaryText="Search" onClick={() => navigate(`/search`)} /> */}
+        <SidebarItem primaryText="Categories" onClick={() => navigate(`/categories`)} />
         <Typography type="titleSmall">System</Typography>
-        <SidebarItem primaryText="Settings" onClick={() => history.push(`/settings`)} />
+        <SidebarItem primaryText="Settings" onClick={() => navigate(`/settings`)} />
         <SidebarItem primaryText="About" />
+        <div className={styles.spacer} />
         <Typography type="titleSmall">Device</Typography>
         {device ? (
           <SidebarItem
             primaryText={device.name}
             secondaryText="Connected"
-            onClick={() => history.push(`/device`)}
+            onClick={() => navigate(`/device`)}
           >
             <IconButton
               className={styles.btnRefresh}

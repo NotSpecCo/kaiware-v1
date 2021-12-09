@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 5px 0;
+  text-align: right;
+  color: var(--secondary-text-color);
+  font-style: italic;
+}
+
+.btnRefresh {
+  margin-left: 5px;
+}

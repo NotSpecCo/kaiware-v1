@@ -6,10 +6,12 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import styles from './App.module.css';
 import { Sidebar } from './components/Sidebar';
 import { DeviceProvider } from './contexts/DeviceProvider';
+import { PanelsProvider } from './contexts/PanelsProvider';
 import { SettingsProvider, useSettings } from './contexts/SettingsProvider';
 import { TextSize } from './models';
 import { AppInfo } from './routes/AppInfo';
 import { AppSettings } from './routes/AppSettings';
+import { Categories } from './routes/Categories';
 import { Category } from './routes/Category';
 import { Device } from './routes/Device';
 import { Home } from './routes/Home';
@@ -30,7 +32,9 @@ export function AppWrapper(): JSX.Element {
       <QueryClientProvider client={queryClient}>
         <SettingsProvider>
           <DeviceProvider>
-            <App />
+            <PanelsProvider>
+              <App />
+            </PanelsProvider>
           </DeviceProvider>
         </SettingsProvider>
       </QueryClientProvider>
@@ -70,6 +74,9 @@ export function App(): JSX.Element {
         </Route>
         <Route exact path="/device">
           <Device />
+        </Route>
+        <Route exact path="/categories/">
+          <Categories />
         </Route>
         <Route exact path="/category/:categoryId">
           <Category />
