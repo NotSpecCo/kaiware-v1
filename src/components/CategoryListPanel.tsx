@@ -22,7 +22,7 @@ export function CategoryListPanel({ panelId }: Props): JSX.Element {
 
   return (
     <Panel panelId={panelId}>
-      <PanelHeader showCloseButton={false} title="Categories"></PanelHeader>
+      <PanelHeader title="Categories"></PanelHeader>
       <PanelContent>
         {categories.map((a) => (
           <SidebarItem

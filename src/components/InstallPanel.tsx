@@ -30,7 +30,7 @@ export function InstallPanel({ panelId }: Props): JSX.Element {
 
   return (
     <Panel panelId={panelId}>
-      <PanelHeader title="Install a zip" showCloseButton={false} />
+      <PanelHeader title="Install a zip" />
       <PanelContent>
         <Typography>
           Drag and drop a zipped app to the box below to install it to your device. Ensure the

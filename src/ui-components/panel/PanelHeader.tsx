@@ -12,7 +12,7 @@ type Props = ComponentBaseProps & {
   onClose?: () => void;
 };
 
-export function PanelHeader({ showCloseButton = true, ...props }: Props): JSX.Element {
+export function PanelHeader({ showCloseButton = false, ...props }: Props): JSX.Element {
   return (
     <div className={joinClasses(styles.root, props.className)}>
       <div className={styles.title}>

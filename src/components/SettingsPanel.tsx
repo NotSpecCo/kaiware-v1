@@ -15,7 +15,7 @@ export function SettingsPanel({ panelId }: Props): JSX.Element {
 
   return (
     <Panel panelId={panelId}>
-      <PanelHeader title="Settings" showCloseButton={false} />
+      <PanelHeader title="Settings" />
       <PanelContent>
         <div className={styles.row}>
           <Typography type="bodyLarge" padding="none">

@@ -35,7 +35,7 @@ export function CategoryPanel({ panelId, categoryId }: Props): JSX.Element {
 
   return (
     <Panel panelId={panelId}>
-      <PanelHeader showCloseButton={false} title={category?.name} />
+      <PanelHeader title={category?.name} />
       <PanelContent>
         {data?.apps.map((app) => (
           <AppRow

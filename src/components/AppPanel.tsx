@@ -41,7 +41,12 @@ export function AppPanel({ panelId, appSlug }: Props): JSX.Element {
 
   return (
     <Panel panelId={panelId}>
-      <PanelHeader title={app?.name} imageUrl={app?.icon} onClose={() => closePanel(panelId)}>
+      <PanelHeader
+        title={app?.name}
+        imageUrl={app?.icon}
+        showCloseButton={true}
+        onClose={() => closePanel(panelId)}
+      >
         <div className={styles.subheader}>
           <div>
             {app?.author ? (
