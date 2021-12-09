@@ -32,6 +32,13 @@ export function AppPanel({ panelId, appSlug }: Props): JSX.Element {
     setWorking(false);
   }
 
+  if (!app) {
+    return <Panel panelId={panelId}>Loading</Panel>;
+    // TODO
+    // Either make it not load by opening the component with the data it needs (so opener gets data and provides it to AppInfo via props)
+    // Or make a skeleton-placeholder / loading screen that gets displayed while `app === null`
+  }
+
   return (
     <Panel panelId={panelId}>
       <PanelHeader title={app?.name} imageUrl={app?.icon} onClose={() => closePanel(panelId)}>

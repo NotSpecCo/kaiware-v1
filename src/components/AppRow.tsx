@@ -31,6 +31,11 @@ export function AppRow({ ...props }: Props): JSX.Element {
   async function install() {
     if (working) return;
 
+    if (!props.downloadUrl) {
+      console.error('App has no download url set!');
+      return;
+    }
+
     setWorking(true);
     await installApp(props.downloadUrl);
     setWorking(false);
@@ -79,7 +84,7 @@ export function AppRow({ ...props }: Props): JSX.Element {
       <div className={styles.actions}>
         {props.showLaunchBtn && <IconButton icon="play" title="Launch" onClick={() => launch()} />}
         {props.showCloseBtn && <IconButton icon="cancel" title="Close" onClick={() => close()} />}
-        {props.showInstallBtn && (
+        {props.showInstallBtn && props.downloadUrl && (
           <IconButton icon="install" title="Install" onClick={() => install()} />
         )}
         {props.showUninstallBtn && (

@@ -1,3 +1,5 @@
+import { DeviceInfo, DeviceApp } from './models';
+
 declare global {
   interface Window {
     // see preload.ts for implementation

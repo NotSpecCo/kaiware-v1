@@ -38,6 +38,10 @@ export async function getCategories(options?: Options): Promise<StoreCategory[]>
   return store.categories;
 }
 
+/**
+ *
+ * @returns apps for the specified category, null if not found
+ */
 export async function getAppsByCategory(
   categoryId: string,
   options?: Options
@@ -45,17 +49,24 @@ export async function getAppsByCategory(
   category: StoreCategory;
   apps: StoreApp[];
   fetchedAt: number;
-}> {
+} | null> {
   const store = await getStoreDb(options);
-  const category: StoreCategory = store.categories.find((a) => a.id === categoryId);
+  const category = store.categories.find((a) => a.id === categoryId);
+  if (!category) {
+    return null;
+  }
   const apps: StoreApp[] = store.apps.filter((a) =>
     a.meta.categories.includes(categoryId)
   ) as StoreApp[];
   return Promise.resolve({ category, apps, fetchedAt: store.fetchedAt });
 }
 
-export async function getAppBySlug(slug: string, options?: Options): Promise<StoreApp> {
+/**
+ *
+ * @returns the store app or null if not found
+ */
+export async function getAppBySlug(slug: string, options?: Options): Promise<StoreApp | null> {
   const store = await getStoreDb(options);
-  const app: StoreApp = store.apps.find((a) => a.slug === slug);
-  return app;
+  const app = store.apps.find((a) => a.slug === slug);
+  return app || null;
 }

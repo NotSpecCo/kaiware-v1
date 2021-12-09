@@ -4,15 +4,14 @@ import ReactDOM from 'react-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import styles from './App.module.css';
+import { ErrorBoundary } from './components/ErrorBoundery';
 import { Sidebar } from './components/Sidebar';
 import { DeviceProvider } from './contexts/DeviceProvider';
 import { PanelsProvider } from './contexts/PanelsProvider';
 import { SettingsProvider, useSettings } from './contexts/SettingsProvider';
 import { TextSize } from './models';
-import { AppInfo } from './routes/AppInfo';
 import { AppSettings } from './routes/AppSettings';
 import { Categories } from './routes/Categories';
-import { Category } from './routes/Category';
 import { Device } from './routes/Device';
 import { Home } from './routes/Home';
 import { themes } from './themes';
@@ -28,17 +27,19 @@ const queryClient = new QueryClient({
 
 export function AppWrapper(): JSX.Element {
   return (
-    <HashRouter>
-      <QueryClientProvider client={queryClient}>
-        <SettingsProvider>
-          <DeviceProvider>
-            <PanelsProvider>
-              <App />
-            </PanelsProvider>
-          </DeviceProvider>
-        </SettingsProvider>
-      </QueryClientProvider>
-    </HashRouter>
+    <ErrorBoundary>
+      <HashRouter>
+        <QueryClientProvider client={queryClient}>
+          <SettingsProvider>
+            <DeviceProvider>
+              <PanelsProvider>
+                <App />
+              </PanelsProvider>
+            </DeviceProvider>
+          </SettingsProvider>
+        </QueryClientProvider>
+      </HashRouter>
+    </ErrorBoundary>
   );
 }
 
@@ -68,26 +69,24 @@ export function App(): JSX.Element {
   return (
     <div className={styles.root}>
       <Sidebar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/device">
-          <Device />
-        </Route>
-        <Route exact path="/categories/">
-          <Categories />
-        </Route>
-        <Route exact path="/category/:categoryId">
-          <Category />
-        </Route>
-        <Route exact path="/app/:slug">
-          <AppInfo />
-        </Route>
-        <Route exact path="/settings">
-          <AppSettings />
-        </Route>
-      </Switch>
+      <ErrorBoundary>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/device">
+            <ErrorBoundary>
+              <Device />
+            </ErrorBoundary>
+          </Route>
+          <Route exact path="/categories/">
+            <Categories />
+          </Route>
+          <Route exact path="/settings">
+            <AppSettings />
+          </Route>
+        </Switch>
+      </ErrorBoundary>
     </div>
   );
 }

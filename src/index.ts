@@ -88,9 +88,13 @@ ipcMain.handle('open-url', async (_, url: string) => {
   await shell.openExternal(url);
 });
 
-ipcMain.handle('download-url', async (_, url: string) => {
+ipcMain.handle('download-url', async ({ sender }, url: string) => {
   console.log('download-url', url);
-  const win = BrowserWindow.getFocusedWindow();
+  const win = BrowserWindow.fromWebContents(sender);
+  if (!win) {
+    throw new Error('BrowserWindow not found');
+  }
+  // would be better if
   await download(win, url, { saveAs: true });
 });
 
