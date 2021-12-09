@@ -8,10 +8,12 @@ import styles from './Home.module.css';
 export function Home(): JSX.Element {
   const [file, setFile] = useState<File>();
   const [working, setWorking] = useState(false);
-  const ref = useRef<HTMLInputElement>();
+  const ref = useRef<HTMLInputElement | null>(null);
 
   function reset() {
-    ref.current.value = null;
+    if (ref.current) {
+      ref.current.value = '';
+    }
     setFile(undefined);
   }
 
@@ -42,10 +44,11 @@ export function Home(): JSX.Element {
           type="file"
           accept="application/zip"
           onChange={(ev) => {
-            if (ev.target.files[0].name.endsWith('.zip')) {
-              setFile(ev.target.files[0]);
+            const file = ev.target.files && ev.target.files[0];
+            if (file?.name.endsWith('.zip')) {
+              setFile(file);
             } else {
-              ev.target.value = null;
+              ev.target.value = '';
             }
           }}
         />

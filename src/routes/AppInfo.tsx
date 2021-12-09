@@ -15,7 +15,7 @@ type Params = {
 };
 
 export function AppInfo(): JSX.Element {
-  const [app, setApp] = useState<StoreApp>();
+  const [app, setApp] = useState<StoreApp | null>(null);
   const [working, setWorking] = useState(false);
   console.log('app', app);
 
@@ -33,19 +33,26 @@ export function AppInfo(): JSX.Element {
     setWorking(false);
   }
 
+  if (!app) {
+    return <View>Loading</View>;
+    // TODO
+    // Either make it not load by opening the component with the data it needs (so opener gets data and provides it to AppInfo via props)
+    // Or make a skeleton-placeholder / loading screen that gets displayed while `app === null`
+  }
+
   return (
     <View>
       <ViewHeader className={styles.header}>
-        <img src={app?.icon} alt="" />
+        <img src={app.icon} alt="" />
         <div>
           <Typography type="titleLarge" padding="none">
-            {app?.name || ''}
+            {app.name || ''}
           </Typography>
-          {app?.author ? (
-            <Typography padding="none">Author: {app?.author.join(', ')}</Typography>
+          {app.author ? (
+            <Typography padding="none">Author: {app.author.join(', ')}</Typography>
           ) : null}
-          {app?.maintainer ? (
-            <Typography padding="none">Maintainer: {app?.maintainer.join(', ')}</Typography>
+          {app.maintainer ? (
+            <Typography padding="none">Maintainer: {app.maintainer.join(', ')}</Typography>
           ) : null}
         </div>
         <div className={styles.actions}>
@@ -55,18 +62,18 @@ export function AppInfo(): JSX.Element {
             disabled={working}
             onClick={install}
           />
-          <Button text="Download" fullWidth={true} onClick={() => downloadUrl(app?.download.url)} />
+          <Button text="Download" fullWidth={true} onClick={() => downloadUrl(app.download.url)} />
         </div>
       </ViewHeader>
       <ViewContent className={styles.content}>
         <div className={styles.screenshots}>
-          {app?.screenshots.map((a, i) => (
+          {app.screenshots.map((a, i) => (
             <img key={i} src={a} alt="" />
           ))}
         </div>
         <section className={styles.section}>
           <Typography type="subtitle">Description</Typography>
-          <Typography padding="horizontal">{app?.description}</Typography>
+          <Typography padding="horizontal">{app.description}</Typography>
         </section>
         <section className={styles.section}>
           <Typography type="subtitle">Links</Typography>
@@ -74,13 +81,13 @@ export function AppInfo(): JSX.Element {
             <Typography display="inline" type="bodyStrong">
               Website:
             </Typography>
-            <BrowserLink url={app?.website} text={app?.website} />
+            <BrowserLink url={app.website} text={app.website} />
           </div>
           <div className={styles.infoRow}>
             <Typography display="inline" type="bodyStrong">
               Donate:
             </Typography>
-            <BrowserLink url={app?.donation} text={app?.donation} />
+            <BrowserLink url={app.donation} text={app.donation} />
           </div>
         </section>
         <section className={styles.section}>
@@ -89,19 +96,19 @@ export function AppInfo(): JSX.Element {
             <Typography display="inline" type="bodyStrong">
               Categories:
             </Typography>
-            <Typography display="inline">{app?.meta.categories.join(', ')}</Typography>
+            <Typography display="inline">{app.meta.categories.join(', ')}</Typography>
           </div>
           <div className={styles.infoRow}>
             <Typography display="inline" type="bodyStrong">
               Tags:
             </Typography>
-            <Typography display="inline">{app?.meta.tags.split('; ').join(', ')}</Typography>
+            <Typography display="inline">{app.meta.tags.split('; ').join(', ')}</Typography>
           </div>
           <div className={styles.infoRow}>
             <Typography display="inline" type="bodyStrong">
               License:
             </Typography>
-            <Typography display="inline">{app?.license}</Typography>
+            <Typography display="inline">{app.license}</Typography>
           </div>
         </section>
       </ViewContent>
