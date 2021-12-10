@@ -18,4 +18,6 @@ export enum TextSize {
 export type Settings = {
   theme: Theme;
   textSize: TextSize;
+  accentColor: string;
+  accentTextColor: 'light' | 'dark';
 };

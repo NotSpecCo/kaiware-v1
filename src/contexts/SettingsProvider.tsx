@@ -5,11 +5,13 @@ import { getStorageItem, setStorageItem, StorageKey } from '../utils/storage';
 const defaultSettings: Settings = {
   theme: Theme.Light,
   textSize: TextSize.Medium,
+  accentColor: 'inherit',
+  accentTextColor: 'light',
 };
 
 type SettingsContextValue = {
   settings: Settings;
-  setSettings: (settings: Settings) => void;
+  setSettings: (settings: Partial<Settings>) => void;
   setSetting: <T extends keyof Settings>(settingsKey: keyof Settings, val: Settings[T]) => void;
 };
 
@@ -33,9 +35,9 @@ export function SettingsProvider(props: SettingsProviderProps) {
     ...getStorageItem<Settings>(StorageKey.Settings),
   });
 
-  function setSettings(val: Settings): void {
-    setStorageItem<Settings>(StorageKey.Settings, val);
-    setSettingsInternal(val);
+  function setSettings(val: Partial<Settings>): void {
+    setStorageItem<Settings>(StorageKey.Settings, { ...settings, ...val });
+    setSettingsInternal({ ...settings, ...val });
   }
 
   function setSetting<T extends keyof Settings>(key: T, val: Settings[T]): void {

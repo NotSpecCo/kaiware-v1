@@ -167,6 +167,12 @@ h5 {
 input {
   border: none;
   outline: none;
+  border-bottom: 1px solid var(--primary-text-color);
+}
+input:active,
+input:focus {
+  border: none;
+  outline: none;
   border-bottom: 1px solid var(--accent-text-color);
 }
 

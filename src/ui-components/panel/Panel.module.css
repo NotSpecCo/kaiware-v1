@@ -19,5 +19,6 @@
 
 .titlebar {
   height: 25px;
+  min-height: 25px;
   -webkit-app-region: drag;
 }

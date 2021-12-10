@@ -53,6 +53,15 @@ export function App(): JSX.Element {
       document.documentElement.style.setProperty(`--${kebabCase(id)}`, theme.values[id]);
     }
 
+    document.documentElement.style.setProperty('--app-accent-color', `${settings.accentColor}`);
+    document.documentElement.style.setProperty('--accent-text-color', `${settings.accentColor}`);
+    document.documentElement.style.setProperty('--button-bg-color', `${settings.accentColor}`);
+
+    document.documentElement.style.setProperty(
+      '--button-text-color',
+      settings.accentTextColor === 'light' ? 'rgba(255,255,255,.95)' : 'rgba(0,0,0,.95)'
+    );
+
     const fontSize = {
       [TextSize.Smallest]: 8,
       [TextSize.Small]: 9,

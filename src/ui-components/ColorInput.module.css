@@ -1,0 +1,27 @@
+.root {
+  position: relative;
+  height: 38px;
+  width: 38px;
+  margin-left: 10px;
+}
+
+.previewInput,
+.preview {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  height: 38px;
+  width: 38px;
+}
+
+.previewInput {
+  opacity: 0;
+}
+
+.preview {
+  pointer-events: none;
+  border: 1px solid var(--secondary-text-color);
+  border-radius: 4px;
+}
