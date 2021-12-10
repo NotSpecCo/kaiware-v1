@@ -56,7 +56,6 @@ export function AppPanel({ panelId, appSlug }: Props): JSX.Element {
               <Typography padding="none">Maintainer: {app?.maintainer.join(', ')}</Typography>
             ) : null}
           </div>
-          <Button text="Download" onClick={() => downloadUrl(app?.download.url)} />
           <Button text={working ? 'Installing' : 'Install'} disabled={working} onClick={install} />
         </div>
       </PanelHeader>
@@ -72,6 +71,21 @@ export function AppPanel({ panelId, appSlug }: Props): JSX.Element {
         </section>
         <section className={styles.section}>
           <Typography type="subtitle">Links</Typography>
+          <div className={styles.infoRow}>
+            <Typography display="inline" type="bodyStrong">
+              Download:
+            </Typography>
+            <a
+              href=""
+              onClick={(ev) => {
+                ev.stopPropagation();
+                ev.preventDefault();
+                downloadUrl(app?.download.url);
+              }}
+            >
+              {app?.download.url}
+            </a>
+          </div>
           <div className={styles.infoRow}>
             <Typography display="inline" type="bodyStrong">
               Website:

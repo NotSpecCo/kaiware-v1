@@ -54,3 +54,18 @@
 .infoRow {
   margin-bottom: 10px;
 }
+
+@media (max-width: 1000px) {
+  .subheader {
+    flex-direction: column;
+  }
+
+  .subheader > div {
+    flex: 1;
+    margin-bottom: 15px;
+  }
+  .subheader button {
+    margin-left: 0px;
+    margin-bottom: 7px;
+  }
+}
