@@ -1,8 +1,9 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { ComponentBaseProps } from '../models';
 
 type Panel = {
   id: string;
+  closeOnEsc?: boolean;
   element: JSX.Element;
 };
 
@@ -35,6 +36,20 @@ type PanelsProviderProps = ComponentBaseProps;
 export function PanelsProvider(props: PanelsProviderProps): JSX.Element {
   const [panels, setPanels] = useState<Panel[]>([]);
   const activePanelId = panels[panels.length - 1]?.id;
+
+  useEffect(() => {
+    const handleKey = (ev: KeyboardEvent) => {
+      if (ev.key === 'Escape' && panels[panels.length - 1]?.closeOnEsc) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        closePanel(panels[panels.length - 1].id);
+      }
+    };
+
+    document.addEventListener('keydown', handleKey);
+
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [panels]);
 
   function addPanel(srcPanelId: string, panel: Panel) {
     const srcIndex = panels.findIndex((a) => a.id === srcPanelId);

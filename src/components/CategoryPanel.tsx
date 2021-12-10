@@ -50,6 +50,7 @@ export function CategoryPanel({ panelId, categoryId }: Props): JSX.Element {
             onClick={() => {
               addPanel(panelId, {
                 id: `app_${app.slug}`,
+                closeOnEsc: true,
                 element: (
                   <AppPanel
                     key={`app_${app.slug}`}
