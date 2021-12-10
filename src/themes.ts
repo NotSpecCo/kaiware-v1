@@ -12,6 +12,7 @@ export type ThemeConfig = {
     dividerColor: string;
     highlightBgColor: string;
     sidebarBgColor: string;
+    panelBgColor: string;
     buttonBgColor: string;
     buttonTextColor: string;
     scrimColor: string;
@@ -22,7 +23,7 @@ export const themes: ThemeConfig[] = [
   {
     id: Theme.Light,
     values: {
-      appBgColor: 'hsl(0, 0%, 100%)',
+      appBgColor: 'hsl(0, 0%, 98%)',
       appAccentColor: '#000000',
       primaryTextColor: 'rgba(0, 0, 0, 0.88)',
       secondaryTextColor: 'rgba(0, 0, 0, 0.5)',
@@ -30,6 +31,7 @@ export const themes: ThemeConfig[] = [
       dividerColor: 'rgba(0, 0, 0, 0.1)',
       highlightBgColor: 'rgba(0, 0, 0, 0.05)',
       sidebarBgColor: 'hsl(0, 0%, 98%)',
+      panelBgColor: 'hsl(0, 0%, 100%)',
       buttonBgColor: '#000000',
       buttonTextColor: '#ffffff',
       scrimColor: 'rgba(255, 255, 255, .7)',
@@ -38,7 +40,7 @@ export const themes: ThemeConfig[] = [
   {
     id: Theme.Warm,
     values: {
-      appBgColor: 'hsl(54, 100%, 97%)',
+      appBgColor: 'hsl(54, 100%, 96%)',
       appAccentColor: 'hsl(54, 70%, 70%)',
       primaryTextColor: 'rgba(0, 0, 0, 0.88)',
       secondaryTextColor: 'rgba(0, 0, 0, 0.5)',
@@ -46,6 +48,7 @@ export const themes: ThemeConfig[] = [
       dividerColor: 'rgba(0, 0, 0, 0.1)',
       highlightBgColor: 'rgba(0, 0, 0, 0.05)',
       sidebarBgColor: 'hsl(54, 100%, 96%)',
+      panelBgColor: 'hsl(54, 100%, 97%)',
       buttonBgColor: 'hsl(54, 70%, 70%)',
       buttonTextColor: 'rgba(0, 0, 0, 0.88)',
       scrimColor: 'rgba(0, 0, 0, .7)',
@@ -54,7 +57,7 @@ export const themes: ThemeConfig[] = [
   {
     id: Theme.Blue,
     values: {
-      appBgColor: 'hsl(209, 20%, 32%)',
+      appBgColor: 'hsl(209, 20%, 30%)',
       appAccentColor: 'hsl(209, 20%, 55%)',
       primaryTextColor: 'rgba(255, 255, 255, 0.88)',
       secondaryTextColor: 'rgba(255, 255, 255, 0.5)',
@@ -62,6 +65,7 @@ export const themes: ThemeConfig[] = [
       dividerColor: 'rgba(255, 255, 255, 0.1)',
       highlightBgColor: 'rgba(255, 255, 255, 0.05)',
       sidebarBgColor: 'hsl(209, 20%, 30%)',
+      panelBgColor: 'hsl(209, 20%, 32%)',
       buttonBgColor: 'hsl(209, 20%, 55%)',
       buttonTextColor: 'rgba(255, 255, 255, 1)',
       scrimColor: 'rgba(0, 0, 0, .7)',
@@ -70,7 +74,7 @@ export const themes: ThemeConfig[] = [
   {
     id: Theme.Dark,
     values: {
-      appBgColor: 'hsl(208, 19%, 18%)',
+      appBgColor: 'hsl(208, 19%, 16%)',
       appAccentColor: 'hsl(209, 20%, 35%)',
       primaryTextColor: 'rgba(255, 255, 255, 0.88)',
       secondaryTextColor: 'rgba(255, 255, 255, 0.5)',
@@ -78,6 +82,7 @@ export const themes: ThemeConfig[] = [
       dividerColor: 'rgba(255, 255, 255, 0.1)',
       highlightBgColor: 'rgba(255, 255, 255, 0.05)',
       sidebarBgColor: 'hsl(208, 19%, 16%)',
+      panelBgColor: 'hsl(208, 19%, 18%)',
       buttonBgColor: '#415262',
       buttonTextColor: 'rgba(255, 255, 255, 0.98)',
       scrimColor: 'rgba(0, 0, 0, .7)',
@@ -86,7 +91,7 @@ export const themes: ThemeConfig[] = [
   {
     id: Theme.Darker,
     values: {
-      appBgColor: 'hsl(0, 0%, 13%)',
+      appBgColor: 'hsl(0, 0%, 12%)',
       appAccentColor: '#3d3d3d',
       primaryTextColor: 'rgba(255, 255, 255, 0.8)',
       secondaryTextColor: 'rgba(255, 255, 255, 0.5)',
@@ -94,6 +99,7 @@ export const themes: ThemeConfig[] = [
       dividerColor: 'rgba(255, 255, 255, 0.1)',
       highlightBgColor: 'rgba(255, 255, 255, 0.05)',
       sidebarBgColor: 'hsl(0, 0%, 12%)',
+      panelBgColor: 'hsl(0, 0%, 13%)',
       buttonBgColor: '#3d3d3d',
       buttonTextColor: '#ffffff',
       scrimColor: 'rgba(0, 0, 0, .7)',
@@ -110,6 +116,7 @@ export const themes: ThemeConfig[] = [
       dividerColor: 'rgba(255, 255, 255, 0.2)',
       highlightBgColor: 'rgba(255, 255, 255, 0.1)',
       sidebarBgColor: 'hsl(0, 0%, 0%)',
+      panelBgColor: 'hsl(0, 0%, 0%)',
       buttonBgColor: '#292929',
       buttonTextColor: '#ffffff',
       scrimColor: 'rgba(0, 0, 0, .7)',

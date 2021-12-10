@@ -11,9 +11,9 @@ export function View(props: Props): JSX.Element {
         if (i === arr.length - 1) {
           return 'auto';
         } else if (i === arr.length - 2) {
-          return '300px';
+          return '350px';
         } else {
-          return '0px';
+          return '40px';
         }
       })
     : ['auto'];

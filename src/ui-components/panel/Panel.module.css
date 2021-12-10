@@ -8,13 +8,20 @@
   box-shadow: -10px 0px 20px rgb(0 0 0 / 10%);
   transition: transform 200ms;
   transform: translateX(110%);
+  border-radius: 20px 0 0 20px;
+  background-color: var(--panel-bg-color);
 }
-.root:last-child {
+.root {
   padding-right: 15px;
 }
 
 .root.show {
+  transform: translateX(-15px);
+  margin-right: -15px;
+}
+.root:first-child.show {
   transform: translateX(0%);
+  margin-right: 0px;
 }
 
 .titlebar {
