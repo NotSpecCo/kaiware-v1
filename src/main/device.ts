@@ -90,7 +90,7 @@ export class Device {
       this._appsActor!.getInstalledApps.bind(this._appsActor)
     );
 
-    const apps = await getInstalledApps();
+    const apps = await getInstalledApps().then((res) => res.filter((a) => !!a.manifest));
 
     return apps;
   }
