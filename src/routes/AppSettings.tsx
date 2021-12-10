@@ -7,8 +7,8 @@ export function AppSettings(): JSX.Element {
   const { panels, setPanels } = usePanels();
 
   useEffect(() => {
-    setPanels([<SettingsPanel key="settings" panelId="settings" />]);
+    setPanels([{ id: 'settings', element: <SettingsPanel key="settings" panelId="settings" /> }]);
   }, []);
 
-  return <View>{panels}</View>;
+  return <View>{panels.map((a) => a.element)}</View>;
 }

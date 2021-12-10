@@ -15,8 +15,6 @@ export function CategoryListPanel({ panelId }: Props): JSX.Element {
   const { addPanel } = usePanels();
 
   useEffect(() => {
-    console.log('catlist eff');
-
     getCategories().then(setCategories);
   }, [panelId]);
 
@@ -29,10 +27,12 @@ export function CategoryListPanel({ panelId }: Props): JSX.Element {
             key={a.id}
             primaryText={a.name}
             onClick={() => {
-              addPanel(
-                panelId,
-                <CategoryPanel key={`cat_${a.id}`} panelId={`cat_${a.id}`} categoryId={a.id} />
-              );
+              addPanel(panelId, {
+                id: `cat_${a.id}`,
+                element: (
+                  <CategoryPanel key={`cat_${a.id}`} panelId={`cat_${a.id}`} categoryId={a.id} />
+                ),
+              });
             }}
           />
         ))}

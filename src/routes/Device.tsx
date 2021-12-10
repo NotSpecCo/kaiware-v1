@@ -7,8 +7,8 @@ export function Device(): JSX.Element {
   const { panels, setPanels } = usePanels();
 
   useEffect(() => {
-    setPanels([<DevicePanel key="device" panelId="device" />]);
+    setPanels([{ id: 'device', element: <DevicePanel key="device" panelId="device" /> }]);
   }, []);
 
-  return <View>{panels}</View>;
+  return <View>{panels.map((a) => a.element)}</View>;
 }

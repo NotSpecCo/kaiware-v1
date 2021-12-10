@@ -7,8 +7,10 @@ export function Home(): JSX.Element {
   const { panels, setPanels } = usePanels();
 
   useEffect(() => {
-    setPanels([<InstallPanel key="installZip" panelId="installZip" />]);
+    setPanels([
+      { id: 'installZip', element: <InstallPanel key="installZip" panelId="installZip" /> },
+    ]);
   }, []);
 
-  return <View>{panels}</View>;
+  return <View>{panels.map((a) => a.element)}</View>;
 }

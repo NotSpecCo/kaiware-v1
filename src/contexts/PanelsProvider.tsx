@@ -1,15 +1,22 @@
 import React, { createContext, useContext, useState } from 'react';
 import { ComponentBaseProps } from '../models';
 
+type Panel = {
+  id: string;
+  element: JSX.Element;
+};
+
 type PanelContextValue = {
-  panels: JSX.Element[];
-  setPanels: (panels: JSX.Element[]) => void;
-  addPanel: (srcPanelId: string, panel: JSX.Element) => void;
+  panels: Panel[];
+  activePanelId: string | undefined;
+  setPanels: (panels: Panel[]) => void;
+  addPanel: (srcPanelId: string, panel: Panel) => void;
   closePanel: (panelId: string) => void;
 };
 
 const defaultValue: PanelContextValue = {
   panels: [],
+  activePanelId: undefined,
   setPanels: (panels) => {
     console.log(panels);
   },
@@ -26,15 +33,16 @@ const PanelContext = createContext<PanelContextValue>(defaultValue);
 type PanelsProviderProps = ComponentBaseProps;
 
 export function PanelsProvider(props: PanelsProviderProps): JSX.Element {
-  const [panels, setPanels] = useState<JSX.Element[]>([]);
+  const [panels, setPanels] = useState<Panel[]>([]);
+  const activePanelId = panels[panels.length - 1]?.id;
 
-  function addPanel(srcPanelId: string, panel: JSX.Element) {
-    const srcIndex = panels.findIndex((a) => a.props.panelId === srcPanelId);
+  function addPanel(srcPanelId: string, panel: Panel) {
+    const srcIndex = panels.findIndex((a) => a.id === srcPanelId);
     setPanels([...panels.slice(0, srcIndex + 1), panel]);
   }
 
   function closePanel(panelId: string) {
-    const srcIndex = panels.findIndex((a) => a.props.panelId === panelId);
+    const srcIndex = panels.findIndex((a) => a.id === panelId);
     setPanels(panels.slice(0, srcIndex));
   }
 
@@ -42,6 +50,7 @@ export function PanelsProvider(props: PanelsProviderProps): JSX.Element {
     <PanelContext.Provider
       value={{
         panels,
+        activePanelId,
         setPanels,
         addPanel,
         closePanel,

@@ -7,10 +7,10 @@ export function Categories(): JSX.Element {
   const { panels, setPanels } = usePanels();
 
   useEffect(() => {
-    setPanels([<CategoryListPanel key="catList" panelId="catList" />]);
+    setPanels([{ id: 'catList', element: <CategoryListPanel key="catList" panelId="catList" /> }]);
 
     return () => setPanels([]);
   }, []);
 
-  return <View>{panels}</View>;
+  return <View>{panels.map((a) => a.element)}</View>;
 }
