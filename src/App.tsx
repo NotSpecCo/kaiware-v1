@@ -14,6 +14,7 @@ import { AppSettings } from './routes/AppSettings';
 import { Categories } from './routes/Categories';
 import { Device } from './routes/Device';
 import { Home } from './routes/Home';
+import { Search } from './routes/Search';
 import { themes } from './themes';
 
 const queryClient = new QueryClient({
@@ -88,7 +89,10 @@ export function App(): JSX.Element {
               <Device />
             </ErrorBoundary>
           </Route>
-          <Route exact path="/categories/">
+          <Route exact path="/search">
+            <Search />
+          </Route>
+          <Route exact path="/categories">
             <Categories />
           </Route>
           <Route exact path="/settings">

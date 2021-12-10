@@ -1,3 +1,4 @@
+import lunr from 'lunr';
 import { StoreApp } from '../models/StoreApp';
 import { StoreCategory } from '../models/StoreCategory';
 import { getStorageItem, setStorageItem, StorageKey } from '../utils/storage';
@@ -12,6 +13,25 @@ type StoreDb = {
 type Options = {
   forceRefresh?: boolean;
 };
+
+let searchIndex: lunr.Index;
+
+function createSearchIndex(store: StoreDb) {
+  searchIndex = lunr(function () {
+    this.field('title');
+    this.field('author');
+    this.field('description');
+
+    store.apps.forEach((app) => {
+      this.add({
+        title: app.name,
+        description: app.description,
+        author: app.author,
+        id: app.slug,
+      });
+    });
+  });
+}
 
 export async function getStoreDb(options?: Options): Promise<StoreDb> {
   let store = getStorageItem<StoreDb>(StorageKey.StoreDb);
@@ -28,6 +48,11 @@ export async function getStoreDb(options?: Options): Promise<StoreDb> {
       generatedAt: data.generated_at,
     };
     setStorageItem(StorageKey.StoreDb, store);
+    createSearchIndex(store);
+  }
+
+  if (!searchIndex) {
+    createSearchIndex(store);
   }
 
   return store;
@@ -69,4 +94,15 @@ export async function getAppBySlug(slug: string, options?: Options): Promise<Sto
   const store = await getStoreDb(options);
   const app = store.apps.find((a) => a.slug === slug);
   return app || null;
+}
+
+export async function searchApps(query: string): Promise<StoreApp[]> {
+  const store = await getStoreDb();
+  const results = searchIndex.search(`${query}*`).slice(0, 30);
+  const appMap = store.apps.reduce((acc, val) => {
+    acc[val.slug] = val;
+    return acc;
+  }, {} as { [key: string]: StoreApp });
+
+  return results.map((a) => appMap[a.ref]);
 }

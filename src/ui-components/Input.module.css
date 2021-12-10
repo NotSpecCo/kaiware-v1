@@ -1,0 +1,6 @@
+.root {
+  padding: 10px;
+  font-size: 1.4rem;
+  background-color: transparent;
+  color: var(--primary-text-color);
+}

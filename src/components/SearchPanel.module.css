@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+}
+
+.form > input {
+  flex: 1;
+}
+
+.form > button {
+  border-bottom: 1px solid var(--primary-text-color);
+}
+
+.form > input:focus + button {
+  border-bottom: 1px solid var(--app-accent-color);
+}

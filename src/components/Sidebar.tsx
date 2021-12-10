@@ -50,7 +50,11 @@ export function Sidebar(): JSX.Element {
           onClick={() => navigate(`/`)}
         />
         <Typography type="titleSmall">Apps</Typography>
-        {/* <SidebarItem primaryText="Search" onClick={() => navigate(`/search`)} /> */}
+        <SidebarItem
+          primaryText="Search"
+          disabled={loc.pathname === '/search'}
+          onClick={() => navigate(`/search`)}
+        />
         <SidebarItem
           primaryText="Categories"
           disabled={loc.pathname === '/categories'}

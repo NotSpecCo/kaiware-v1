@@ -5,18 +5,20 @@
   cursor: pointer;
   background-color: transparent;
   padding: 0 5px;
-
-  opacity: 0.75;
-  transition: opacity 500ms;
   border: none;
   outline: none;
   text-align: center;
 }
-.root:hover {
+
+.root > svg {
+  opacity: 0.75;
+  transition: opacity 500ms;
+}
+.root > svg:hover {
   opacity: 1;
 }
 
-.root[disabled] {
+.root > svg[disabled] {
   opacity: 0.3;
 }
 

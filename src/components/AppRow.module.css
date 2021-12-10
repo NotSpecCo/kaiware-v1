@@ -26,6 +26,14 @@
   margin-right: 10px;
 }
 
+.name,
+.author,
+.description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .name {
   font-size: 1.6rem;
   font-weight: 600;
@@ -39,9 +47,6 @@
 
 .description {
   color: var(--secondary-text-color);
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .actions {
