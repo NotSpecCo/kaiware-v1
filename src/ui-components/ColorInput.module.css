@@ -22,6 +22,6 @@
 
 .preview {
   pointer-events: none;
-  border: 1px solid var(--secondary-text-color);
+  border: 1px solid var(--divider-color);
   border-radius: 4px;
 }

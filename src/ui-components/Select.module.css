@@ -1,9 +1,10 @@
 .root {
-  padding: 10px 10px;
+  padding: 8px;
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
   transition: opacity 500ms;
   font-weight: 600;
+  font-family: 'Poppins', sans-serif;
   cursor: pointer;
   opacity: 0.9;
   border-radius: 5px;
@@ -11,6 +12,7 @@
   outline: none;
   text-align: center;
   font-size: 1.4rem;
+  border-right: 8px solid var(--button-bg-color);
 }
 .root:hover {
   opacity: 1;
