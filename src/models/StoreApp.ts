@@ -21,4 +21,5 @@ export type StoreApp = {
   };
   type: string;
   slug: string;
+  people: [{ name: string; role: 'author' | 'maintainer'; email?: string; website?: string }];
 };

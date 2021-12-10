@@ -36,7 +36,41 @@ function createSearchIndex(store: StoreDb) {
 export async function getStoreDb(options?: Options): Promise<StoreDb> {
   let store = getStorageItem<StoreDb>(StorageKey.StoreDb);
   if (!store || new Date().valueOf() - store.fetchedAt > 1_800_000 || options?.forceRefresh) {
-    const data = await (await fetch('https://banana-hackers.gitlab.io/store-db/data.json')).json();
+    const data = await fetch('https://banana-hackers.gitlab.io/store-db/data.json')
+      .then((res) => res.json())
+      .then((res) => {
+        res.apps = res.apps.map((a: any) => {
+          const people = [
+            ...a.author.map((person: string) => {
+              const emailMatch = person.match(/(.*)[ ]?<(.*@.*)>/);
+              const urlMatch = person.match(/(.*)[ ]?<(http.*)>/);
+              return {
+                name: emailMatch?.[1] || urlMatch?.[1] || person,
+                email: emailMatch?.[2] || undefined,
+                website: urlMatch?.[2] || undefined,
+                role: 'author',
+              };
+            }),
+            ...a.maintainer.map((person: string) => {
+              const emailMatch = person.match(/(.*)[ ]?<(.*@.*)>/);
+              const urlMatch = person.match(/(.*)[ ]?<(http.*)>/);
+              return {
+                name: emailMatch?.[1] || urlMatch?.[1] || person,
+                email: emailMatch?.[2] || undefined,
+                website: urlMatch?.[2] || undefined,
+                role: 'maintainer',
+              };
+            }),
+          ];
+
+          return {
+            ...a,
+            people,
+          };
+        });
+
+        return res;
+      });
     const categories: StoreCategory[] = Object.keys(data.categories).map((key) => ({
       ...(data.categories as unknown as { [key: string]: Omit<StoreCategory, 'id'> })[key],
       id: key,
@@ -105,4 +139,15 @@ export async function searchApps(query: string): Promise<StoreApp[]> {
   }, {} as { [key: string]: StoreApp });
 
   return results.map((a) => appMap[a.ref]);
+}
+
+export async function fetchAppVersion(manifestUrl: string): Promise<string> {
+  const res = await fetch(manifestUrl)
+    .then((res) => res.json() as { version?: string })
+    .catch((err) => {
+      console.log('Failed to get app version', err);
+      return null;
+    });
+
+  return res?.version || '';
 }

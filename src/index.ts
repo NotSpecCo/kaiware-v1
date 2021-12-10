@@ -130,15 +130,14 @@ if (require('electron-squirrel-startup')) {
 
 const createWindow = (): void => {
   session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
-    // console.log('details', details);
-
     callback({
       responseHeaders: {
         ...details.responseHeaders,
+        'access-control-allow-origin': '*',
         'Content-Security-Policy': [
           app.isPackaged
-            ? "default-src 'self' 'unsafe-inline' data:; script-src 'self' data:; img-src 'self' https://banana-hackers.gitlab.io; connect-src 'self' https://banana-hackers.gitlab.io"
-            : "default-src 'self' 'unsafe-inline' data: https://banana-hackers.gitlab.io; script-src 'self' 'unsafe-eval' 'unsafe-inline' data:",
+            ? "default-src 'self' 'unsafe-inline' data:; script-src 'self' data:; img-src 'self' https://banana-hackers.gitlab.io; connect-src 'self' https://banana-hackers.gitlab.io https://gitlab.com"
+            : "default-src 'self' 'unsafe-inline' data: https://banana-hackers.gitlab.io https://gitlab.com; script-src 'self' 'unsafe-eval' 'unsafe-inline' data:",
         ],
       },
     });
