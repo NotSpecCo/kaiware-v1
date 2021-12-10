@@ -22,7 +22,7 @@ export function CategoryPanel({ panelId, categoryId }: Props): JSX.Element {
     apps: StoreApp[];
     fetchedAt: number;
   }>();
-  const { addPanel } = usePanels();
+  const { activePanelId, addPanel } = usePanels();
 
   useEffect(() => {
     getCategories().then((res) => setCategory(res.find((a) => a.id === categoryId)));
@@ -46,12 +46,18 @@ export function CategoryPanel({ panelId, categoryId }: Props): JSX.Element {
             author={app.author?.[0]}
             description={app.description}
             downloadUrl={app.download.url}
-            showInstallBtn={true}
+            showInstallBtn={activePanelId === panelId}
             onClick={() => {
-              addPanel(
-                panelId,
-                <AppPanel key={`app_${app.slug}`} panelId={`app_${app.slug}`} appSlug={app.slug} />
-              );
+              addPanel(panelId, {
+                id: `app_${app.slug}`,
+                element: (
+                  <AppPanel
+                    key={`app_${app.slug}`}
+                    panelId={`app_${app.slug}`}
+                    appSlug={app.slug}
+                  />
+                ),
+              });
             }}
           />
         ))}
