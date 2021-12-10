@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 import { usePanels } from '../contexts/PanelsProvider';
 import { DeviceInfo } from '../models';
 import { getDeviceInfo } from '../services/device';
@@ -13,6 +13,8 @@ export function Sidebar(): JSX.Element {
   const [device, setDevice] = useState<DeviceInfo>();
   const [searching, setSearching] = useState(false);
   const history = useHistory();
+  const loc = useLocation();
+
   const { setPanels } = usePanels();
 
   useEffect(() => {
@@ -42,12 +44,24 @@ export function Sidebar(): JSX.Element {
     <div className={styles.root}>
       <div className={styles.titlebar} />
       <div className={styles.items}>
-        <SidebarItem primaryText="Home" onClick={() => navigate(`/`)} />
+        <SidebarItem
+          primaryText="Home"
+          disabled={loc.pathname === '/'}
+          onClick={() => navigate(`/`)}
+        />
         <Typography type="titleSmall">Apps</Typography>
         {/* <SidebarItem primaryText="Search" onClick={() => navigate(`/search`)} /> */}
-        <SidebarItem primaryText="Categories" onClick={() => navigate(`/categories`)} />
+        <SidebarItem
+          primaryText="Categories"
+          disabled={loc.pathname === '/categories'}
+          onClick={() => navigate(`/categories`)}
+        />
         <Typography type="titleSmall">System</Typography>
-        <SidebarItem primaryText="Settings" onClick={() => navigate(`/settings`)} />
+        <SidebarItem
+          primaryText="Settings"
+          disabled={loc.pathname === '/settings'}
+          onClick={() => navigate(`/settings`)}
+        />
         <SidebarItem primaryText="About" />
         <div className={styles.spacer} />
         <Typography type="titleSmall">Device</Typography>
@@ -55,6 +69,7 @@ export function Sidebar(): JSX.Element {
           <SidebarItem
             primaryText={device.name}
             secondaryText="Connected"
+            disabled={loc.pathname === '/device'}
             onClick={() => navigate(`/device`)}
           >
             <IconButton

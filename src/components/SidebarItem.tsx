@@ -8,11 +8,12 @@ type Props = ComponentBaseProps &
     icon?: string;
     primaryText: string;
     secondaryText?: string;
+    disabled?: boolean;
   };
 
 export function SidebarItem(props: Props): JSX.Element {
   return (
-    <div className={styles.root} onClick={props.onClick}>
+    <div className={styles.root} onClick={(ev) => !props.disabled && props.onClick?.(ev)}>
       {props.icon ? <i className={props.icon}></i> : null}
       <div className={styles.text}>
         <div className={styles.primaryText}>{props.primaryText}</div>
