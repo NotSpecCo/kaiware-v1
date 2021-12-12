@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useDevice } from '../contexts/DeviceProvider';
 import { usePanels } from '../contexts/PanelsProvider';
 import { StoreApp } from '../models';
 import { downloadUrl } from '../services/browser';
@@ -21,6 +22,7 @@ export function AppPanel({ panelId, appSlug }: Props): JSX.Element {
   const [version, setVersion] = useState<string>('');
   const [working, setWorking] = useState(false);
   const { closePanel } = usePanels();
+  const { info: device } = useDevice();
 
   useEffect(() => {
     getAppBySlug(appSlug).then((res) => {
@@ -76,7 +78,11 @@ export function AppPanel({ panelId, appSlug }: Props): JSX.Element {
             ) : null}
           </div>
           {/* <Button text="Download" onClick={() => downloadUrl(app?.download.url)} /> */}
-          <Button text={working ? 'Installing' : 'Install'} disabled={working} onClick={install} />
+          <Button
+            text={working ? 'Installing' : 'Install'}
+            disabled={working || !device}
+            onClick={install}
+          />
         </div>
       </PanelHeader>
       <PanelContent className={styles.content}>
