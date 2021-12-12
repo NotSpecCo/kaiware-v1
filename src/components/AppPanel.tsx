@@ -138,10 +138,12 @@ export function AppPanel({ panelId, appSlug }: Props): JSX.Element {
               {app?.people.map((person, i) => (
                 <tr key={i}>
                   <td className={styles.personRole}>
-                    <Typography padding="horizontal">{person.role}</Typography>
+                    <Typography type="bodyStrong" padding="horizontal">
+                      {person.role}:
+                    </Typography>
                   </td>
                   <td>
-                    <Typography padding="horizontal">
+                    <Typography padding="none">
                       {person.name}
                       {person.email ? (
                         <>
