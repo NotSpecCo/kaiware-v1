@@ -1,21 +1,15 @@
 import React, { createContext, useContext, useState } from 'react';
-import { ComponentBaseProps } from '../models';
-// import { Device } from '../device';
+import { ComponentBaseProps, DeviceInfo } from '../models';
+import { getDeviceInfo } from '../services/device';
 
 type DeviceContextValue = {
-  device?: any;
-  connect: () => void;
-  disconnect: () => void;
+  info: DeviceInfo | null;
+  refresh: () => Promise<void>;
 };
 
 const defaultValue: DeviceContextValue = {
-  device: undefined,
-  connect: () => {
-    console.log('connect');
-  },
-  disconnect: () => {
-    console.log('connect');
-  },
+  info: null,
+  refresh: async () => console.log('refresh'),
 };
 
 const DeviceContext = createContext<DeviceContextValue>(defaultValue);
@@ -23,32 +17,21 @@ const DeviceContext = createContext<DeviceContextValue>(defaultValue);
 type DeviceProviderProps = ComponentBaseProps;
 
 export function DeviceProvider(props: DeviceProviderProps) {
-  const [device, setDevice] = useState<any>();
+  const [info, setInfo] = useState<DeviceInfo | null>(null);
 
-  async function connect() {
-    if (device) {
-      console.log('already connected');
-      return;
-    }
-
-    console.log('connect');
-  }
-
-  function disconnect() {
-    if (!device) {
-      console.log('no device to disconnect');
-      return;
-    }
-
-    console.log('disconnect');
+  async function refresh() {
+    const info = await getDeviceInfo().catch((err) => {
+      console.error('Failed to get device', err);
+      return null;
+    });
+    setInfo(info);
   }
 
   return (
     <DeviceContext.Provider
       value={{
-        device,
-        connect,
-        disconnect,
+        info,
+        refresh,
       }}
     >
       {props.children}

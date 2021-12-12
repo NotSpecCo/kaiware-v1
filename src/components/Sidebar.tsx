@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
+import { useDevice } from '../contexts/DeviceProvider';
 import { usePanels } from '../contexts/PanelsProvider';
-import { DeviceInfo } from '../models';
-import { getDeviceInfo } from '../services/device';
 import { IconButton } from '../ui-components/IconButton';
 import { Typography } from '../ui-components/Typography';
 import { delay } from '../utils/delay';
@@ -10,8 +9,8 @@ import styles from './Sidebar.module.css';
 import { SidebarItem } from './SidebarItem';
 
 export function Sidebar(): JSX.Element {
-  const [device, setDevice] = useState<DeviceInfo>();
   const [searching, setSearching] = useState(false);
+  const device = useDevice();
   const history = useHistory();
   const loc = useLocation();
 
@@ -26,12 +25,7 @@ export function Sidebar(): JSX.Element {
 
     setSearching(true);
     await delay(1000);
-    const res = await getDeviceInfo().catch((err) => console.log('init err', err));
-    if (res) {
-      setDevice(res);
-    } else {
-      setDevice(undefined);
-    }
+    await device.refresh();
     setSearching(false);
   }
 
@@ -69,9 +63,9 @@ export function Sidebar(): JSX.Element {
         <SidebarItem primaryText="About" />
         <div className={styles.spacer} />
         <Typography type="titleSmall">Device</Typography>
-        {device ? (
+        {device.info ? (
           <SidebarItem
-            primaryText={device.name}
+            primaryText={device.info.name}
             secondaryText="Connected"
             disabled={loc.pathname === '/device'}
             onClick={() => navigate(`/device`)}

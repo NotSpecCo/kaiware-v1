@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useDevice } from '../contexts/DeviceProvider';
 import { ComponentBaseProps } from '../models';
 import { ClickableProps } from '../models/ClickableProps';
 import { closeApp, installApp, launchApp, uninstallApp } from '../services/device';
@@ -27,6 +28,7 @@ type Props = ComponentBaseProps &
 
 export function AppRow({ ...props }: Props): JSX.Element {
   const [working, setWorking] = useState(false);
+  const { info: device } = useDevice();
 
   async function install() {
     if (working) return;
@@ -82,13 +84,22 @@ export function AppRow({ ...props }: Props): JSX.Element {
         <div className={styles.description}>{props.description}</div>
       </div>
       <div className={styles.actions}>
-        {props.showLaunchBtn && <IconButton icon="play" title="Launch" onClick={() => launch()} />}
-        {props.showCloseBtn && <IconButton icon="cancel" title="Close" onClick={() => close()} />}
+        {props.showLaunchBtn && (
+          <IconButton icon="play" title="Launch" disabled={!device} onClick={() => launch()} />
+        )}
+        {props.showCloseBtn && (
+          <IconButton icon="cancel" title="Close" disabled={!device} onClick={() => close()} />
+        )}
         {props.showInstallBtn && props.downloadUrl && (
-          <IconButton icon="install" title="Install" onClick={() => install()} />
+          <IconButton icon="install" title="Install" disabled={!device} onClick={() => install()} />
         )}
         {props.showUninstallBtn && (
-          <IconButton icon="delete" title="Uninstall" onClick={() => uninstall()} />
+          <IconButton
+            icon="delete"
+            title="Uninstall"
+            disabled={!device}
+            onClick={() => uninstall()}
+          />
         )}
       </div>
     </div>
