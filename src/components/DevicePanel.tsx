@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { AppRow } from '../components/AppRow';
 import { useDevice } from '../contexts/DeviceProvider';
+import { usePanels } from '../contexts/PanelsProvider';
 import { DeviceApp } from '../models';
 import { getInstalledApps, getRunningApps } from '../services/device';
 import { IconButton } from '../ui-components/IconButton';
@@ -8,6 +9,7 @@ import { Panel, PanelContent, PanelFooter, PanelHeader } from '../ui-components/
 import { IconSize } from '../ui-components/SvgIcon';
 import { Typography } from '../ui-components/Typography';
 import styles from './DevicePanel.module.css';
+import { InstalledAppPanel } from './InstalledAppPanel';
 
 type Props = {
   panelId: string;
@@ -18,6 +20,7 @@ export function DevicePanel({ panelId }: Props): JSX.Element {
   const [runningApps, setRunningApps] = useState<DeviceApp[]>([]);
   const [working, setWorking] = useState(false);
   const device = useDevice();
+  const { addPanel } = usePanels();
 
   async function getData() {
     if (working) return;
@@ -99,6 +102,15 @@ export function DevicePanel({ panelId }: Props): JSX.Element {
             showUninstallBtn={true}
             onLaunch={() => setRunningApps([...runningApps, app])}
             onUninstall={() => setInstalledApps(installedApps.filter((a) => a.id !== app.id))}
+            onClick={() => {
+              addPanel(panelId, {
+                id: `app_${app.id}`,
+                closeOnEsc: true,
+                element: (
+                  <InstalledAppPanel key={`app_${app.id}`} panelId={`app_${app.id}`} app={app} />
+                ),
+              });
+            }}
           />
         ))}
       </PanelContent>

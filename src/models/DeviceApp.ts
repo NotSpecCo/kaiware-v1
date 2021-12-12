@@ -7,9 +7,11 @@ export interface DeviceApp {
     subtitle: string;
     developer: {
       name: string;
-      url: string;
+      url?: string;
     };
     version: string;
+    type: string;
+    permissions: { [key: string]: { access?: string; description?: string } };
   };
   manifestURL: string;
   appStatus: number;
