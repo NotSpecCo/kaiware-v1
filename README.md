@@ -1,5 +1,7 @@
 # Kaiware
 
+**Hey! This version of Kaiware is deprecated. Don't worry though, I'm rewriting it with the same features plus a lot more! Check it out over here: [github.com/NothingSpecialDev/kaiware](https://github.com/NothingSpecialDev/kaiware)**
+
 ![Screenshot](/promo/screenshot1.png?raw=true)
 
 Note: Very much a work in progress
